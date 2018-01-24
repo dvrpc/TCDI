@@ -1,5 +1,3 @@
-// steps to update the data in the future: get data set from Rob. Edit and format it into what is here. Replace accordingly (new data set will be current, everything else shifts place. Should automatically do it up)
-
 const thirdPreviousDataSet = [
     {"properties": { "FID": 132, "YR": 2010, "MUN_NAME": "Pitman Borough", "CO_NAME": "Gloucester", "STATE": "NJ", "PROJECTNAM": "Downtown Revitalization Plan", "PROJECTNUM": 1155111, "PROJECTTYP": "Revitalization", "ID": 34, "STATUS": "On-going", "AMOUNT": 75000, "PROJ_DESC": "TCDI funds will be used to create a comprehensive revitalization plan by promoting land use, economic development, and marketing strategies.", "PROJ_DESC2": " ", "PROJ_DESC3": " ", "AMT_WEB": "$75,000 ", "TITLE": "Downtown Revitalization Plan and Marketing Study", "RPTITLE": "Uptown Pitman Revitalization Plan", "REPORT": "Digital", "GEOGRAPHY": "Municipal", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NcjJPUDEwRmhUZVE\/view?usp=drivesdk", "SHAPE_AREA": 5838485.433, "SHAPE_LEN": 10263.60622, "MAPCAT": "County", "MAPCATYR": "County2010", "MAPID": 34, "LAT": -75.13057632, "LONG": 39.73349597 }, "geometry": { "type": "Point", "coordinates": [ -75.13057632, 39.73349597 ] } },
     {"properties": { "FID": 133, "YR": 2010, "MUN_NAME": "Lawrence Township", "CO_NAME": "Mercer", "STATE": "NJ", "PROJECTNAM": "Brunswick Pike Redevelopment Plan", "PROJECTNUM": 1166115, "PROJECTTYP": "Revitalization", "ID": 48, "STATUS": "On-going", "AMOUNT": 55000, "PROJ_DESC": "This project will allow the Township to prepare a redevelopment plan for the Brunswick Pike corridor to convert a suburban corridor into a lively mixed-use district.", "PROJ_DESC2": " ", "PROJ_DESC3": " ", "AMT_WEB": "$55,000 ", "TITLE": "Brunswick Pike Redevelopment", "RPTITLE": "Brunswick Pike Redevelopment and Form-Based Code Study", "REPORT": "Not found", "GEOGRAPHY": "Municipal", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NTV9hNk1GOUFmZFk\/view?usp=drivesdk", "SHAPE_AREA": 56898621.95, "SHAPE_LEN": 37372.6315, "MAPCAT": "County", "MAPCATYR": "County2010", "MAPID": 48, "LAT": -74.72053149, "LONG": 40.29537644 }, "geometry": { "type": "Point", "coordinates": [ -74.72053149, 40.29537644 ] } },
@@ -171,12 +169,54 @@ for(var i = 0; i < accordion.length; i++){
     // TABLE format & rules:
         /* <tr class = Municipality Name>
                 <td> Municipality Name (project.properties.MUN_NAME)</td>
-                <td> <a href='project_pdf'> Project Title (project.properties.TITLE)</a></td> 
+                <td> <a href='project.properties.WEBLINK'> Project Title (project.properties.TITLE)</a></td> 
                 <td> $ amount (project.properties.AMOUNT)</td>
             </tr>
         Upon creation of a row, check if project.properties.MUN_NAME.indexOf(usedMunicipalitiesArray)
             if yes: first <td> is empty, append <tr> as a sibling of the named TR, somehow...
             if no: add the MUN_NAME as the classNAme, add MUN_NAME to the usedMunicipalitiesArray  
+        */
+function populateProjectDetails(dataset, tableName){
+    var table = document.querySelector('#'+tableName)
+    var usedMunicipalities = []
 
+    dataset.forEach(function(project){
+        var fragment = document.createDocumentFragment()
+        var row = document.createElement('tr')
+        var municipalityColumn = document.createElement('td')
+        var titleColumn = document.createElement('td')
+        var amountColumn = document.createElement('td')
+
+        var municipality = project.properties.MUN_NAME
+        var title = project.properties.TITLE
+        var link = project.properties.WEBLINK
+        var amount = project.properties.AMOUNT
+
+        if(usedMunicipalities.indexOf(municipality) > -1){
+            console.log('RRRRRRRRRREPEAT MUNICIPALITY')
+        }else{
+
+            // add the muncipality to the used array
+            usedMunicipalities.push(municipality)
+
+            // build out each column
+            municipalityColumn.textContent = municipality
+            titleColumn.innerHTML = link === 'na' ? title : '<a href="' + link + '" rel="external">' + title + '</a>'
+            amountColumn.textContent = '$'+amount
+
+            // append the columns first to the fragment, then to the row in order to minimize DOM manipulations
+            fragment.appendChild(municipalityColumn)
+            fragment.appendChild(titleColumn)
+            fragment.appendChild(amountColumn)
+            row.appendChild(fragment)
+            table.appendChild(row)
+        }
+
+    })
+}
+populateProjectDetails(currentDataSet, 'currentDataSet')
+populateProjectDetails(previousDataSet, 'previousDataSet')
+populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
+populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 // function to populate the map
     // TBD with how mapboxGL works
