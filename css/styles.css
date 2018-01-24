@@ -51,10 +51,9 @@
     justify-content: center;
     color: #0e3243;
 }
-.amounts-middle{
-/*    border-left: thin solid #0e3243;
-    border-right: thin solid #0e3243;
-    padding: 0 3.5% 0 3.5%;*/
+.vr{
+    border: thin solid #0e3f43;
+    margin: 0 1% 0 1%;
 }
 .amounts p{
     font-size: 4.5em;
