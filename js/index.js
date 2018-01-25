@@ -1,3 +1,4 @@
+//TODO: include the polyfill.io ES6 polyfill so I can fully refactor this to ES6+
 const thirdPreviousDataSet = [
     {"properties": { "FID": 132, "YR": 2010, "MUN_NAME": "Pitman Borough", "CO_NAME": "Gloucester", "STATE": "NJ", "PROJECTNAM": "Downtown Revitalization Plan", "PROJECTNUM": 1155111, "PROJECTTYP": "Revitalization", "ID": 34, "STATUS": "On-going", "AMOUNT": 75000, "PROJ_DESC": "TCDI funds will be used to create a comprehensive revitalization plan by promoting land use, economic development, and marketing strategies.", "PROJ_DESC2": " ", "PROJ_DESC3": " ", "AMT_WEB": "$75,000 ", "TITLE": "Downtown Revitalization Plan and Marketing Study", "RPTITLE": "Uptown Pitman Revitalization Plan", "REPORT": "Digital", "GEOGRAPHY": "Municipal", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NcjJPUDEwRmhUZVE\/view?usp=drivesdk", "SHAPE_AREA": 5838485.433, "SHAPE_LEN": 10263.60622, "MAPCAT": "County", "MAPCATYR": "County2010", "MAPID": 34, "LAT": -75.13057632, "LONG": 39.73349597 }, "geometry": { "type": "Point", "coordinates": [ -75.13057632, 39.73349597 ] } },
     {"properties": { "FID": 133, "YR": 2010, "MUN_NAME": "Lawrence Township", "CO_NAME": "Mercer", "STATE": "NJ", "PROJECTNAM": "Brunswick Pike Redevelopment Plan", "PROJECTNUM": 1166115, "PROJECTTYP": "Revitalization", "ID": 48, "STATUS": "On-going", "AMOUNT": 55000, "PROJ_DESC": "This project will allow the Township to prepare a redevelopment plan for the Brunswick Pike corridor to convert a suburban corridor into a lively mixed-use district.", "PROJ_DESC2": " ", "PROJ_DESC3": " ", "AMT_WEB": "$55,000 ", "TITLE": "Brunswick Pike Redevelopment", "RPTITLE": "Brunswick Pike Redevelopment and Form-Based Code Study", "REPORT": "Not found", "GEOGRAPHY": "Municipal", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NTV9hNk1GOUFmZFk\/view?usp=drivesdk", "SHAPE_AREA": 56898621.95, "SHAPE_LEN": 37372.6315, "MAPCAT": "County", "MAPCATYR": "County2010", "MAPID": 48, "LAT": -74.72053149, "LONG": 40.29537644 }, "geometry": { "type": "Point", "coordinates": [ -74.72053149, 40.29537644 ] } },
@@ -133,9 +134,8 @@ const currentDataSet = [
     {"properties": { "FID": 254, "YR": 2017, "MUN_NAME": "Lower Northwest Planning District", "CO_NAME": "Philadelphia", "STATE": "PA", "PROJECTNAM": "Wissahickon Gateway", "PROJECTNUM": 0, "PROJECTTYP": " ", "ID": 926, "STATUS": " ", "AMOUNT": 100000, "PROJ_DESC": "This study will further the recommendations from the Lower Northwest District Plan Focus Area and examine immediate and long-term improvements to accommodate new development and increase transportation access and safety.", "PROJ_DESC2": " ", "PROJ_DESC3": " ", "AMT_WEB": "$100,000 ", "TITLE": "Wissahickon Gateway", "RPTITLE": " ", "REPORT": " ", "GEOGRAPHY": "Study Area", "WEBLINK": "na", "SHAPE_AREA": 25855735.96, "SHAPE_LEN": 30194.02394, "MAPCAT": "Local", "MAPCATYR": "Local2017", "MAPID": 926, "LAT": -75.22189866, "LONG": 40.04325709 }, "geometry": { "type": "Point", "coordinates": [ -75.22189866, 40.04325709 ] } }
 ]
 
-// Accordion functionality 
+// Accordion functionality
 var accordion = document.querySelectorAll('.accordion')
-
 for(var i = 0; i < accordion.length; i++){
     accordion[i].onclick = function(){
         // show/hide the accordions on click
@@ -153,70 +153,75 @@ for(var i = 0; i < accordion.length; i++){
         panel.setAttribute('aria-hidden', ariaHiddenBool)
 
         // show/hide the panel on click
-        if(panel.style.maxHeight){
-            panel.style.maxHeight = null
-        }else{
-            panel.style.maxHeight = panel.scrollHeight + 'px'
-        }
+        if(panel.style.maxHeight){panel.style.maxHeight = null}
+        else{panel.style.maxHeight = panel.scrollHeight + 'px'}
     }
 }
 
-
-// function to populate the project lists
-    // accepts two paramaters: the data set, and the year (in order to grab the right data table)
-    // use the year for the header ('xxxx Projects' EXCEPT in the case of current year.)
-    // REMINDER: when dynamicallly populating tables w/API call, set 'municipality' field to null if it has already been encountered
-    // TABLE format & rules:
-        /* <tr class = Municipality Name>
-                <td> Municipality Name (project.properties.MUN_NAME)</td>
-                <td> <a href='project.properties.WEBLINK'> Project Title (project.properties.TITLE)</a></td> 
-                <td> $ amount (project.properties.AMOUNT)</td>
-            </tr>
-        Upon creation of a row, check if project.properties.MUN_NAME.indexOf(usedMunicipalitiesArray)
-            if yes: first <td> is empty, append <tr> as a sibling of the named TR, somehow...
-            if no: add the MUN_NAME as the classNAme, add MUN_NAME to the usedMunicipalitiesArray  
-        */
 function populateProjectDetails(dataset, tableName){
     var table = document.querySelector('#'+tableName)
     var usedMunicipalities = []
 
+    // populate the headers if necessary
+    if(tableName != 'currentDataSet'){
+        // TODO: this
+    }
+
     dataset.forEach(function(project){
+        var municipalityClassName;
+        var beenUsed = false
         var fragment = document.createDocumentFragment()
-        var row = document.createElement('tr')
         var municipalityColumn = document.createElement('td')
         var titleColumn = document.createElement('td')
         var amountColumn = document.createElement('td')
 
         var municipality = project.properties.MUN_NAME
+        if(municipality.includes('Multi-Municipal')){
+            municipality = municipality.substring(0, 15)
+            // add the 'primary municipality' field here once it becomes available
+            // ex: municipality += `-${project.properties.primaryMunicipality`}
+            municipalityClassName = municipality
+        }else{municipalityClassName = municipality.split(' ').join('-')}
+
+        // classNames in order to lookup repeats
+        municipalityColumn.classList.add(municipalityClassName)
+
         var title = project.properties.TITLE
         var link = project.properties.WEBLINK
-        var amount = project.properties.AMOUNT
+        var amount = project.properties.AMOUNT.toLocaleString()
 
-        if(usedMunicipalities.indexOf(municipality) > -1){
-            console.log('RRRRRRRRRREPEAT MUNICIPALITY')
+        if(usedMunicipalities.indexOf(municipality) > -1) {beenUsed = true}
+
+        // add the muncipality to the used array
+        usedMunicipalities.push(municipality)
+
+        // build out each column
+        municipalityColumn.textContent = beenUsed ? '' : municipality
+        titleColumn.innerHTML = link === 'na' ? title : '<a href="' + link + '" rel="external">' + title + '</a>'
+        amountColumn.textContent = '$'+amount
+
+        fragment.appendChild(municipalityColumn)
+        fragment.appendChild(titleColumn)
+        fragment.appendChild(amountColumn)
+
+        // insert row after nearest 
+        if(beenUsed){
+            let sibling = document.querySelectorAll('.'+municipalityClassName)
+            sibling = sibling[sibling.length - 1]
+            let rowIndex = sibling.parentElement.rowIndex
+            let newRow = table.insertRow(rowIndex)
+            newRow.appendChild(fragment)
         }else{
-
-            // add the muncipality to the used array
-            usedMunicipalities.push(municipality)
-
-            // build out each column
-            municipalityColumn.textContent = municipality
-            titleColumn.innerHTML = link === 'na' ? title : '<a href="' + link + '" rel="external">' + title + '</a>'
-            amountColumn.textContent = '$'+amount
-
-            // append the columns first to the fragment, then to the row in order to minimize DOM manipulations
-            fragment.appendChild(municipalityColumn)
-            fragment.appendChild(titleColumn)
-            fragment.appendChild(amountColumn)
+            var row = document.createElement('tr')
             row.appendChild(fragment)
             table.appendChild(row)
         }
-
     })
 }
 populateProjectDetails(currentDataSet, 'currentDataSet')
 populateProjectDetails(previousDataSet, 'previousDataSet')
 populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
 populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
-// function to populate the map
-    // TBD with how mapboxGL works
+
+
+// mapBoxGL business goes here
