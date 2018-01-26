@@ -161,10 +161,16 @@ for(var i = 0; i < accordion.length; i++){
 function populateProjectDetails(dataset, tableName){
     var table = document.querySelector('#'+tableName)
     var usedMunicipalities = []
+    var year = dataset[0].properties.YR
 
-    // populate the headers if necessary
+    // fill out the awards header
+    var awardsHeader = document.querySelector('h2.'+tableName)
+    awardsHeader.textContent = year + ' TCDI AWARDS'
+
+    // fill out the accordion header where applicable
     if(tableName != 'currentDataSet'){
-        // TODO: this
+        var accordionButton = document.querySelector('.'+tableName)
+        accordionButton.textContent = year + ' Projects'
     }
 
     dataset.forEach(function(project){
