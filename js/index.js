@@ -230,4 +230,114 @@ populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
 populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 
 
-// mapBoxGL business goes here
+// Interactive webmap
+mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA' // TODO: make secret
+var stylesheet = {
+  "version": 8,
+  "sources": {
+    "counties": {
+      "type": "vector",
+      "url": "http://a.michaelruane.com/dvrpc_boundaries.json"
+    }
+  },
+  "layers": [
+    {"id": "county-fill",
+      "type": "fill",
+      "source": "counties",
+      "source-layer": "county",
+      "layout": {},
+      "paint": {
+          "fill-color": "#778899",
+          "fill-opacity": 1
+      },
+      "filter": [
+                "==",
+                "DVRPC_REG",
+                "Yes"
+            ],
+    },
+    {
+        "id": "municipality-outline",
+        "type": "line",
+        "source": "counties",
+        "source-layer": "municipalities",
+        "paint": {
+            'line-width': 0.5,
+            'line-color': '#efefef'
+        }
+    },
+    {
+        "id": "county-outline",
+        "type": "line",
+        "source": "counties",
+        "source-layer": "county",
+        "paint": {
+            'line-width': 2.5,
+            'line-color': '#fff'
+        },
+        "filter": [
+                "==",
+                "DVRPC_REG",
+                "Yes"
+            ]
+    }
+  ]
+} 
+
+// lets build the map
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: stylesheet,
+    center: [-75.2273, 40.071],
+    zoom: 8.82, // starting zoom
+    hash: 'true'
+});
+
+//make sure it all fits
+map.fitBounds([[
+    -76.09405517578125, 39.49211914385648   
+], [
+    -74.32525634765625,40.614734298694216
+]]);
+
+/*//request to award data for 2017 - nope.
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'data/2017_tcdi.geojson');
+xhr.onload = function() {
+    if (xhr.status === 200) {
+
+        // data returned from this is the 'page cannot be found' page...
+        var data = xhr.responseText;
+
+        console.log('data is ', data)
+        
+        map.on('load', function(){
+            // Add a new source from our GeoJSON data 
+            map.addSource("awards", {
+                type: "geojson",
+                data: JSON.parse(data)
+            });
+            // Create layer from source
+            map.addLayer({
+                "id": "award-fill",
+                "type": "circle",
+                "source": "awards",
+                'paint': {
+                    'circle-radius': {
+                        property: 'AMOUNT',
+                        type: 'exponential',
+                        stops: [
+                          [25000, 10],
+                          [175000, 35]
+                        ]
+                      },
+                    'circle-color': 'red'
+                }
+            });
+        });
+    }
+    else {
+        alert('Request failed.  Returned status of ' + xhr.status);
+    }
+};
+xhr.send();*/

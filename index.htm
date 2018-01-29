@@ -14,15 +14,15 @@
 	<meta name="Owner" content="webmaster@dvrpc.org" >
 	<meta name="Distribution" content="global" >
 	<meta name="Robots" content="index, follow" >
-	<meta name="Copyright" content="1995-2015 all rights reserved">
+	<meta name="Copyright" content="1995-2018 all rights reserved">
 	<!-- DVRPC Website VERSION #7.0 Copyright (c) 1995-2018 Delaware Valley Regional Planning Commission. All rights reserved.  -->
 	<link rel="SHORTCUT ICON" href="/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="DVRPC Announcements" href="http://feeds.feedburner.com/DVRPCAnnouncements">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="/css/subpage.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script defer type="text/javascript" src="./js/index.js"></script>
-
-	
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js'></script>
 </head>
 
 <body>
@@ -105,7 +105,7 @@ Transportation and Community Development Initiative (TCDI)
     </ul>
 
     <h2 class="flex-horizontal invest-header">INVESTING IN A REGION <button class="btn btn-active this-year-btn">2017</button> <button class="btn btn-inactive">All Years</button></h2>
-    <img src="./img/tcdi_poop_map-01.png">
+    <div id="map"></div>
 </div>
 
 <ul aria-label="Accordion Control Group Buttons" class="accordion-controls">
@@ -192,7 +192,7 @@ Transportation and Community Development Initiative (TCDI)
                     </div>
                     <span class="vr"></span>
                     <div class="amounts">
-                        <p>$1.7</p>
+                        <p>$1.2</p>
                         <span>MILLION AWARDED</span>
                     </div>
                     <span class="vr"></span>
