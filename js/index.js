@@ -177,7 +177,6 @@ for(var i = 0; i < accordion.length; i++){
 function populateProjectDetails(dataset, tableName){
     var table = document.querySelector('#'+tableName)
     var usedMunicipalities = []
-    console.log('dataset as a geojson is ', dataset)
     var year = dataset.features[0].properties.YR
 
     // fill out the awards header
@@ -246,7 +245,6 @@ populateProjectDetails(previousDataSet, 'previousDataSet')
 populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
 populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 
-
 // Interactive webmap
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 var stylesheet = {
@@ -311,23 +309,26 @@ var map = new mapboxgl.Map({
 });
 
 //make sure it all fits
-map.fitBounds([[
-    -76.09405517578125, 39.49211914385648   
-], [
-    -74.32525634765625,40.614734298694216
-]]);
+map.fitBounds([
+    [-76.09405517578125, 39.49211914385648],
+    [-74.32525634765625,40.614734298694216]
+]);
 
-// add circle to the map layer
-// TODO: hook map.on functions to onclicks for the 2017/all years buttons
-map.on('load', function(){
-    map.addSource('awards', {
-        type: 'geojson',
-        data: currentDataSet
-    })
-    map.addLayer({
-        'id': 'award-fill',
+// merge the 4 data sets into one large geoJSON
+const mergeGeoJSON = {
+    "type": "FeatureCollection",
+    "name": "merge-set",
+    // ES6 spread operator
+    "features": [... currentDataSet.features, ... previousDataSet.features, ... secondPreviousDataSet.features, ... thirdPreviousDataSet.features]
+}
+console.log('merge geo json ', mergeGeoJSON)
+
+// keep it DRY
+const layer = id => {
+    return {
+        'id': id,
         'type': 'circle',
-        'source': 'awards',
+        'source': id,
         'paint': {
             'circle-radius': {
                 property: 'AMOUNT',
@@ -337,9 +338,51 @@ map.on('load', function(){
                     [175000, 35]
                 ]
             },
+            // TODO: better colors for the circles
             'circle-color': 'red'
         }
+    }
+}
+
+// function to add circle to the jawn
+map.on('load', function(){
+    map.addSource('current-year-awards', {
+        type: 'geojson',
+        data: currentDataSet
     })
+    map.addLayer(layer('current-year-awards'))
+
+    map.addSource('all-years-awards', {
+        type: 'geojson',
+        data: mergeGeoJSON
+    })
+    map.addLayer(layer('all-years-awards'))
 })
 
-// get a handle on the buttons
+// connect show/hide layers functionality to the buttons 
+const thisYearButton = document.querySelector('#current-year-awards')
+const allYearsButton = document.querySelector('#all-years-awards')
+
+toggleMapLayer = (e, buttonClicked) => {
+    const clickedLayer = buttonClicked.id
+    console.log('clicked layer is ', clickedLayer)
+    e.preventDefault()
+    e.stopPropagation()
+    console.log('map is ', map)
+    let visibility = map.getLayoutProperty(clickedLayer, 'visibility')
+
+    if(visibility === 'visible'){
+        map.setLayoutProperty(clickedLayer, 'visibility', 'none')
+        buttonClicked.classList.add('btn-inactive')
+        buttonClicked.classList.remove('btn-active')
+        // TODO: toggle active/hidden properties of the buttons here
+    }else{
+        // TODO: toggle active/hidden properties of the buttons here
+        buttonClicked.classList.add('btn-active')
+        buttonClicked.classList.remove('btn-inactive')
+        map.setLayoutProperty(clickedLayer, 'visibility', 'visible')
+    }
+}
+
+thisYearButton.onclick = e => toggleMapLayer(e, thisYearButton)
+allYearsButton.onclick = e => toggleMapLayer(e, allYearsButton)

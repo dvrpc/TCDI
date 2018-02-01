@@ -23,271 +23,257 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <script defer type="text/javascript" src="./js/index.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js'></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
 </head>
 
 <body>
 <div id="leftHandWrap">
 <div id="rightHandWrap">
 <div id="subMenuItem"></div>
-<div id="topCurves" class="topCBodyTL">
-</div>
+<div id="topCurves" class="topCBodyTL"></div>
 <div id="header"></div>
-<div class="navDividerTop">
-</div>
+<div class="navDividerTop"></div>
 <div id="topBodyCurves" class="topBodyTL">
 <div class="topBodyB"></div>
 <div class="topBodyTR"></div>
 </div>
 <div id="bodyWrap">
 <div id="body">
-
 <div id="mainColumn" class="mainColumn fleft">
 <div id="mainCenterWrapper"></div>
 <div id="mainWrapper">
-
 <div id="mainContent">
+    <h1>Transportation and Community Development Initiative (TCDI)</h1>
+    <!-- TODO: delete the entire webmapp ONCE THE REDESIGN IS COMPLETE !-->
+    <p>
+        The Transportation and Community Development Initiative (TCDI) is an opportunity to support smart growth initiatives that implement the <em>Connections 2045</em> Plan for Greater Philadelphia.  TCDI focuses on linking land use and transportation planning by:
+    </p>
+    <ul>
+        <li>Improving the overall character and quality of life for current and future businesses and residents;</li>
+        <li>Enhancing the existing transportation infrastructure capacity to reduce demands on the region's transportation network;</li>
+        <li>Promoting and encouraging the use of transit, bike, and pedestrian transportation modes;</li>
+        <li>Building capacity in our older suburbs and neighborhoods;</li>
+        <li>Reinforcing and implementing improvements in designated Centers and Areas of Disadvantage; and</li>
+        <li>Protecting our environment through growth management and land preservation</li>
+    </ul>
+    <div class="tcdi-yearly">
+        <h2 class="currentDataSet"></h2>
 
-<h1>Transportation and Community Development Initiative (TCDI)</h1>
-<!-- TODO: erase this and delete the entire webmapp ONCE THE REDESIGN IS COMPLETE 
-<a href="/webmaps/TCDI/" rel="external" class="gitem fright clear">
-<img src="/mapping/img/webmaps/16.png" />
-Transportation and Community Development Initiative (TCDI)
-</a> -->
+        <div class="flex-horizontal awards">
+            <div class="amounts">
+                <p>26</p>
+                <span>PROJECTS</span>
+            </div>
+            <span class="vr"></span>
+            <div class="amounts">
+                <p>$1.8</p>
+                <span>MILLION AWARDED</span>
+            </div>
+            <span class="vr"></span>
+            <div class="amounts">
+                <p>$207</p>
+                <span>MILLION LEVERAGED</span>
+            </div>
+        </div>
+        
+        <ul aria-label="Accordion Control Group Button" class="accordion-controls">
+            <li>
+                <button aria-controls="content-1" aria-expanded="false" id="accordion-controls-1" class="accordion"> Project details </button>
+                <div aria-hidden="true" id="content-1" class="panel">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Municipality</th>
+                                <th>Project Name</th>
+                                <th>Award Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="currentDataSet">
+                        </tbody>
+                    </table>
+                </div>
+            </li>
+        </ul>
 
-<p>
-    The Transportation and Community Development Initiative (TCDI) is an opportunity to support smart growth initiatives that implement the <em>Connections 2045</em> Plan for Greater Philadelphia.  TCDI focuses on linking land use and transportation planning by:
-</p>
-<ul>
-    <li>Improving the overall character and quality of life for current and future businesses and residents;</li>
-    <li>Enhancing the existing transportation infrastructure capacity to reduce demands on the region's transportation network;</li>
-    <li>Promoting and encouraging the use of transit, bike, and pedestrian transportation modes;</li>
-    <li>Building capacity in our older suburbs and neighborhoods;</li>
-    <li>Reinforcing and implementing improvements in designated Centers and Areas of Disadvantage; and</li>
-    <li>Protecting our environment through growth management and land preservation</li>
-</ul>
-<div class="tcdi-yearly">
-    <h2 class="currentDataSet"></h2>
-
-    <div class="flex-horizontal awards">
-        <div class="amounts">
-            <p>26</p>
-            <span>PROJECTS</span>
-        </div>
-        <span class="vr"></span>
-        <div class="amounts">
-            <p>$1.8</p>
-            <span>MILLION AWARDED</span>
-        </div>
-        <span class="vr"></span>
-        <div class="amounts">
-            <p>$207</p>
-            <span>MILLION LEVERAGED</span>
-        </div>
+        <h2 class="flex-horizontal invest-header">INVESTING IN A REGION
+            <button id="current-year-awards" class="btn btn-active this-year-btn">2017</button>
+            <button id="all-years-awards" class="btn btn-inactive">All Years</button>
+        </h2>
+        <div id="map"></div>
     </div>
-    
-    <ul aria-label="Accordion Control Group Button" class="accordion-controls">
+
+    <ul aria-label="Accordion Control Group Buttons" class="accordion-controls">
         <li>
-            <button aria-controls="content-1" aria-expanded="false" id="accordion-controls-1" class="accordion"> Project details </button>
-            <div aria-hidden="true" id="content-1" class="panel">
-                <table>
-                    <thead>
-                        <tr>
+            <button aria-controls="content-2" aria-expanded="false" id="accordion-controls-2" class="accordion previousDataSet"></button>
+            <div aria-hidden="true" id="content-2" class="panel">
+                <div class="tcdi-yearly">
+                    <h2 class="previousDataSet"></h2>
+
+                    <div class="flex-horizontal awards">
+                        <div class="amounts">
+                            <p>32</p>
+                            <span>PROJECTS</span>
+                        </div>
+                        <span class="vr"></span>
+                        <div class="amounts">
+                            <p>$2.2</p>
+                            <span>MILLION AWARDED</span>
+                        </div>
+                        <span class="vr"></span>
+                        <div class="amounts">
+                            <p>$207</p>
+                            <span>MILLION LEVERAGED</span>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
                             <th>Municipality</th>
                             <th>Project Name</th>
                             <th>Award Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody id="currentDataSet">
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody id="previousDataSet">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <button aria-controls="content-3" aria-expanded="false" id="accordion-controls-3" class="accordion secondPreviousDataSet"></button>
+            <div aria-hidden="true" id="content-3" class="panel">
+                <div class="tcdi-yearly">
+                    <h2 class="secondPreviousDataSet"></h2>
+
+                    <div class="flex-horizontal awards">
+                        <div class="amounts">
+                            <p>40</p>
+                            <span>PROJECTS</span>
+                        </div>
+                        <span class="vr"></span>
+                        <div class="amounts">
+                            <p>$2.2</p>
+                            <span>MILLION AWARDED</span>
+                        </div>
+                        <span class="vr"></span>
+                        <div class="amounts">
+                            <p>$207</p>
+                            <span>MILLION LEVERAGED</span>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>Municipality</th>
+                            <th>Project Name</th>
+                            <th>Award Amount</th>
+                        </thead>
+                        <tbody id="secondPreviousDataSet">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <button aria-controls="content-4" aria-expanded="false" id="accordion-controls-4" class="accordion thirdPreviousDataSet"></button>
+            <div aria-hidden="true" id="content-4" class="panel">
+                <div class="tcdi-yearly">
+                    <h2 class="thirdPreviousDataSet"></h2>
+
+                    <div class="flex-horizontal awards">
+                        <div class="amounts">
+                            <p>28</p>
+                            <span>PROJECTS</span>
+                        </div>
+                        <span class="vr"></span>
+                        <div class="amounts">
+                            <p>$1.2</p>
+                            <span>MILLION AWARDED</span>
+                        </div>
+                        <span class="vr"></span>
+                        <div class="amounts">
+                            <p>$207</p>
+                            <span>MILLION LEVERAGED</span>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>Municipality</th>
+                            <th>Project Name</th>
+                            <th>Award Amount</th>
+                        </thead>
+                        <tbody id="thirdPreviousDataSet">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </li>
     </ul>
-
-    <h2 class="flex-horizontal invest-header">INVESTING IN A REGION <button class="btn btn-active this-year-btn">2017</button> <button class="btn btn-inactive">All Years</button></h2>
-    <div id="map"></div>
-</div>
-
-<ul aria-label="Accordion Control Group Buttons" class="accordion-controls">
-    <li>
-        <button aria-controls="content-2" aria-expanded="false" id="accordion-controls-2" class="accordion previousDataSet"></button>
-        <div aria-hidden="true" id="content-2" class="panel">
-            <div class="tcdi-yearly">
-                <h2 class="previousDataSet"></h2>
-
-                <div class="flex-horizontal awards">
-                    <div class="amounts">
-                        <p>32</p>
-                        <span>PROJECTS</span>
-                    </div>
-                    <span class="vr"></span>
-                    <div class="amounts">
-                        <p>$2.2</p>
-                        <span>MILLION AWARDED</span>
-                    </div>
-                    <span class="vr"></span>
-                    <div class="amounts">
-                        <p>$207</p>
-                        <span>MILLION LEVERAGED</span>
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <th>Municipality</th>
-                        <th>Project Name</th>
-                        <th>Award Amount</th>
-                    </thead>
-                    <tbody id="previousDataSet">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </li>
-
-    <li>
-        <button aria-controls="content-3" aria-expanded="false" id="accordion-controls-3" class="accordion secondPreviousDataSet"></button>
-        <div aria-hidden="true" id="content-3" class="panel">
-            <div class="tcdi-yearly">
-                <h2 class="secondPreviousDataSet"></h2>
-
-                <div class="flex-horizontal awards">
-                    <div class="amounts">
-                        <p>40</p>
-                        <span>PROJECTS</span>
-                    </div>
-                    <span class="vr"></span>
-                    <div class="amounts">
-                        <p>$2.2</p>
-                        <span>MILLION AWARDED</span>
-                    </div>
-                    <span class="vr"></span>
-                    <div class="amounts">
-                        <p>$207</p>
-                        <span>MILLION LEVERAGED</span>
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <th>Municipality</th>
-                        <th>Project Name</th>
-                        <th>Award Amount</th>
-                    </thead>
-                    <tbody id="secondPreviousDataSet">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </li>
-
-    <li>
-        <button aria-controls="content-4" aria-expanded="false" id="accordion-controls-4" class="accordion thirdPreviousDataSet"></button>
-        <div aria-hidden="true" id="content-4" class="panel">
-            <div class="tcdi-yearly">
-                <h2 class="thirdPreviousDataSet"></h2>
-
-                <div class="flex-horizontal awards">
-                    <div class="amounts">
-                        <p>28</p>
-                        <span>PROJECTS</span>
-                    </div>
-                    <span class="vr"></span>
-                    <div class="amounts">
-                        <p>$1.2</p>
-                        <span>MILLION AWARDED</span>
-                    </div>
-                    <span class="vr"></span>
-                    <div class="amounts">
-                        <p>$207</p>
-                        <span>MILLION LEVERAGED</span>
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <th>Municipality</th>
-                        <th>Project Name</th>
-                        <th>Award Amount</th>
-                    </thead>
-                    <tbody id="thirdPreviousDataSet">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </li>
-</ul>
-<h2><a href="/TCDI/Archive/">Older TCDI Projects Archive</a></h2>
-<div class="card apply">
-    <h2> How to Apply for a TCDI Grant</h2>
-    <p>
-        DVRPC grants will be offered for FY 2019. On March 13th, 2018, DVRPC will conduct an information session to answer questions about the application process. Attendence at this session is mandatory for prospective applicants. A local government representative (staff or elected appointed official) must attend. <span class="underline"> Consultants are not considered a representative of the community.</span> In the case of a multi-municipal project, the lead municipality must attend. Should an applicant not be able to attend the scheduled meeting, the applicant should contact DVRPC as soon as possible. 
-    </p>
-    <a href="https://dvrpc.ticketleap.com/fy-2019-tcdi-information-session/">Register Here</a>
-    <table>
-        <thead>
-            <tr>
-                <th>When</th>
-                <th class="text-right">Where</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td> March 13, 2018 <br /> 4:00-6:00 PM </td>
-                <td class="text-right"> 
-                    <a href="https://www.google.com/maps/place/Delaware+Valley+Regional+Planning+Commission/@39.954399,-75.150017,15z/data=!4m12!1m6!3m5!1s0x0:0x4416186ce81a3398!2sDelaware+Valley+Regional+Planning+Commission!8m2!3d39.954399!4d-75.150017!3m4!1s0x0:0x4416186ce81a3398!8m2!3d39.954399!4d-75.150017" rel="external">
-                        DVRPC Main Conference Center <br />
-                        190 N. Independence Mall West <br />
-                        8th Floor <br />
-                        Philadelphia, PA 19106
-                    </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="card">
-    <h2>2018 TCDI Schedule</h2>
-    <p class="lead">The next TCDI round will be held in the Spring 2018. Below is the tentative schedule.</p>
-    <table class="table-striped">
-        <tbody>
-            <tr><td>March 8, 2018</td><td>DVRPC distributes TCDI Program Guide</td></tr>
-            <tr><td>March 13, 2018</td><td>Pre-application meeting at DVRPC</td></tr>
-            <tr><td>March 14, 2018</td><td>Application portal opens</td></tr>
-            <tr><td>April 20, 2018</td><td>Applications/Attachments due</td></tr>
-            <tr><td>May 20, 2018</td><td>Resolutions must be received</td></tr>
-            <tr><td>April-May 2018</td><td>Review by TCDI Review Committee(s)</td></tr>
-            <tr><td>June 28, 2018</td><td>DVRPC Board Meeting</td></tr>
-            <tr><td>TBD</td><td>Contract Meeting for Awardees</td></tr>
-            <tr><td>July 1, 2018</td><td>Funding available for reimbursement</td></tr>
-            <tr><td>December 30, 2018</td><td>RFP Process must be completed</td></tr>
-            <tr><td>June 30, 2020</td><td>Project tasks must be completed</td></tr>
-        </tbody>
-    </table>
-</div>
-
-</div>
-
+    <h2><a href="/TCDI/Archive/">Older TCDI Projects Archive</a></h2>
+    <div class="card apply">
+        <h2> How to Apply for a TCDI Grant</h2>
+        <p>
+            DVRPC grants will be offered for FY 2019. On March 13th, 2018, DVRPC will conduct an information session to answer questions about the application process. Attendence at this session is mandatory for prospective applicants. A local government representative (staff or elected appointed official) must attend. <span class="underline"> Consultants are not considered a representative of the community.</span> In the case of a multi-municipal project, the lead municipality must attend. Should an applicant not be able to attend the scheduled meeting, the applicant should contact DVRPC as soon as possible. 
+        </p>
+        <a href="https://dvrpc.ticketleap.com/fy-2019-tcdi-information-session/">Register Here</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>When</th>
+                    <th class="text-right">Where</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> March 13, 2018 <br /> 4:00-6:00 PM </td>
+                    <td class="text-right"> 
+                        <a href="https://www.google.com/maps/place/Delaware+Valley+Regional+Planning+Commission/@39.954399,-75.150017,15z/data=!4m12!1m6!3m5!1s0x0:0x4416186ce81a3398!2sDelaware+Valley+Regional+Planning+Commission!8m2!3d39.954399!4d-75.150017!3m4!1s0x0:0x4416186ce81a3398!8m2!3d39.954399!4d-75.150017" rel="external">
+                            DVRPC Main Conference Center <br />
+                            190 N. Independence Mall West <br />
+                            8th Floor <br />
+                            Philadelphia, PA 19106
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card">
+        <h2>2018 TCDI Schedule</h2>
+        <p class="lead">The next TCDI round will be held in the Spring 2018. Below is the tentative schedule.</p>
+        <table class="table-striped">
+            <tbody>
+                <tr><td>March 8, 2018</td><td>DVRPC distributes TCDI Program Guide</td></tr>
+                <tr><td>March 13, 2018</td><td>Pre-application meeting at DVRPC</td></tr>
+                <tr><td>March 14, 2018</td><td>Application portal opens</td></tr>
+                <tr><td>April 20, 2018</td><td>Applications/Attachments due</td></tr>
+                <tr><td>May 20, 2018</td><td>Resolutions must be received</td></tr>
+                <tr><td>April-May 2018</td><td>Review by TCDI Review Committee(s)</td></tr>
+                <tr><td>June 28, 2018</td><td>DVRPC Board Meeting</td></tr>
+                <tr><td>TBD</td><td>Contract Meeting for Awardees</td></tr>
+                <tr><td>July 1, 2018</td><td>Funding available for reimbursement</td></tr>
+                <tr><td>December 30, 2018</td><td>RFP Process must be completed</td></tr>
+                <tr><td>June 30, 2020</td><td>Project tasks must be completed</td></tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 </div>
-
+</div>
 <!-- column for left hand navigation -->
 <div id="navColumn" class="sideColumn fleft">
 <div class="columnWrapper"></div>
 </div>
-
-
 <!-- The column containing all of the widgets -->
 <div id="widgetColumn" class="sideColumn fleft">
 <div class="columnWrapper"></div>
 </div>
-
 <div class="clear"></div>
 </div>
 <div class="clear"></div>
-
 </div>
 </div>
-
 </div>
-    <script type="text/javascript" src="/js/homepage/subpage.js"></script>
+<script type="text/javascript" src="/js/homepage/subpage.js"></script>
 <script type="text/javascript">
 	//Bread crumb format will change
 	var crumbs = [{"link": "Home", "href": "/"},{"link": "Funding Opportunities", "href":"/Funding/"},{"link": "Transportation and Community Development Initiative (TCDI)", "href":"#"}];
