@@ -151,7 +151,7 @@ const currentDataSet = {
 }
 
 // Accordion functionality
-var accordion = document.querySelectorAll('.accordion')
+let accordion = document.querySelectorAll('.accordion')
 for(var i = 0; i < accordion.length; i++){
     accordion[i].onclick = function(){
         // show/hide the accordions on click
@@ -174,13 +174,13 @@ for(var i = 0; i < accordion.length; i++){
     }
 }
 
-function populateProjectDetails(dataset, tableName){
-    var table = document.querySelector('#'+tableName)
-    var usedMunicipalities = []
-    var year = dataset.features[0].properties.YR
+populateProjectDetails = (dataset, tableName) => {
+    const table = document.querySelector('#'+tableName)
+    let usedMunicipalities = []
+    const year = dataset.features[0].properties.YR
 
     // fill out the awards header
-    var awardsHeader = document.querySelector('h2.'+tableName)
+    let awardsHeader = document.querySelector('h2.'+tableName)
     awardsHeader.textContent = year + ' TCDI AWARDS'
 
     // fill out the accordion header where applicable
@@ -198,10 +198,9 @@ function populateProjectDetails(dataset, tableName){
         var amountColumn = document.createElement('td')
 
         var municipality = project.properties.MUN_NAME
+        // TODO: UPDATE THIS once Robert sends me the remastered TCDI geoJSON
         if(municipality.includes('Multi-Municipal')){
             municipality = municipality.substring(0, 15)
-            // add the 'primary municipality' field here once it becomes available
-            // ex: municipality += `-${project.properties.primaryMunicipality`}
             municipalityClassName = municipality
         }else{municipalityClassName = municipality.split(' ').join('-')}
 
@@ -269,7 +268,7 @@ var stylesheet = {
                 "==",
                 "DVRPC_REG",
                 "Yes"
-            ],
+        ],
     },
     {
         "id": "municipality-outline",
@@ -309,10 +308,7 @@ var map = new mapboxgl.Map({
 });
 
 //make sure it all fits
-map.fitBounds([
-    [-76.09405517578125, 39.49211914385648],
-    [-74.32525634765625,40.614734298694216]
-]);
+map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 
 // merge the 4 data sets into one large geoJSON
 const mergeGeoJSON = {
@@ -333,13 +329,10 @@ const layer = id => {
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [
-                    [25000, 10],
-                    [175000, 35]
-                ]
+                stops: [[25000, 10], [175000, 35]]
             },
             // TODO: better colors for the circles
-            'circle-color': 'red'
+            'circle-color': '#9eea00'
         }
     }
 }
@@ -364,25 +357,22 @@ const thisYearButton = document.querySelector('#current-year-awards')
 const allYearsButton = document.querySelector('#all-years-awards')
 
 toggleMapLayer = (e, buttonClicked) => {
-    const clickedLayer = buttonClicked.id
-    console.log('clicked layer is ', clickedLayer)
     e.preventDefault()
     e.stopPropagation()
-    console.log('map is ', map)
-    let visibility = map.getLayoutProperty(clickedLayer, 'visibility')
+    const clickedLayer = buttonClicked.id
+    let sibling = buttonClicked.nextElementSibling ? buttonClicked.nextElementSibling : buttonClicked.previousElementSibling
 
-    if(visibility === 'visible'){
-        map.setLayoutProperty(clickedLayer, 'visibility', 'none')
-        buttonClicked.classList.add('btn-inactive')
-        buttonClicked.classList.remove('btn-active')
-        // TODO: toggle active/hidden properties of the buttons here
-    }else{
-        // TODO: toggle active/hidden properties of the buttons here
-        buttonClicked.classList.add('btn-active')
-        buttonClicked.classList.remove('btn-inactive')
-        map.setLayoutProperty(clickedLayer, 'visibility', 'visible')
-    }
+    // now have a handle on button and sibling, so just hit em with the old switcharoo
+    map.setLayoutProperty(buttonClicked.id, 'visibility', 'visible')
+    map.setLayoutProperty(sibling.id, 'visibility', 'none')
+
+    // update the button classes
+    buttonClicked.classList.contains('btn-inactive') ? buttonClicked.classList.remove('btn-inactive') : null
+    buttonClicked.classList.add('btn-active')
+    sibling.classList.contains('btn-active') ? sibling.classList.remove('btn-active') : null
+    sibling.classList.add('btn-inactive')
 }
 
+// onclick needs to also hide the other layer 
 thisYearButton.onclick = e => toggleMapLayer(e, thisYearButton)
 allYearsButton.onclick = e => toggleMapLayer(e, allYearsButton)
