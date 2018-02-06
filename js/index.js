@@ -1,4 +1,3 @@
-//TODO: include the polyfill.io ES6 polyfill so I can fully refactor this to ES6+
 const thirdPreviousDataSet = {
     "type": "FeatureCollection",
     "name": "tcdi_centroids",
@@ -122,7 +121,7 @@ const currentDataSet = {
     "name": "tcdi_centroids",
     "features": [
         { "type": "Feature", "properties": { "FID": 229, "YR": 2017, "ID": 501, "PROJ_DESC": "The River Route Circulation Plan will focus on updating the 1997 circulation and transportation component of the River Route Master Plan. The plan will identify safety, functional, and operational problems and provide investment strategies to link", "PROJ_DESC2": "transportation improvements with economic development opportunities.", "AMT_WEB": "$175,000", "TITLE": "River Route Circulation Plan", "WEBLINK": "na", "LAT": -74.89376865, "LONG": 40.04729549, "LEAD_MUN": "Burlington County Planning" }, "geometry": { "type": "Point", "coordinates": [ -74.89376865, 40.04729549 ] } },
-        { "type": "Feature", "properties": { "FID": 230, "YR": 2017, "ID": 902, "PROJ_DESC": "An in-depth land use and buildout analysis will be conducted for the communities of Beverly, Delanco, and Edgewater Park to assess the future traffic volumes for the interchange at location 32 along U.S. Route 130.", "AMT_WEB": "$100,000", "TITLE": "Conceptual Design Plan to Route 130 Intersections", "WEBLINK": "na", "LAT": -74.92929221, "LONG": 40.05294662, "LEAD_MUN": "Burlington County Planning" }, "geometry": { "type": "Point", "coordinates": [ -74.92929221, 40.05294662 ] } },
+        { "type": "Feature", "properties": { "FID": 230, "YR": 2017, "ID": 902, "PROJ_DESC": "An in-depth land use and buildout analysis will be conducted for the communities of Beverly, Delanco, and Edgewater Park to assess the future traffic volumes for the interchange at location 32 along U.S. Route 130.", "AMT_WEB": "$100,000", "TITLE": "Conceptual Design Plan to Route 130 Intersections", "WEBLINK": "na", "LAT": -74.92929221, "LONG": 40.05294662, "LEAD_MUN": "Burlington County Planning (Multi-Municipal)" }, "geometry": { "type": "Point", "coordinates": [ -74.92929221, 40.05294662 ] } },
         { "type": "Feature", "properties": { "FID": 231, "YR": 2017, "ID": 503, "PROJ_DESC": "The Township will develop a vision for the area adjacent to the PATCO Woodcrest Station that supports transit-oriented development and", "PROJ_DESC2": "related planning practices.", "AMT_WEB": "$60,000", "TITLE": "Woodcrest Station Transit-Oriented Development (TOD) Plan", "WEBLINK": "na", "LAT": -74.99461206, "LONG": 39.90340864, "LEAD_MUN": "Cherry Hill" }, "geometry": { "type": "Point", "coordinates": [ -74.99461206, 39.90340864 ] } },
         { "type": "Feature", "properties": { "FID": 232, "YR": 2017, "ID": 504, "PROJ_DESC": "A new interior and exterior redesign\/concept plan will be developed for the Walter Rand Transportation Center in order to better leverage existing transportation infrastructure as a resource to transform", "PROJ_DESC2": "a derelict facility into a world class transportation center.", "AMT_WEB": "$100,000", "TITLE": "Walter Rand Market Feasibility & Station Redesign", "WEBLINK": "na", "LAT": -75.10756319, "LONG": 39.93618305, "LEAD_MUN": "Camden County" }, "geometry": { "type": "Point", "coordinates": [ -75.10756319, 39.93618305 ] } },
         { "type": "Feature", "properties": { "FID": 233, "YR": 2017, "ID": 505, "PROJ_DESC": "This study will develop a balance between travel modes, parking needs, and the future economic development in Princeton’s downtown.", "PROJ_DESC2": "A parking demand baseline will be developed with short and long-term recommendations to accommodate future downtown residential development parking needs.", "AMT_WEB": "$65,000", "TITLE": "Princeton Parking: Inventory, Analysis & Recommendations", "WEBLINK": "na", "LAT": -74.66932503, "LONG": 40.3562264, "LEAD_MUN": "Princeton" }, "geometry": { "type": "Point", "coordinates": [ -74.66932503, 40.3562264 ] } },
@@ -151,7 +150,7 @@ const currentDataSet = {
 }
 
 // Accordion functionality
-let accordion = document.querySelectorAll('.accordion')
+const accordion = document.querySelectorAll('.accordion')
 for(var i = 0; i < accordion.length; i++){
     accordion[i].onclick = function(){
         // show/hide the accordions on click
@@ -163,94 +162,61 @@ for(var i = 0; i < accordion.length; i++){
         this.setAttribute('aria-expanded', ariaExpandedBool)
 
         // toggle the aria-hidden attribute of the accordion panel
-        let panel = this.nextElementSibling
+        const panel = this.nextElementSibling
         let ariaHiddenBool = panel.getAttribute('aria-hidden')
         ariaHiddenBool === 'false' ? ariaHiddenBool = 'true' : ariaHiddenBool = 'false'
         panel.setAttribute('aria-hidden', ariaHiddenBool)
 
         // show/hide the panel on click
-        if(panel.style.maxHeight){panel.style.maxHeight = null}
-        else{panel.style.maxHeight = panel.scrollHeight + 'px'}
+        if(panel.style.maxHeight) panel.style.maxHeight = null
+        else panel.style.maxHeight = panel.scrollHeight + 'px'
     }
 }
 
 populateProjectDetails = (dataset, tableName) => {
     const table = document.querySelector('#'+tableName)
-    let usedMunicipalities = []
     const year = dataset.features[0].properties.YR
 
     // fill out the awards header
-    let awardsHeader = document.querySelector('h2.'+tableName)
+    const awardsHeader = document.querySelector('h2.'+tableName)
     awardsHeader.textContent = year + ' TCDI AWARDS'
 
     // fill out the accordion header where applicable
     if(tableName != 'currentDataSet'){
-        var accordionButton = document.querySelector('.'+tableName)
+        const accordionButton = document.querySelector('.'+tableName)
         accordionButton.textContent = year + ' Projects'
     }
 
-    dataset.features.forEach(function(project){
-        var municipalityClassName;
-        let municipalityFix;
-        var beenUsed = false
-        var fragment = document.createDocumentFragment()
-        var municipalityColumn = document.createElement('td')
-        var titleColumn = document.createElement('td')
-        var amountColumn = document.createElement('td')
+    dataset.features.forEach(project => {
+        const newRow = table.insertRow()
+        const municipalityColumn = newRow.insertCell()
+        const titleColumn = newRow.insertCell()
+        const amountColumn = newRow.insertCell()
 
-        var municipality = project.properties.LEAD_MUN
-        console.log('municipality ', municipality)
-        // edge case where () are in the name, replace them with a space
-        if(municipality.includes('(')) municipalityFix = municipality.replace(/[()]/g, '')
-        municipalityClassName = municipalityFix ? municipalityFix.split(' ').join('-') : municipality.split(' ').join('-')
+        const municipality = project.properties.LEAD_MUN
+        const title = project.properties.TITLE
+        const link = project.properties.WEBLINK
+        const amount = project.properties.AMT_WEB
 
-        // classNames in order to lookup repeats
-        municipalityColumn.classList.add(municipalityClassName)
-
-        var title = project.properties.TITLE
-        var link = project.properties.WEBLINK
-        var amount = project.properties.AMT_WEB
-
-        if(usedMunicipalities.indexOf(municipality) > -1) beenUsed = true
-
-        // add the muncipality to the used array
-        usedMunicipalities.push(municipality)
-
-        // build out each column
-        municipalityColumn.textContent = beenUsed ? '' : municipality
-        titleColumn.innerHTML = link === 'na' ? title : '<a href="' + link + '" rel="external">' + title + '</a>'
+        municipalityColumn.textContent = municipality
+        titleColumn.innerHTML = link === 'na' ? title : `<a href="${link}" rel="external">${title}</a>`
         amountColumn.textContent = amount
-
-        fragment.appendChild(municipalityColumn)
-        fragment.appendChild(titleColumn)
-        fragment.appendChild(amountColumn)
-
-        // insert row after nearest 
-        if(beenUsed){
-            let sibling = document.querySelectorAll('.'+municipalityClassName)
-            sibling = sibling[sibling.length - 1]
-            let rowIndex = sibling.parentElement.rowIndex
-            let newRow = table.insertRow(rowIndex)
-            newRow.appendChild(fragment)
-        }else{
-            var row = document.createElement('tr')
-            row.appendChild(fragment)
-            table.appendChild(row)
-        }
+        amountColumn.style.textAlign = 'right'
     })
 }
+
 populateProjectDetails(currentDataSet, 'currentDataSet')
 populateProjectDetails(previousDataSet, 'previousDataSet')
 populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
 populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 
-// Interactive webmap
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
-var stylesheet = {
+const stylesheet = {
   "version": 8,
   "sources": {
     "counties": {
       "type": "vector",
+      // TODO: migrate to SSL domain from Mike
       "url": "http://a.michaelruane.com/dvrpc_boundaries.json"
     }
   },
@@ -299,26 +265,34 @@ var stylesheet = {
 } 
 
 // lets build the map
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map', // container id
     style: stylesheet,
     center: [-75.2273, 40.071],
-    zoom: 8.82, // starting zoom
-    hash: 'true'
+    zoom: 8.82 // starting zoom
 });
+
+const popup = new mapboxgl.Popup({
+    closebutton: true,
+    closeOnClick: false
+})
 
 //make sure it all fits
 map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 
-// merge the 4 data sets into one large geoJSON
-const mergeGeoJSON = {
-    "type": "FeatureCollection",
-    "name": "merge-set",
-    // ES6 spread operator
-    "features": [... currentDataSet.features, ... previousDataSet.features, ... secondPreviousDataSet.features, ... thirdPreviousDataSet.features]
-}
+let min = 1000000;
+let max = 0;
+currentDataSet.features.forEach(project => {
+    project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1))
+    min = project.properties.AMOUNT < min ? project.properties.AMOUNT : min
+    max = project.properties.AMOUNT > max ? project.properties.AMOUNT : max
+})
+console.log('min is ', min)
+console.log('max is ', max)
+const minRadius = 5
+const maxRadius = 25
 
-const layer = (id, visibility) => {
+const layer = id => {
     return {
         'id': id,
         'type': 'circle',
@@ -327,51 +301,37 @@ const layer = (id, visibility) => {
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[25000, 10], [175000, 35]]
+                stops: [[min, minRadius], [max, maxRadius]]
             },
-            // TODO: better colors for the circles
-            'circle-color': '#9eea00'
+            'circle-color': '#9eea00',
+            'circle-opacity': 0.7
         },
-        'layout': {'visibility': visibility},
     }
 }
 
-// function to add circles to the map
+const popupDetails = e => {
+    popup.setLngLat(e.features[0].geometry.coordinates)
+         .setHTML(`<strong>${e.features[0].properties.TITLE}</strong><br />${e.features[0].properties.PROJ_DESC}..<br /><em>Award Amount: </em>${e.features[0].properties.AMT_WEB}`)
+         .addTo(map)
+}
+
+const toPointer = e => {
+    let features = map.queryRenderedFeatures(e.point, { layers: ['current-year-awards']})
+    map.getCanvas().style.cursor = features.length ? 'pointer' : '';
+}
+
+const legend = document.querySelector('#legend')
+quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 25, amount:175}]
+quantiles.forEach(quantile => {
+    legend.insertAdjacentHTML('beforeend', `<div><span style="width: ${quantile.size}px; height: ${quantile.size}px; margin: 0 ${(20-quantile.size/2)}px"></span><p>$${quantile.amount}k</p></div>`)
+})
+
 map.on('load', function(){
     map.addSource('current-year-awards', {
         type: 'geojson',
         data: currentDataSet
     })
-    map.addLayer(layer('current-year-awards', 'visible'))
-
-    map.addSource('all-years-awards', {
-        type: 'geojson',
-        data: mergeGeoJSON
-    })
-    map.addLayer(layer('all-years-awards', 'none'))
+    map.addLayer(layer('current-year-awards'))
+    map.on('mousemove', 'current-year-awards', e => toPointer(e))
+    map.on('click', 'current-year-awards', e => popupDetails(e))
 })
-
-// connect show/hide layers functionality to the buttons 
-const thisYearButton = document.querySelector('#current-year-awards')
-const allYearsButton = document.querySelector('#all-years-awards')
-
-toggleMapLayer = (e, buttonClicked) => {
-    e.preventDefault()
-    e.stopPropagation()
-    const clickedLayer = buttonClicked.id
-    let sibling = buttonClicked.nextElementSibling ? buttonClicked.nextElementSibling : buttonClicked.previousElementSibling
-
-    // now have a handle on button and sibling, so just hit em with the old switcharoo
-    map.setLayoutProperty(buttonClicked.id, 'visibility', 'visible')
-    map.setLayoutProperty(sibling.id, 'visibility', 'none')
-
-    // update the button classes
-    buttonClicked.classList.contains('btn-inactive') ? buttonClicked.classList.remove('btn-inactive') : null
-    buttonClicked.classList.add('btn-active')
-    sibling.classList.contains('btn-active') ? sibling.classList.remove('btn-active') : null
-    sibling.classList.add('btn-inactive')
-}
-
-// onclick needs to also hide the other layer 
-thisYearButton.onclick = e => toggleMapLayer(e, thisYearButton)
-allYearsButton.onclick = e => toggleMapLayer(e, allYearsButton)

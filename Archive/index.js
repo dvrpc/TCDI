@@ -17,14 +17,6 @@ const archiveData = {
         { "type": "Feature", "properties": { "FID": 12, "YR": 2002, "ID": 60, "PROJ_DESC": "This study evaluated the physical possibilities and limitations of developing new retail activities and commuter parking at a revitalized Yeadon\/Fernwood station on SEPTA’s R3 Regional Rail line, including the Church Lane corridor from Baltimore Pike", "PROJ_DESC2": "to the station area.", "AMT_WEB": "$50,000", "TITLE": "Fernwood Train Station", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NYVVHUjJyZDI3dnM\/view?usp=drivesdk", "LAT": -75.28289099, "LONG": 39.94620595, "LEAD_MUN": "Yeadon" }, "geometry": { "type": "Point", "coordinates": [ -75.28289099, 39.94620595 ] } },
         { "type": "Feature", "properties": { "FID": 13, "YR": 2002, "ID": 64, "PROJ_DESC": "Girard Avenue was once a vibrant commercial corridor in Lower North Philadelphia.  However, today it operates as a series of disconnected uses, some of which are ill maintained, and fails to unite surrounding neighborhoods by providing a service and", "PROJ_DESC2": "shopping area.  This project funded the completion of Making a Neighborhood Main Street: A Plan for Girard Avenue, to faciliate Girard Avenue's transformation into a healthy, transit-rich commercial corridor.  The City of Philadelphia has committed", "PROJ_DESC3": "$1.1 million dollars plus a match of $1.1 million dollars in state funds for streetscape enhacements along Girard Avenue which have since been completed.", "AMT_WEB": "$100,000", "TITLE": "Girard Avenue", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NT2RhRDZkYmF6NUU\/view?usp=drivesdk", "LAT": -75.15818892, "LONG": 39.97147738, "LEAD_MUN": "Philadelphia" }, "geometry": { "type": "Point", "coordinates": [ -75.15818892, 39.97147738 ] } },
         { "type": "Feature", "properties": { "FID": 14, "YR": 2002, "ID": 66, "PROJ_DESC": "This project prioritized brownfield sites in the Bridesburg, Kensington and Richmond area for redevelopment, based on factors such as access to transportation and feasibility of site reuse.", "AMT_WEB": "$75,000", "TITLE": "Vacant & Underutilized Land Study", "WEBLINK": "na", "LAT": -75.09065533, "LONG": 39.99036975, "LEAD_MUN": "Philadelphia" }, "geometry": { "type": "Point", "coordinates": [ -75.09065533, 39.99036975 ] } },
-        { "type": "Feature", "properties": { "FID": 15, "YR": 2003, "ID": 82, "PROJ_DESC": "This plan provided pedestrian improvements and multi-modal access to the downtown.", "AMT_WEB": "$48,000", "TITLE": "Pedestrian Circulation Element", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NdmlRVUl5NzBxcmc\/view?usp=drivesdk", "LAT": -74.9720192, "LONG": 39.65991417, "LEAD_MUN": "Monroe Township" }, "geometry": { "type": "Point", "coordinates": [ -74.9720192, 39.65991417 ] } },
-        { "type": "Feature", "properties": { "FID": 16, "YR": 2003, "ID": 76, "PROJ_DESC": "This plan will address issues identified in the Route 130 Study.  The plan will focus on streetscaping enhancements, economic development strategies, and pedestrian facilities and access.", "AMT_WEB": "$40,000", "TITLE": "Bike\/Ped Plan", "WEBLINK": "na", "LAT": -74.70984504, "LONG": 40.14205447, "LEAD_MUN": "Burlington Township" }, "geometry": { "type": "Point", "coordinates": [ -74.70984504, 40.14205447 ] } },
-        { "type": "Feature", "properties": { "FID": 17, "YR": 2003, "ID": 83, "PROJ_DESC": "This plan provided for a redevelopment plan of the downtown.", "AMT_WEB": "$43,200", "TITLE": "Redevelopment Plan for White Horse Pike", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NVHRyam1xc01IaHM\/view?usp=drivesdk", "LAT": -74.52528228, "LONG": 40.26858696, "LEAD_MUN": "Hightstown" }, "geometry": { "type": "Point", "coordinates": [ -74.52528228, 40.26858696 ] } },
-        { "type": "Feature", "properties": { "FID": 18, "YR": 2003, "ID": 80, "PROJ_DESC": "This plan focused on revitalization strategies in proximity to the PATCO station.", "AMT_WEB": "$14,800", "TITLE": "CBD Plan", "WEBLINK": "na", "LAT": -75.09554331, "LONG": 39.91667351, "LEAD_MUN": "Woodlynne" }, "geometry": { "type": "Point", "coordinates": [ -75.09554331, 39.91667351 ] } },
-        { "type": "Feature", "properties": { "FID": 19, "YR": 2003, "ID": 79, "PROJ_DESC": "This market feasibility study provided an analysis of the commercial sustainability of redevelopment along the White Horse Pike.", "AMT_WEB": "$56,000", "TITLE": "Market Feasbility Study", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NWmZWMkh5ZXVrVEk\/view?usp=drivesdk", "LAT": -75.03681501, "LONG": 39.85797903, "LEAD_MUN": "Barrington" }, "geometry": { "type": "Point", "coordinates": [ -75.03681501, 39.85797903 ] } },
-        { "type": "Feature", "properties": { "FID": 20, "YR": 2003, "ID": 77, "PROJ_DESC": "TCDI funds enabled a development plan for the Market and Cooper Street corridor from the Waterfront and the Aerial Tram.", "AMT_WEB": "$78,000", "TITLE": "Downtown Transit Plan", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NczVzLTg2Mm1OQUE\/view?usp=drivesdk", "LAT": -75.10756319, "LONG": 39.93618305, "LEAD_MUN": "Camden City" }, "geometry": { "type": "Point", "coordinates": [ -75.10756319, 39.93618305 ] } },
-        { "type": "Feature", "properties": { "FID": 21, "YR": 2003, "ID": 81, "PROJ_DESC": "This plan addressed ways to increase public bus service throughout the Glassboro Borough.", "AMT_WEB": "$78,000", "TITLE": "Getting Around Glassboro", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NT3BwR1VKbXpLN2s\/view?usp=drivesdk", "LAT": -75.11133348, "LONG": 39.70135866, "LEAD_MUN": "Glassboro" }, "geometry": { "type": "Point", "coordinates": [ -75.11133348, 39.70135866 ] } },
-        { "type": "Feature", "properties": { "FID": 22, "YR": 2003, "ID": 84, "PROJ_DESC": "The City of Trenton intends to develop a plan for a jitney service connecting light rail with downtown employment and recreation destinations.", "AMT_WEB": "$70,000", "TITLE": "Capital District Jitney", "WEBLINK": "na", "LAT": -74.76413829000001, "LONG": 40.22368004, "LEAD_MUN": "Trenton" }, "geometry": { "type": "Point", "coordinates": [ -74.76413829, 40.22368004 ] } },
         { "type": "Feature", "properties": { "FID": 23, "YR": 2002, "ID": 73, "PROJ_DESC": "Glassboro, home to Rowan University, has embarked on an initiative to reinvigorate its downtown, which had been in decline as a result of peripheral residential and commercial growth.  This project studied the feasibility of connecting the downtown", "PROJ_DESC2": "with Rowan University to create a town-and-gown environment.  This connection has taken the form of Rowan Boulevard, a new mixed-use commercial thoroughfare.", "AMT_WEB": "$50,000", "TITLE": "Rowan Boulevard", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NcWljc05WY2taY2s\/view?usp=drivesdk", "LAT": -75.11133348, "LONG": 39.70135866, "LEAD_MUN": "Glassboro" }, "geometry": { "type": "Point", "coordinates": [ -75.11133348, 39.70135866 ] } },
         { "type": "Feature", "properties": { "FID": 24, "YR": 2002, "ID": 75, "PROJ_DESC": "Redevelopment plan of land aroung RiverLine stations.", "AMT_WEB": "$61,100", "TITLE": "Cass Street", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NVWZTNWd4c3N0ZW8\/view?usp=drivesdk", "LAT": -74.76413829000001, "LONG": 40.22368004, "LEAD_MUN": "Trenton" }, "geometry": { "type": "Point", "coordinates": [ -74.76413829, 40.22368004 ] } },
         { "type": "Feature", "properties": { "FID": 25, "YR": 2002, "ID": 68, "PROJ_DESC": "The recent arrival of light rail in Burlington provides an excellent opportunity for downtown revitalization and transit oriented development.  The creation of a Gateway from Route 130 to Broad Street along High Street (the “main street” of downtown)", "PROJ_DESC2": "will provide an important connection between the highway, the downtown, and the waterfront.  This Gateway will continue streetscape work begun in the 1980s along High Street, and the project will prepare preliminary plans and cost estimates for", "PROJ_DESC3": "these enhancements.", "AMT_WEB": "$40,000", "TITLE": "Gateway Study from Route 130 to Broad Street (TOD)", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NcnVGeXItbElKTm8\/view?usp=drivesdk", "LAT": -74.8523867, "LONG": 40.07848669, "LEAD_MUN": "Burlington City" }, "geometry": { "type": "Point", "coordinates": [ -74.8523867, 40.07848669 ] } },
@@ -36,6 +28,14 @@ const archiveData = {
         { "type": "Feature", "properties": { "FID": 31, "YR": 2002, "ID": 69, "PROJ_DESC": "Wrightstown is a small community located adjacent to Fort Dix military base.  The area has experienced significant decline, and periodic road closings have made its commercial core virtually inaccessible.  The TCDI grant allowed the Borough to create", "PROJ_DESC2": "a detailed economic development and marketing plan for the downtown area, as well as site reuse plans for the military base.", "AMT_WEB": "$60,000", "TITLE": "TOD and Gateway to Route 130 Study", "WEBLINK": "na", "LAT": -74.63192756, "LONG": 40.02548264, "LEAD_MUN": "Wrightstown Borough" }, "geometry": { "type": "Point", "coordinates": [ -74.63192756, 40.02548264 ] } },
         { "type": "Feature", "properties": { "FID": 32, "YR": 2002, "ID": 61, "PROJ_DESC": "Bridgeport is a community in Montgomery County that has experienced significant disinvestment and contains many vacant and underutilized parcels with commercial potential.  The Community Revitalization Plan addressed strategies for addressing such", "PROJ_DESC2": "challenges.  Specific calls to action include an economic development strategy, infrastructure and public safety improvements, and a series of housing and transportation tactics. The Revitalization committee will play a vital role in executing the", "PROJ_DESC3": "strategies outlined in the Plan.  Streetscaping, parking, and aesthetic improvements have already been implemented.", "AMT_WEB": "$43,000", "TITLE": "Community Revitalization Plan", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NNnJ6TWlPNFhFMDQ\/view?usp=drivesdk", "LAT": -75.34368976, "LONG": 40.104031, "LEAD_MUN": "Bridgeport" }, "geometry": { "type": "Point", "coordinates": [ -75.34368976, 40.104031 ] } },
         { "type": "Feature", "properties": { "FID": 33, "YR": 2002, "ID": 62, "PROJ_DESC": "The historic Glenside Train Station is serviced by three regional rail lines and is expected to have increased transit ridership provided adequate parking is provided.  The area surrounding the station also has potential as a shopping amenity for", "PROJ_DESC2": "commuters.  The Glenside Train Station Implementation Project presented a development scheme for key parcels adjacent to the station.  It responded to four key objectives: providing short and long term parking, revitalizing the commercial core,", "PROJ_DESC3": "facilitating reuse of the nearby historic Roberts Block building for retail and commercial uses, and modernizing the transit station.  Plans have moved forward for the construction of a parking garage.", "AMT_WEB": "$60,000", "TITLE": "Glenside Station Area Development Plan", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NQTVXNjctWG9GOFE\/view?usp=drivesdk", "LAT": -75.13817503, "LONG": 40.07806315, "LEAD_MUN": "Cheltenham" }, "geometry": { "type": "Point", "coordinates": [ -75.13817503, 40.07806315 ] } },
+        { "type": "Feature", "properties": { "FID": 15, "YR": 2003, "ID": 82, "PROJ_DESC": "This plan provided pedestrian improvements and multi-modal access to the downtown.", "AMT_WEB": "$48,000", "TITLE": "Pedestrian Circulation Element", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NdmlRVUl5NzBxcmc\/view?usp=drivesdk", "LAT": -74.9720192, "LONG": 39.65991417, "LEAD_MUN": "Monroe Township" }, "geometry": { "type": "Point", "coordinates": [ -74.9720192, 39.65991417 ] } },
+        { "type": "Feature", "properties": { "FID": 16, "YR": 2003, "ID": 76, "PROJ_DESC": "This plan will address issues identified in the Route 130 Study.  The plan will focus on streetscaping enhancements, economic development strategies, and pedestrian facilities and access.", "AMT_WEB": "$40,000", "TITLE": "Bike\/Ped Plan", "WEBLINK": "na", "LAT": -74.70984504, "LONG": 40.14205447, "LEAD_MUN": "Burlington Township" }, "geometry": { "type": "Point", "coordinates": [ -74.70984504, 40.14205447 ] } },
+        { "type": "Feature", "properties": { "FID": 17, "YR": 2003, "ID": 83, "PROJ_DESC": "This plan provided for a redevelopment plan of the downtown.", "AMT_WEB": "$43,200", "TITLE": "Redevelopment Plan for White Horse Pike", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NVHRyam1xc01IaHM\/view?usp=drivesdk", "LAT": -74.52528228, "LONG": 40.26858696, "LEAD_MUN": "Hightstown" }, "geometry": { "type": "Point", "coordinates": [ -74.52528228, 40.26858696 ] } },
+        { "type": "Feature", "properties": { "FID": 18, "YR": 2003, "ID": 80, "PROJ_DESC": "This plan focused on revitalization strategies in proximity to the PATCO station.", "AMT_WEB": "$14,800", "TITLE": "CBD Plan", "WEBLINK": "na", "LAT": -75.09554331, "LONG": 39.91667351, "LEAD_MUN": "Woodlynne" }, "geometry": { "type": "Point", "coordinates": [ -75.09554331, 39.91667351 ] } },
+        { "type": "Feature", "properties": { "FID": 19, "YR": 2003, "ID": 79, "PROJ_DESC": "This market feasibility study provided an analysis of the commercial sustainability of redevelopment along the White Horse Pike.", "AMT_WEB": "$56,000", "TITLE": "Market Feasbility Study", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NWmZWMkh5ZXVrVEk\/view?usp=drivesdk", "LAT": -75.03681501, "LONG": 39.85797903, "LEAD_MUN": "Barrington" }, "geometry": { "type": "Point", "coordinates": [ -75.03681501, 39.85797903 ] } },
+        { "type": "Feature", "properties": { "FID": 20, "YR": 2003, "ID": 77, "PROJ_DESC": "TCDI funds enabled a development plan for the Market and Cooper Street corridor from the Waterfront and the Aerial Tram.", "AMT_WEB": "$78,000", "TITLE": "Downtown Transit Plan", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NczVzLTg2Mm1OQUE\/view?usp=drivesdk", "LAT": -75.10756319, "LONG": 39.93618305, "LEAD_MUN": "Camden City" }, "geometry": { "type": "Point", "coordinates": [ -75.10756319, 39.93618305 ] } },
+        { "type": "Feature", "properties": { "FID": 21, "YR": 2003, "ID": 81, "PROJ_DESC": "This plan addressed ways to increase public bus service throughout the Glassboro Borough.", "AMT_WEB": "$78,000", "TITLE": "Getting Around Glassboro", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NT3BwR1VKbXpLN2s\/view?usp=drivesdk", "LAT": -75.11133348, "LONG": 39.70135866, "LEAD_MUN": "Glassboro" }, "geometry": { "type": "Point", "coordinates": [ -75.11133348, 39.70135866 ] } },
+        { "type": "Feature", "properties": { "FID": 22, "YR": 2003, "ID": 84, "PROJ_DESC": "The City of Trenton intends to develop a plan for a jitney service connecting light rail with downtown employment and recreation destinations.", "AMT_WEB": "$70,000", "TITLE": "Capital District Jitney", "WEBLINK": "na", "LAT": -74.76413829000001, "LONG": 40.22368004, "LEAD_MUN": "Trenton" }, "geometry": { "type": "Point", "coordinates": [ -74.76413829, 40.22368004 ] } },
         { "type": "Feature", "properties": { "FID": 34, "YR": 2003, "ID": 92, "PROJ_DESC": "This project developed an overall streetscape master plan for the area between the central business district and riverfront while recommending transportation and pedestrian improvements.", "AMT_WEB": "$48,600", "TITLE": "Downtown Riverfront Linkages", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-Nbmg2N0hiUE9NZ28\/view?usp=drivesdk", "LAT": -75.30339135, "LONG": 40.07718386, "LEAD_MUN": "Conshohocken" }, "geometry": { "type": "Point", "coordinates": [ -75.30339135, 40.07718386 ] } },
         { "type": "Feature", "properties": { "FID": 35, "YR": 2003, "ID": 95, "PROJ_DESC": "As a follow-up to the Norristown Economic Revitalization Strategy (NERS), the Borough conducted a feasibility study to determine if a business improvement district could be sustained.", "AMT_WEB": "$100,000", "TITLE": "BID", "WEBLINK": "https:\/\/drive.google.com\/a\/dvrpc.org\/file\/d\/0B6gfXHKohx-NejdNRy04RkYyWVU\/view?usp=drivesdk", "LAT": -75.33986062, "LONG": 40.122384, "LEAD_MUN": "Norristown" }, "geometry": { "type": "Point", "coordinates": [ -75.33986062, 40.122384 ] } },
         { "type": "Feature", "properties": { "FID": 36, "YR": 2003, "ID": 93, "PROJ_DESC": "This project will address the entire Borough in terms of revitalization and will focus on traffic flow through the central business district, provide linkages to the regional transit network, and modernize the zoning code to ensure", "PROJ_DESC2": "appropriate development.", "AMT_WEB": "$100,000", "TITLE": "Downtown Jenkintown", "WEBLINK": "na", "LAT": -75.12969536, "LONG": 40.09630499, "LEAD_MUN": "Jenkintown" }, "geometry": { "type": "Point", "coordinates": [ -75.12969536, 40.09630499 ] } },
@@ -147,56 +147,26 @@ const archiveData = {
 
 function populateProjectDetails(dataset, tableName){
     var table = document.querySelector('#'+tableName)
-    var usedMunicipalities = []
-    var year = dataset.features[0].properties.YR
 
-    dataset.features.forEach(function(project){
-        let municipalityClassName;
-        let municipalityFix;
-        var beenUsed = false
-        var fragment = document.createDocumentFragment()
-        var municipalityColumn = document.createElement('td')
-        var titleColumn = document.createElement('td')
-        var amountColumn = document.createElement('td')
+    dataset.features.forEach(project => {
+        const newRow = table.insertRow()
+        const municipalityColumn = newRow.insertCell()
+        const titleColumn = newRow.insertCell()
+        const amountColumn = newRow.insertCell()
+        const yearColumn = newRow.insertCell()
 
-        var municipality = project.properties.LEAD_MUN
-        // edge case where () are in the name, replace them with a space
-        if(municipality.includes('(')) municipalityFix = municipality.replace(/[()]/g, '')
-        municipalityClassName = municipalityFix ? municipalityFix.split(' ').join('-') : municipality.split(' ').join('-')
+        const municipality = project.properties.LEAD_MUN
+        const title = project.properties.TITLE
+        const link = project.properties.WEBLINK
+        const amount = project.properties.AMT_WEB
+        const year = project.properties.YR
 
-        // classNames in order to lookup repeats
-        municipalityColumn.classList.add(municipalityClassName)
-
-        var title = project.properties.TITLE
-        var link = project.properties.WEBLINK
-        var amount = project.properties.AMT_WEB
-
-        if(usedMunicipalities.indexOf(municipality) > -1) beenUsed = true
-
-        // add the muncipality to the used array
-        usedMunicipalities.push(municipality)
-
-        // build out each column
-        municipalityColumn.textContent = beenUsed ? '' : municipality
-        titleColumn.innerHTML = link === 'na' ? title : '<a href="' + link + '" rel="external">' + title + '</a>'
+        municipalityColumn.textContent = municipality
+        titleColumn.innerHTML = link === 'na' ? title : `<a href="${link}" rel="external">${title}</a>`
         amountColumn.textContent = amount
-
-        fragment.appendChild(municipalityColumn)
-        fragment.appendChild(titleColumn)
-        fragment.appendChild(amountColumn)
-
-        // insert row after nearest 
-        if(beenUsed){
-            let sibling = document.querySelectorAll('.'+municipalityClassName)
-            sibling = sibling[sibling.length - 1]
-            let rowIndex = sibling.parentElement.rowIndex
-            let newRow = table.insertRow(rowIndex)
-            newRow.appendChild(fragment)
-        }else{
-            var row = document.createElement('tr')
-            row.appendChild(fragment)
-            table.appendChild(row)
-        }
+        amountColumn.style.textAlign = 'right'
+        yearColumn.textContent = year
+        yearColumn.style.textAlign = 'right'
     })
 }
 populateProjectDetails(archiveData, 'archiveData')
