@@ -264,33 +264,22 @@ const stylesheet = {
   ]
 } 
 
-// lets build the map
 const map = new mapboxgl.Map({
-    container: 'map', // container id
+    container: 'map',
     style: stylesheet,
     center: [-75.2273, 40.071],
-    zoom: 8.82 // starting zoom
+    zoom: 8.82
 });
 
 const popup = new mapboxgl.Popup({
     closebutton: true,
-    closeOnClick: false
+    closeOnClick: true
 })
 
-//make sure it all fits
 map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 
-let min = 1000000;
-let max = 0;
-currentDataSet.features.forEach(project => {
-    project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1))
-    min = project.properties.AMOUNT < min ? project.properties.AMOUNT : min
-    max = project.properties.AMOUNT > max ? project.properties.AMOUNT : max
-})
-console.log('min is ', min)
-console.log('max is ', max)
-const minRadius = 5
-const maxRadius = 25
+// convert WEB_AMT to numeric value so mapboxGL can create graduated circles
+currentDataSet.features.forEach(project => project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1)))
 
 const layer = id => {
     return {
@@ -301,7 +290,7 @@ const layer = id => {
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[min, minRadius], [max, maxRadius]]
+                stops: [[25, 5], [175, 25]]
             },
             'circle-color': '#9eea00',
             'circle-opacity': 0.7
@@ -315,13 +304,8 @@ const popupDetails = e => {
          .addTo(map)
 }
 
-const toPointer = e => {
-    let features = map.queryRenderedFeatures(e.point, { layers: ['current-year-awards']})
-    map.getCanvas().style.cursor = features.length ? 'pointer' : '';
-}
-
 const legend = document.querySelector('#legend')
-quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 25, amount:175}]
+quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 27, amount:175}]
 quantiles.forEach(quantile => {
     legend.insertAdjacentHTML('beforeend', `<div><span style="width: ${quantile.size}px; height: ${quantile.size}px; margin: 0 ${(20-quantile.size/2)}px"></span><p>$${quantile.amount}k</p></div>`)
 })
@@ -332,6 +316,8 @@ map.on('load', function(){
         data: currentDataSet
     })
     map.addLayer(layer('current-year-awards'))
-    map.on('mousemove', 'current-year-awards', e => toPointer(e))
+
     map.on('click', 'current-year-awards', e => popupDetails(e))
+    map.on('mouseenter', 'current-year-awards', () => map.getCanvas().style.cursor = 'pointer')
+    map.on('mouseleave', 'current-year-awards', () => map.getCanvas().style.cursor = '')
 })
