@@ -173,7 +173,7 @@ for(var i = 0; i < accordion.length; i++){
     }
 }
 
-populateProjectDetails = (dataset, tableName) => {
+const populateProjectDetails = (dataset, tableName) => {
     const table = document.querySelector('#'+tableName)
     const year = dataset.features[0].properties.YR
 
@@ -305,7 +305,7 @@ const popupDetails = e => {
 }
 
 const legend = document.querySelector('#legend')
-quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 27, amount:175}]
+const quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 27, amount:175}]
 quantiles.forEach(quantile => {
     legend.insertAdjacentHTML('beforeend', `<div><span style="width: ${quantile.size}px; height: ${quantile.size}px; margin: 0 ${(20-quantile.size/2)}px"></span><p>$${quantile.amount}k</p></div>`)
 })

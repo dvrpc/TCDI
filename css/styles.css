@@ -147,3 +147,21 @@ thead th:last-child{
     opacity: 0.8;
     background-color: #9eea00;
 }
+
+
+/* --------- */
+/* IE....... */
+/* --------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+    /* .flex-horizontal (horizontal flex spacing)
+       .amounts(flex-direction: column)
+   */
+   .awards{
+        max-width: 90vw;
+   }
+   .amounts{
+        padding: 0 5% 0 5%;
+        text-align: center;
+   }
+
+}
