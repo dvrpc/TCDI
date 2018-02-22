@@ -217,7 +217,7 @@ const stylesheet = {
     "counties": {
       "type": "vector",
       // TODO: migrate to SSL domain from Mike
-      "url": "http://a.michaelruane.com/dvrpc_boundaries.json"
+      "url": "https://dvrpc-freight.michaelruane.com/dvrpc_boundaries.json"
     }
   },
   "layers": [
@@ -271,11 +271,6 @@ const map = new mapboxgl.Map({
     zoom: 8.82
 });
 
-const popup = new mapboxgl.Popup({
-    closebutton: true,
-    closeOnClick: true
-})
-
 map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 
 // convert WEB_AMT to numeric value so mapboxGL can create graduated circles
@@ -299,9 +294,12 @@ const layer = id => {
 }
 
 const popupDetails = e => {
-    popup.setLngLat(e.features[0].geometry.coordinates)
-         .setHTML(`<strong>${e.features[0].properties.TITLE}</strong><br />${e.features[0].properties.PROJ_DESC}..<br /><em>Award Amount: </em>${e.features[0].properties.AMT_WEB}`)
-         .addTo(map)
+    new mapboxgl.Popup({
+            closebutton: true,
+            closeOnClick: true
+        }).setLngLat(e.features[0].geometry.coordinates)
+        .setHTML(`<strong>${e.features[0].properties.TITLE}</strong><br />${e.features[0].properties.PROJ_DESC}..<br /><em>Award Amount: </em>${e.features[0].properties.AMT_WEB}`)
+        .addTo(map)
 }
 
 const legend = document.querySelector('#legend')
