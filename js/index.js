@@ -231,7 +231,7 @@ const stylesheet = {
       "source-layer": "county",
       "layout": {},
       "paint": {
-          "fill-color": "#778899",
+          "fill-color": "#B6C1C6",
           "fill-opacity": 1
       },
       "filter": [
@@ -294,7 +294,7 @@ const award_layer = id => {
             },
             'circle-color': '#6fb8b9',
             'circle-opacity': 0.7,
-            'circle-stroke-width': 0.5,
+            'circle-stroke-width': 1.25,
             'circle-stroke-color': '#fff',
             'circle-stroke-opacity': 0.7
         },
@@ -314,7 +314,7 @@ const award_hover = (id, source) => {
             },
             'circle-color': '#6fb8b9',
             'circle-opacity': 1,
-            'circle-stroke-width': 1,
+            'circle-stroke-width': 1.5,
             'circle-stroke-color': '#fff',
             'circle-stroke-opacity': 1
         },
