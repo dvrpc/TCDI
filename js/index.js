@@ -211,6 +211,10 @@ populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
 populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
+
+const maxRadius = 25
+const minRadius = 5
+
 const stylesheet = {
   "version": 8,
   "sources": {
@@ -286,12 +290,12 @@ const award_layer = id => {
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[25, 5], [175, 25]]
+                stops: [[25, minRadius], [175, maxRadius]]
             },
-            'circle-color': '#9eea00',
+            'circle-color': '#6fb8b9',
             'circle-opacity': 0.7,
             'circle-stroke-width': 0.5,
-            'circle-stroke-color': '#567F00',
+            'circle-stroke-color': '#fff',
             'circle-stroke-opacity': 0.7
         },
     }
@@ -306,12 +310,12 @@ const award_hover = (id, source) => {
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[25, 5], [175, 25]]
+                stops: [[25, minRadius], [175, maxRadius]]
             },
-            'circle-color': '#9eea00',
+            'circle-color': '#6fb8b9',
             'circle-opacity': 1,
             'circle-stroke-width': 1,
-            'circle-stroke-color': '#567F00',
+            'circle-stroke-color': '#fff',
             'circle-stroke-opacity': 1
         },
         'filter': [
@@ -331,10 +335,25 @@ const popupDetails = e => {
         .addTo(map)
 }
 
-const legend = document.querySelector('#legend')
-const quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 27, amount:175}]
-quantiles.forEach(quantile => {
-    legend.insertAdjacentHTML('beforeend', `<div><span style="width: ${quantile.size}px; height: ${quantile.size}px; margin: 0 ${(20-quantile.size/2)}px"></span><p>$${quantile.amount}k</p></div>`)
+const legend = document.querySelector('#legend-labels')
+const legendSizes = [{size: 25, class: 'large'}, {size: 15, class: 'medium'}, {size: 5, class: 'small'}]
+
+// @to-do need to automate calculation of max and min awards which could be used in this function current data is 25 and 175
+const rateOfChange = (maxRadius - minRadius) / (175 - 25);
+const radiusAtZero = maxRadius - (rateOfChange * 175);
+
+const roundfive = num => (num % 5) >= 2.5 ? parseInt(num / 5) * 5 + 5 : parseInt(num / 5) * 5
+
+const awardSize = circleRadius => {
+    let awardVal = (circleRadius - radiusAtZero) / rateOfChange
+    let label = '$' + roundfive(awardVal) + 'k'
+    
+    return label
+}
+
+legendSizes.forEach(circle => {
+    let labelText = awardSize(circle.size);
+    legend.insertAdjacentHTML('beforeend', `<p class="leg-label ${circle.class}">${labelText}</p>`)
 })
 
 map.on('load', function(){
