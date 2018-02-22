@@ -105,6 +105,9 @@ thead th:last-child{
 /* --------- */
 /* Mapbox GL */
 /* --------- */
+.mapboxgl-popup {
+    z-index: 1;
+}
 #map{
     position: relative;
     top: 0;
