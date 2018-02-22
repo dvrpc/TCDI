@@ -112,6 +112,9 @@ thead th:last-child{
     width: 100%;
     height: 500px;
 }
+#map canvas:focus{
+    outline: none;
+}
 .mapboxgl-popup{
     max-width: 400px;
     font-size: 14px;
@@ -142,6 +145,7 @@ thead th:last-child{
 }
 #legend div span {
     border-radius: 50%;
+    border: 0.5px solid #567F00;
     display: inline-block;
     margin-left: 5px;
     opacity: 0.8;

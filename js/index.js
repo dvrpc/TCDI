@@ -267,6 +267,7 @@ const stylesheet = {
 const map = new mapboxgl.Map({
     container: 'map',
     style: stylesheet,
+    attributionControl: false,
     center: [-75.2273, 40.071],
     zoom: 8.82
 });
@@ -276,7 +277,7 @@ map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.61
 // convert WEB_AMT to numeric value so mapboxGL can create graduated circles
 currentDataSet.features.forEach(project => project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1)))
 
-const layer = id => {
+const award_layer = id => {
     return {
         'id': id,
         'type': 'circle',
@@ -288,8 +289,36 @@ const layer = id => {
                 stops: [[25, 5], [175, 25]]
             },
             'circle-color': '#9eea00',
-            'circle-opacity': 0.7
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 0.5,
+            'circle-stroke-color': '#567F00',
+            'circle-stroke-opacity': 0.7
         },
+    }
+}
+
+const award_hover = (id, source) => {
+    return {
+        'id': id,
+        'type': 'circle',
+        'source': source,
+        'paint': {
+            'circle-radius': {
+                property: 'AMOUNT',
+                type: 'exponential',
+                stops: [[25, 5], [175, 25]]
+            },
+            'circle-color': '#9eea00',
+            'circle-opacity': 1,
+            'circle-stroke-width': 1,
+            'circle-stroke-color': '#567F00',
+            'circle-stroke-opacity': 1
+        },
+        'filter': [
+            '==',
+            'FID',
+            ''
+        ]
     }
 }
 
@@ -313,9 +342,14 @@ map.on('load', function(){
         type: 'geojson',
         data: currentDataSet
     })
-    map.addLayer(layer('current-year-awards'))
+    map.addLayer(award_layer('current-year-awards'))
+    map.addLayer(award_hover('current-year-hover', 'current-year-awards'))
 
     map.on('click', 'current-year-awards', e => popupDetails(e))
-    map.on('mouseenter', 'current-year-awards', () => map.getCanvas().style.cursor = 'pointer')
-    map.on('mouseleave', 'current-year-awards', () => map.getCanvas().style.cursor = '')
+    map.on('mousemove', 'current-year-awards', e => {
+        map.getCanvas().style.cursor = 'pointer'
+        map.setFilter('current-year-hover', ['==', 'FID', e.features[0].properties['FID']])})
+    map.on('mouseleave', 'current-year-awards', e => {
+        map.getCanvas().style.cursor = ''
+        map.setFilter('current-year-hover', ['==', 'FID', ''])})
 })
