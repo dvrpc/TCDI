@@ -162,7 +162,7 @@ function populateProjectDetails(dataset, tableName){
         const year = project.properties.YR
 
         municipalityColumn.textContent = municipality
-        titleColumn.innerHTML = link === 'na' ? title : `<a href="${link}" rel="external">${title}</a>`
+        titleColumn.innerHTML = link === 'na' ? title : "<a href="+link+" rel='external'>"+title+"</a>"
         amountColumn.textContent = amount
         amountColumn.style.textAlign = 'right'
         yearColumn.textContent = year

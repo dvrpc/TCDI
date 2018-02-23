@@ -168,12 +168,15 @@ for(var i = 0; i < accordion.length; i++){
         panel.setAttribute('aria-hidden', ariaHiddenBool)
 
         // show/hide the panel on click
-        if(panel.style.maxHeight) panel.style.maxHeight = null
-        else panel.style.maxHeight = panel.scrollHeight + 'px'
+        if(panel.style.maxHeight){
+            panel.style.maxHeight = null
+        }else{
+            panel.style.maxHeight = panel.scrollHeight + 'px'
+        }
     }
 }
 
-const populateProjectDetails = (dataset, tableName) => {
+const populateProjectDetails = function(dataset, tableName){
     const table = document.querySelector('#'+tableName)
     const year = dataset.features[0].properties.YR
 
@@ -187,7 +190,7 @@ const populateProjectDetails = (dataset, tableName) => {
         accordionButton.textContent = year + ' Projects'
     }
 
-    dataset.features.forEach(project => {
+    dataset.features.forEach(function(project){
         const newRow = table.insertRow()
         const municipalityColumn = newRow.insertCell()
         const titleColumn = newRow.insertCell()
@@ -199,7 +202,7 @@ const populateProjectDetails = (dataset, tableName) => {
         const amount = project.properties.AMT_WEB
 
         municipalityColumn.textContent = municipality
-        titleColumn.innerHTML = link === 'na' ? title : `<a href="${link}" rel="external">${title}</a>`
+        titleColumn.innerHTML = link === 'na' ? title : "<a href="+link+" rel='external'>"+title+"</a>"
         amountColumn.textContent = amount
         amountColumn.style.textAlign = 'right'
     })
@@ -279,9 +282,11 @@ const map = new mapboxgl.Map({
 map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 
 // convert WEB_AMT to numeric value so mapboxGL can create graduated circles
-currentDataSet.features.forEach(project => project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1)))
+currentDataSet.features.forEach(function(project){
+    project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1))
+})
 
-const award_layer = id => {
+const award_layer = function(id){
     return {
         'id': id,
         'type': 'circle',
@@ -301,7 +306,7 @@ const award_layer = id => {
     }
 }
 
-const award_hover = (id, source) => {
+const award_hover = function(id, source){
     return {
         'id': id,
         'type': 'circle',
@@ -326,12 +331,12 @@ const award_hover = (id, source) => {
     }
 }
 
-const popupDetails = e => {
+const popupDetails = function(e){
     new mapboxgl.Popup({
             closebutton: true,
             closeOnClick: true
         }).setLngLat(e.features[0].geometry.coordinates)
-        .setHTML(`<strong>${e.features[0].properties.TITLE}</strong><br />${e.features[0].properties.PROJ_DESC}..<br /><em>Award Amount: </em>${e.features[0].properties.AMT_WEB}`)
+        .setHTML("<strong>"+e.features[0].properties.TITLE+"</strong><br />"+e.features[0].properties.PROJ_DESC+"..<br /><em>Award Amount: </em>"+e.features[0].properties.AMT_WEB)
         .addTo(map)
 }
 
@@ -342,18 +347,19 @@ const legendSizes = [{size: 25, class: 'large'}, {size: 15, class: 'medium'}, {s
 const rateOfChange = (maxRadius - minRadius) / (175 - 25);
 const radiusAtZero = maxRadius - (rateOfChange * 175);
 
-const roundfive = num => (num % 5) >= 2.5 ? parseInt(num / 5) * 5 + 5 : parseInt(num / 5) * 5
+const roundfive = function(num){
+    return (num % 5) >= 2.5 ? parseInt(num / 5) * 5 + 5 : parseInt(num / 5) * 5
+}
 
-const awardSize = circleRadius => {
+const awardSize = function(circleRadius){
     let awardVal = (circleRadius - radiusAtZero) / rateOfChange
     let label = '$' + roundfive(awardVal) + 'k'
-    
     return label
 }
 
-legendSizes.forEach(circle => {
+legendSizes.forEach(function(circle){
     let labelText = awardSize(circle.size);
-    legend.insertAdjacentHTML('beforeend', `<p class="leg-label ${circle.class}">${labelText}</p>`)
+    legend.insertAdjacentHTML('beforeend', "<p class='leg-label'"+circle.class+">"+labelText+"</p>")
 })
 
 map.on('load', function(){
@@ -364,11 +370,13 @@ map.on('load', function(){
     map.addLayer(award_layer('current-year-awards'))
     map.addLayer(award_hover('current-year-hover', 'current-year-awards'))
 
-    map.on('click', 'current-year-awards', e => popupDetails(e))
-    map.on('mousemove', 'current-year-awards', e => {
+    map.on('click', 'current-year-awards', function(e){
+        popupDetails(e)
+    })
+    map.on('mousemove', 'current-year-awards', function(e){
         map.getCanvas().style.cursor = 'pointer'
         map.setFilter('current-year-hover', ['==', 'FID', e.features[0].properties['FID']])})
-    map.on('mouseleave', 'current-year-awards', e => {
+    map.on('mouseleave', 'current-year-awards', function(e){
         map.getCanvas().style.cursor = ''
         map.setFilter('current-year-hover', ['==', 'FID', ''])})
 })
