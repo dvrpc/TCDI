@@ -211,13 +211,17 @@ populateProjectDetails(secondPreviousDataSet, 'secondPreviousDataSet')
 populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
+
+const maxRadius = 25
+const minRadius = 5
+
 const stylesheet = {
   "version": 8,
   "sources": {
     "counties": {
       "type": "vector",
       // TODO: migrate to SSL domain from Mike
-      "url": "http://a.michaelruane.com/dvrpc_boundaries.json"
+      "url": "https://dvrpc-freight.michaelruane.com/dvrpc_boundaries.json"
     }
   },
   "layers": [
@@ -227,7 +231,7 @@ const stylesheet = {
       "source-layer": "county",
       "layout": {},
       "paint": {
-          "fill-color": "#778899",
+          "fill-color": "#B6C1C6",
           "fill-opacity": 1
       },
       "filter": [
@@ -267,21 +271,17 @@ const stylesheet = {
 const map = new mapboxgl.Map({
     container: 'map',
     style: stylesheet,
+    attributionControl: false,
     center: [-75.2273, 40.071],
     zoom: 8.82
 });
-
-const popup = new mapboxgl.Popup({
-    closebutton: true,
-    closeOnClick: true
-})
 
 map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 
 // convert WEB_AMT to numeric value so mapboxGL can create graduated circles
 currentDataSet.features.forEach(project => project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1)))
 
-const layer = id => {
+const award_layer = id => {
     return {
         'id': id,
         'type': 'circle',
@@ -290,24 +290,70 @@ const layer = id => {
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[25, 5], [175, 25]]
+                stops: [[25, minRadius], [175, maxRadius]]
             },
-            'circle-color': '#9eea00',
-            'circle-opacity': 0.7
+            'circle-color': '#6fb8b9',
+            'circle-opacity': 0.7,
+            'circle-stroke-width': 1.25,
+            'circle-stroke-color': '#fff',
+            'circle-stroke-opacity': 0.7
         },
     }
 }
 
-const popupDetails = e => {
-    popup.setLngLat(e.features[0].geometry.coordinates)
-         .setHTML(`<strong>${e.features[0].properties.TITLE}</strong><br />${e.features[0].properties.PROJ_DESC}..<br /><em>Award Amount: </em>${e.features[0].properties.AMT_WEB}`)
-         .addTo(map)
+const award_hover = (id, source) => {
+    return {
+        'id': id,
+        'type': 'circle',
+        'source': source,
+        'paint': {
+            'circle-radius': {
+                property: 'AMOUNT',
+                type: 'exponential',
+                stops: [[25, minRadius], [175, maxRadius]]
+            },
+            'circle-color': '#6fb8b9',
+            'circle-opacity': 1,
+            'circle-stroke-width': 1.5,
+            'circle-stroke-color': '#fff',
+            'circle-stroke-opacity': 1
+        },
+        'filter': [
+            '==',
+            'FID',
+            ''
+        ]
+    }
 }
 
-const legend = document.querySelector('#legend')
-const quantiles = [{size: 5, amount: 25}, {size: 10, amount: 63}, {size: 15, amount: 100}, {size:20, amount: 138}, {size: 27, amount:175}]
-quantiles.forEach(quantile => {
-    legend.insertAdjacentHTML('beforeend', `<div><span style="width: ${quantile.size}px; height: ${quantile.size}px; margin: 0 ${(20-quantile.size/2)}px"></span><p>$${quantile.amount}k</p></div>`)
+const popupDetails = e => {
+    new mapboxgl.Popup({
+            closebutton: true,
+            closeOnClick: true
+        }).setLngLat(e.features[0].geometry.coordinates)
+        .setHTML(`<strong>${e.features[0].properties.TITLE}</strong><br />${e.features[0].properties.PROJ_DESC}..<br /><em>Award Amount: </em>${e.features[0].properties.AMT_WEB}`)
+        .addTo(map)
+}
+
+const legend = document.querySelector('#legend-labels')
+const legendSizes = [{size: 25, class: 'large'}, {size: 15, class: 'medium'}, {size: 5, class: 'small'}]
+
+// @to-do need to automate calculation of max and min awards which could be used in this function current data is 25 and 175
+const rateOfChange = (maxRadius - minRadius) / (175 - 25);
+const radiusAtZero = maxRadius - (rateOfChange * 175);
+
+const roundfive = num => (num % 5) >= 2.5 ? parseInt(num / 5) * 5 + 5 : parseInt(num / 5) * 5
+
+const awardSize = circleRadius => {
+    let awardVal = (circleRadius - radiusAtZero) / rateOfChange
+    let label = '$' + roundfive(awardVal) + 'k'
+    
+    return label
+}
+
+legendSizes.forEach(circle => {
+    let labelText = awardSize(circle.size);
+    legend.insertAdjacentHTML('beforeend', `<p class="leg-label ${circle.class}">${labelText}</p>`)
 })
 
 map.on('load', function(){
@@ -315,9 +361,14 @@ map.on('load', function(){
         type: 'geojson',
         data: currentDataSet
     })
-    map.addLayer(layer('current-year-awards'))
+    map.addLayer(award_layer('current-year-awards'))
+    map.addLayer(award_hover('current-year-hover', 'current-year-awards'))
 
     map.on('click', 'current-year-awards', e => popupDetails(e))
-    map.on('mouseenter', 'current-year-awards', () => map.getCanvas().style.cursor = 'pointer')
-    map.on('mouseleave', 'current-year-awards', () => map.getCanvas().style.cursor = '')
+    map.on('mousemove', 'current-year-awards', e => {
+        map.getCanvas().style.cursor = 'pointer'
+        map.setFilter('current-year-hover', ['==', 'FID', e.features[0].properties['FID']])})
+    map.on('mouseleave', 'current-year-awards', e => {
+        map.getCanvas().style.cursor = ''
+        map.setFilter('current-year-hover', ['==', 'FID', ''])})
 })

@@ -105,12 +105,18 @@ thead th:last-child{
 /* --------- */
 /* Mapbox GL */
 /* --------- */
+.mapboxgl-popup {
+    z-index: 1;
+}
 #map{
     position: relative;
     top: 0;
     bottom: 0;
     width: 100%;
     height: 500px;
+}
+#map canvas:focus{
+    outline: none;
 }
 .mapboxgl-popup{
     max-width: 400px;
@@ -120,32 +126,69 @@ thead th:last-child{
     background: #eee;
     z-index: 1;
     position: absolute;
-    left: 10px;
-    bottom: 15px;
     padding: 8px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
 }
 #legend h4{
-    margin: 0 0 10px;
-    color: black;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    background-color: #6fb8b9;
+    margin: -8px -8px 6px;
+    padding: 8px;
+    color: #fff;
 }
 #legend p {
-    top: 2px;
-    margin-left: 40px;
     margin-top: 0;
-    position: absolute;
-    display: block;
+    margin-bottom: -1px;
 }
 #legend div {
     position: relative;
 }
-#legend div span {
+#legend-labels {
+    margin-left: 75px;
+    margin-top: -49px;
+}
+.legend-note {
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.leg-circle {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    display: inline-block;
-    margin-left: 5px;
-    opacity: 0.8;
-    background-color: #9eea00;
+    border: 1px dashed black;
+
+}
+.leg-circle.medium {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 19px;
+}
+.leg-circle.small {
+    width: 12px;
+    height: 12px;
+    margin: 0 auto;
+    margin-top: -12px;
+}
+.leg-line{
+    border-bottom: 1px black dotted;
+}
+.leg-line.large {
+    width: 30px;
+    margin-left: 40px;
+    margin-top: -45px;
+}
+.leg-line.medium {
+    width: 36px;
+    margin-left: 34px;
+    margin-top: 18px;
+}
+.leg-line.small {
+    width: 40px;
+    margin-left: 30px;
+    margin-top: 18px;
 }
 
 
