@@ -288,8 +288,8 @@ const awards = currentDataSet.features.map(function(project) {
     return project.properties.AMOUNT;
 })
 
-const maxAward = Math.max.apply(Math, awards);
-const minAward = Math.min.apply(Math, awards);
+const maxAward = Math.max.apply(null, awards);
+const minAward = Math.min.apply(null, awards);
 
 const maxRadius = 25
 const minRadius = 5
