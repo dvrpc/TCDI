@@ -215,9 +215,6 @@ populateProjectDetails(thirdPreviousDataSet, 'thirdPreviousDataSet')
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
-const maxRadius = 25
-const minRadius = 5
-
 const stylesheet = {
   "version": 8,
   "sources": {
@@ -286,6 +283,17 @@ currentDataSet.features.forEach(function(project){
     project.properties.AMOUNT = parseInt(project.properties.AMT_WEB.slice(1))
 })
 
+// define the max and min awards and radii for mapboxGl to consume
+const awards = currentDataSet.features.map(function(project) {
+    return project.properties.AMOUNT;
+})
+
+const maxAward = Math.max.apply(null, awards);
+const minAward = Math.min.apply(null, awards);
+
+const maxRadius = 25
+const minRadius = 5
+
 const award_layer = function(id){
     return {
         'id': id,
@@ -295,7 +303,7 @@ const award_layer = function(id){
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[25, minRadius], [175, maxRadius]]
+                stops: [[minAward, minRadius], [maxAward, maxRadius]]
             },
             'circle-color': '#6fb8b9',
             'circle-opacity': 0.7,
@@ -315,7 +323,7 @@ const award_hover = function(id, source){
             'circle-radius': {
                 property: 'AMOUNT',
                 type: 'exponential',
-                stops: [[25, minRadius], [175, maxRadius]]
+                stops: [[minAward, minRadius], [maxAward, maxRadius]]
             },
             'circle-color': '#6fb8b9',
             'circle-opacity': 1,
@@ -344,8 +352,8 @@ const legend = document.querySelector('#legend-labels')
 const legendSizes = [{size: 25, class: 'large'}, {size: 15, class: 'medium'}, {size: 5, class: 'small'}]
 
 // @to-do need to automate calculation of max and min awards which could be used in this function current data is 25 and 175
-const rateOfChange = (maxRadius - minRadius) / (175 - 25);
-const radiusAtZero = maxRadius - (rateOfChange * 175);
+const rateOfChange = (maxRadius - minRadius) / (maxAward - minAward);
+const radiusAtZero = maxRadius - (rateOfChange * maxAward);
 
 const roundfive = function(num){
     return (num % 5) >= 2.5 ? parseInt(num / 5) * 5 + 5 : parseInt(num / 5) * 5
