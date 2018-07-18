@@ -218,52 +218,32 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5e
 const stylesheet = {
   "version": 8,
   "sources": {
-    "counties": {
+    "agotiles": {
       "type": "vector",
       // TODO: migrate to SSL domain from Mike
-      "url": "https://dvrpc-freight.michaelruane.com/dvrpc_boundaries.json"
+      "tiles": ["https://tiles.arcgis.com/tiles/LWtWv6q6BJyKidj8/arcgis/rest/services/Muni_Boundaries/VectorTileServer/tile/{z}/{y}/{x}.pbf"]
     }
   },
   "layers": [
-    {"id": "county-fill",
+    {"id": "municipality",
       "type": "fill",
-      "source": "counties",
-      "source-layer": "county",
+      "source": "agotiles",
+      "source-layer": "DVRPC - Municipal Boundaries",
       "layout": {},
       "paint": {
           "fill-color": "#B6C1C6",
           "fill-opacity": 1
-      },
-      "filter": [
-                "==",
-                "DVRPC_REG",
-                "Yes"
-        ],
+      }
     },
     {
         "id": "municipality-outline",
         "type": "line",
-        "source": "counties",
-        "source-layer": "municipalities",
+        "source": "agotiles",
+        "source-layer": "DVRPC - Municipal Boundaries",
         "paint": {
             'line-width': 0.5,
             'line-color': '#efefef'
         }
-    },
-    {
-        "id": "county-outline",
-        "type": "line",
-        "source": "counties",
-        "source-layer": "county",
-        "paint": {
-            'line-width': 2.5,
-            'line-color': '#fff'
-        },
-        "filter": [
-                "==",
-                "DVRPC_REG",
-                "Yes"
-            ]
     }
   ]
 } 
@@ -387,4 +367,34 @@ map.on('load', function(){
     map.on('mouseleave', 'current-year-awards', function(e){
         map.getCanvas().style.cursor = ''
         map.setFilter('current-year-hover', ['==', 'FID', ''])})
+
+    map.on('click', function(e) {
+
+        var features = map.queryRenderedFeatures(e.point, {
+            layers: ['municipality']
+        });
+        if (!features.length) {
+            return;
+        }
+        popup = new mapboxgl.Popup({
+            closeButton: true,
+            closeOnClick: true
+        });
+           
+        popup.setLngLat(e.lngLat);
+        
+        var txt = '', propVal;
+        for(var obj in features[0].properties){
+            propVal = features[0].properties[obj];
+            txt += "<b>"+ obj + "</b>: "+ propVal +"<br/>";
+        }
+        
+        popup.setHTML(
+            "<p>" + txt + "</p>"
+        );
+
+        popup.addTo(map);
+        
+    });
+            
 })
