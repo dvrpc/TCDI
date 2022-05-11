@@ -294,7 +294,7 @@ const options = {
 }
 
 const getWebLinks = async year => {
-    const stream = await fetch(`https://www.dvrpc.org/ASP/TCDIdirect/deliverableFileList_new.aspx?year=${year}`, options)
+    const stream = await fetch(`https://www.dvrpc.org/ASP/TCDIdirect/deliverableFileList.aspx?year=${year}`, options)
 
     let output = {}
 
