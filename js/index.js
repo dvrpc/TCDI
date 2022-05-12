@@ -1518,7 +1518,8 @@ const populateProjectDetails = function (dataset, tableName) {
 populateProjectDetails(currentDataSet, "currentDataSet");
 populateProjectDetails(previousDataSet, "previousDataSet");
 populateProjectDetails(secondPreviousDataSet, "secondPreviousDataSet");
-populateProjectDetails(thirdPreviousDataSet, "thirdPreviousDataSet");
+// moved to archived projects 5/12/2022
+// populateProjectDetails(thirdPreviousDataSet, "thirdPreviousDataSet");
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA";

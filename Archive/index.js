@@ -5,6 +5,270 @@ const archiveData = {
     {
       type: "Feature",
       properties: {
+        YR: "2015",
+        ID: "369",
+        LEAD_MUN: "Clifton Heights Borough",
+        AMT_WEB: "$20,000.00",
+        TITLE: "Clifton Heights Market Study",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nblYxOUF1aERpZmM&filename=TCDI_369deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "411",
+        LEAD_MUN: "Pemberton Township",
+        AMT_WEB: "$50,000.00",
+        TITLE: "Complete Streets Policy",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nbmt1eWtSeHBSNjA&filename=TCDI_411deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "401",
+        LEAD_MUN: "Lower Moreland Township",
+        AMT_WEB: "$20,000.00",
+        TITLE: "Historic Bethayres Streetscape Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nclBZdkExZ2lkbkU&filename=TCDI_401deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "366",
+        LEAD_MUN: "Phoenixville Borough ",
+        AMT_WEB: "$20,000.00",
+        TITLE: "SALDO Update",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16ncUpSSUl0OUs0ODQ&filename=TCDI_366deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "362",
+        LEAD_MUN: "Bensalem Township",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Bensalem Riverfont Master Plan Evaluation",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16ncWRONmZuLUNLRHM&filename=TCDI_362deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "383",
+        LEAD_MUN: "Abington Township",
+        AMT_WEB: "$60,000.00",
+        TITLE: "Master Bicycle Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16ndkV3TFgyRVFVMFE&filename=TCDI_383deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "412",
+        LEAD_MUN: "Audubon Borough",
+        AMT_WEB: "$60,000.00",
+        TITLE: "East Atlantic Avenue Corridor",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16neDRDdEtBRkNqVTg&filename=TCDI_412deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "368",
+        LEAD_MUN: "Aston Township",
+        AMT_WEB: "$88,000.00",
+        TITLE: "Comprehensive Plan Update",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nMEJCMkVJM3V6em8&filename=TCDI_368deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "415",
+        LEAD_MUN: "Merchantville Borough",
+        AMT_WEB: "$35,000.00",
+        TITLE: "Town Centre Redevelopment",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nNk4zWGFmTHlkbE0&filename=TCDI_415deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "364",
+        LEAD_MUN: "Caln Township",
+        AMT_WEB: "$75,000.00",
+        TITLE: "Route 30 Multi Modal Transportation Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nNTJrSGZZSWNTTzQ&filename=TCDI_364deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "382",
+        LEAD_MUN: "Media Borough",
+        AMT_WEB: "$40,000.00",
+        TITLE: "Wayfinding Signage",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nRFlTel9qWVdGWkE&filename=TCDI_382deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "410",
+        LEAD_MUN: "Burlington County",
+        AMT_WEB: "$95,000.00",
+        TITLE: "Rancocas Creek Greenway",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nRlBKNlFpcWtZWVk&filename=TCDI_410deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "403",
+        LEAD_MUN: "Upper Merion Township ",
+        AMT_WEB: "$88,000.00",
+        TITLE: "First Avenue Linear Park",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nSXNGQjZlUWRnazg&filename=TCDI_403deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "409",
+        LEAD_MUN: "Bordentown City",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Ocean Spray Redevelopment",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nT3pRS3VsU3BwZlU&filename=TCDI_409deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "406",
+        LEAD_MUN: "City of Philadelphia (PIDC)",
+        AMT_WEB: "$75,000.00",
+        TITLE: "University City Access",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nTU1CcDRHM3hMN0E&filename=TCDI_406deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "414",
+        LEAD_MUN: "Gloucester Township",
+        AMT_WEB: "$64,000.00",
+        TITLE: "Blackhorse PikeRedevelopment Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nU2w2YVpuMVpIM2M&filename=TCDI_414deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "402",
+        LEAD_MUN: "Montgomery County",
+        AMT_WEB: "$50,000.00",
+        TITLE: "Walkability Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nUmZtMTBEY2JRZUk&filename=TCDI_402deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "407",
+        LEAD_MUN: "City of Philadelphia (PCPC)",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Rails and Trails",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nUW5oVXZlWUpEYTQ&filename=TCDI_407deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "413",
+        LEAD_MUN: "City of Camden ",
+        AMT_WEB: "$60,000.00",
+        TITLE: "Downtown Corridors Traffic Feasibility",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nUXRNc0hUY1VSUkk&filename=TCDI_413deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "404",
+        LEAD_MUN: "Whitemarsh Township ",
+        AMT_WEB: "$0.00",
+        TITLE: "Riverfront Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nWWgzQnd1T05PalE&filename=TCDI_404deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "367",
+        LEAD_MUN: "Schuylkill Township",
+        AMT_WEB: "$60,000.00",
+        TITLE: "Schuylkill Sidwalk System",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nYktraVA0SFl4V0E&filename=TCDI_367deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2015",
+        ID: "409",
+        LEAD_MUN: "Bordentown City",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Ocean Spray Redevelopment",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=0BzX5TLpz-16nYzAxRU9tRi0tLXc&filename=TCDI_409deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
         YR: "2012",
         ID: "253",
         LEAD_MUN: "Abington Township",
