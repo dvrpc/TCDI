@@ -767,7 +767,7 @@ const populateProjectDetails = function (dataset, tableName) {
 
   // fill out the awards header
   const awardsHeader = document.querySelector("h2." + tableName);
-  awardsHeader.textContent = year + " TCDI AWARDS";
+  awardsHeader.textContent = year + " PA TCDI AWARDS";
 
   // fill out the accordion header & get links where applicable
   let response;
