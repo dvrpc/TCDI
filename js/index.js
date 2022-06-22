@@ -632,7 +632,7 @@ const currentDataSet = {
         mapped: "No",
         latitude: 39.97306026,
         projectnum: 0,
-        MUNICIPALI: "Countywide",
+        MUNICIPALITY: "Countywide",
         ID: 325.0,
         PROJ_DESC:
           "This project seeks to continue the process of updating the Chester County Public Transportation Plan to ensure that the issues, policies, and recommendations outlined in the plan remain relevant and consistent with the Chester County Comprehensive Plan.",
@@ -652,7 +652,7 @@ const currentDataSet = {
         map_status: "Mapped at the county level",
         PROJECTNAME: "Complete Streets Delivery Program - Phase 2",
         mapped: "No",
-        MUNICIPALI: "Countywide",
+        MUNICIPALITY: "Countywide",
         AMOUNT: 100000,
         longitude: -75.15361445,
         ID: 324.0,
@@ -680,7 +680,7 @@ const currentDataSet = {
         map_status: "Mapped at the county level",
         PROJECTNAME: "Preliminary Work for Comprehensive Plan",
         mapped: "No",
-        MUNICIPALI: "Countywide",
+        MUNICIPALITY: "Countywide",
         AMOUNT: 100000,
         longitude: -75.15354223,
         ID: 340.0,
@@ -708,7 +708,7 @@ const currentDataSet = {
         map_status: "Mapped as a study area",
         PROJECTNAME: "Philadelphia Neighborhood Bikeways",
         mapped: "No",
-        MUNICIPALI: "Philadelphia City",
+        MUNICIPALITY: "Philadelphia City",
         AMOUNT: 70000,
         longitude: -75.15368705,
         ID: 349.0,
@@ -737,7 +737,7 @@ const currentDataSet = {
         PROJECTNAME:
           "Philadelphia Complete Streets Corridor Study - Aramingo Avenue",
         mapped: "Yes",
-        MUNICIPALI: "Philadelphia City",
+        MUNICIPALITY: "Philadelphia City",
         AMOUNT: 100000,
         longitude: -75.10045675,
         ID: 348.0,
@@ -765,7 +765,7 @@ const currentDataSet = {
         map_status: "Mapped at the municipal level",
         PROJECTNAME: "Middletown Township Multimodal Improvement Plan",
         mapped: "No",
-        MUNICIPALI: "Middletown Township",
+        MUNICIPALITY: "Middletown Township",
         AMOUNT: 85000,
         longitude: -74.90628157,
         ID: 323.0,
@@ -800,7 +800,7 @@ const currentDataSet = {
         mapped: "No",
         latitude: 40.22898332,
         projectnum: 0,
-        MUNICIPALI: "Newtown Borough",
+        MUNICIPALITY: "Newtown Borough",
         ID: 337.0,
         PROJ_DESC:
           "A borough-wide multimodal transportation study will be conducted in order to create a prioritized list of improvements for non-motorized modes of transportation.",
@@ -820,7 +820,7 @@ const currentDataSet = {
         map_status: "Mapped at the municipal level",
         PROJECTNAME: "Oxford Borough - SALDO and Zoning Update",
         mapped: "No",
-        MUNICIPALI: "Oxford Borough",
+        MUNICIPALITY: "Oxford Borough",
         AMOUNT: 100000,
         longitude: -75.98003497,
         ID: 338.0,
@@ -848,7 +848,7 @@ const currentDataSet = {
         map_status: "Mapped at the municipal level",
         PROJECTNAME: "Chester Pike Corridor Multi Modal Improvement Study",
         mapped: "No",
-        MUNICIPALI:
+        MUNICIPALITY:
           "Multi-Municipal - Glenolden Borough, Norwood Borough, Prospect Park Borough, Ridley Park Borough & Sharon Hill Borough",
         AMOUNT: 125000,
         longitude: -75.30610033,
@@ -882,7 +882,7 @@ const currentDataSet = {
         mapped: "Yes",
         latitude: 39.85007349,
         projectnum: 0,
-        MUNICIPALI:
+        MUNICIPALITY:
           "Multi-Municipal - Chester City, Eddystone Borough & Ridley Township",
         ID: 331.0,
         PROJ_DESC:
@@ -909,7 +909,7 @@ const currentDataSet = {
         mapped: "No",
         latitude: 40.26392626,
         projectnum: 0,
-        MUNICIPALI: "Lower Salford Township",
+        MUNICIPALITY: "Lower Salford Township",
         ID: 320.0,
         PROJ_DESC:
           "TCDI funds will be used to study how to make the existing infrastructure work more efficiently and safely with a focus on options that put the priority on pedestrian and bicycle safety throughout Lederach.",
@@ -935,7 +935,7 @@ const currentDataSet = {
         mapped: "No",
         latitude: 40.12238375,
         projectnum: 0,
-        MUNICIPALI: "Norristown Borough",
+        MUNICIPALITY: "Norristown Borough",
         ID: 332.0,
         PROJ_DESC:
           "TCDI funds will be used to support an expansive transit study of the Norristown Redevelopment Area in order to pursue increased funding for infrastructure improvements and economic development projects in the future.",
@@ -955,7 +955,7 @@ const currentDataSet = {
         map_status: "Mapped at the municipal level",
         PROJECTNAME: "Community Mobility Hub Feasibility Study",
         mapped: "No",
-        MUNICIPALI: "Pottstown Borough",
+        MUNICIPALITY: "Pottstown Borough",
         AMOUNT: 65000,
         longitude: -75.64440932,
         ID: 343.0,
