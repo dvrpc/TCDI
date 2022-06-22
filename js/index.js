@@ -762,7 +762,7 @@ const currentDataSet = {
         amt_web: "$85,000",
         co_name: "Bucks",
         map_status: "Mapped at the municipal level",
-        PROJECTNAME: "Middletown Township Multimodal Improvement Plan",
+        PROJECTNAME: "Multimodal Improvement Plan",
         mapped: "No",
         MUNICIPALITY: "Township of Middletown",
         AMOUNT: 85000,
