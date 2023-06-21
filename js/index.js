@@ -1063,13 +1063,13 @@ const populateProjectDetails = function (dataset, tableName) {
 
   const table = document.querySelector("#" + tableName);
   const year = isCurrent || dataset[0]["YR"];
-  const yearShort = year - 2000
+  const yearShort = year - 2000;
 
   // fill out the awards header
   const awardsHeader = document.querySelector("h2." + tableName);
   awardsHeader.textContent = !isCurrent
-    ? "FY" + year + " TCDI AWARDS"
-    : "FY" + yearShort + " PA & FY"+ (yearShort + 1) + " NJ TCDI AWARDS";
+    ? "FY" + year + " TCDI Awards"
+    : "FY" + yearShort + " PA & FY" + (yearShort + 1) + " NJ TCDI Awards";
 
   // fill out the accordion header & get links where applicable
   let response;
