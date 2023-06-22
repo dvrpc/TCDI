@@ -968,7 +968,8 @@ const currentDataSet = {
       properties: {
         PROJECTNAME: "Johnson Trolley Trail Corridor Study",
         AMOUNT: 175000,
-        MUNICIPALITY: "Ewing Township, Lawrence Township, Princeton, Trenton City",
+        MUNICIPALITY:"Mercer County",
+        MCD: "Ewing Township, Lawrence Township, Princeton, Trenton City",
         ID: 350.0,
         PROJ_DESC:
           "The Johnson Trolley Trail is part of the Circuit Trails network, and this feasibility assessment will identify an alignment that connects, and extends, both existing and proposed segments. The outcome would be a bicycle and pedestrian corridor originating in the City of Trenton, passing through Ewing and Lawrence Townships, and terminating in the Municipality of Princeton.",
@@ -985,7 +986,8 @@ const currentDataSet = {
       properties: {
         PROJECTNAME: "BurLink B5 Alternatives Analysis",
         AMOUNT: 100000,
-        MUNICIPALITY: "Burlington Township & Florence Township",
+        MUNICIPALITY: "Cross County Connection TMA",
+        MCD: "Burlington Township & Florence Township",
         ID: 351.0,
         PROJ_DESC:
           "The BurLINK B5 shuttle operates in Florence and Burlington Townships, and serves as a first-mile/last-mile loop for commuters between NJ Transit\u2019s Florence River LINE Station and the Haines Industrial Park. Cross County Connection Transportation Management Association will conduct an analysis to identify limitations, inefficiencies, and quality of service issues; include a review of workforce automation trends in the sectors served by the shuttle to better understand how those trends may impact future ridership; and identify short-, medium-, and long-term improvement and funding options.",
@@ -1019,7 +1021,8 @@ const currentDataSet = {
       properties: {
         PROJECTNAME: "Southern Regional Trails Feasibility Study",
         AMOUNT: 100000,
-        MUNICIPALITY: "Evesham Township, Maple Shade Township, Medford Township, Moorestown Township, Mount Laurel Township",
+        MUNICIPALITY: "Burlington County",
+        MCD: "Evesham Township, Maple Shade Township, Medford Township, Moorestown Township, Mount Laurel Township",
         ID: 353.0,
         PROJ_DESC:
           "Burlington County will conduct a feasibility study to expand the Circuit Trail network from the Rancocas Creek Greenway Trail through multiple municipalities in Burlington County, including Maple Shade Township, Moorestown Township,Mount Laurel Township, Evesham Township, Medford Township, Shamong Township, and Tabernacle Township; as well as potential links to Camden County\u2019s regional trails.",
@@ -1036,7 +1039,8 @@ const currentDataSet = {
       properties: {
         PROJECTNAME: "Pennsauken Transit Center TOD Study",
         AMOUNT: 100000,
-        MUNICIPALITY: "Pennsauken Township",
+        MUNICIPALITY: "NJ Transit",
+        MCD: "Pennsauken Township",
         ID: 354.0,
         PROJ_DESC:
           "New Jersey Transit will use the TCDI funds to study the need for TOD at the Pennsauken Transit Center, which is an ADA-accessible intermodal transit facility with NJ Transit Atlantic City Rail, River LINE, and bus service, as well as identify transit-friendly improvements within the half-mile station area.",
