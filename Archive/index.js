@@ -2861,7 +2861,7 @@ const archiveData = {
 function populateProjectDetails(dataset, tableName) {
   var table = document.querySelector("#" + tableName);
 
-  dataset.features.forEach((project) => {
+  dataset.forEach((project) => {
     const newRow = table.insertRow();
     const DColumn = newRow.insertCell();
     const titleColumn = newRow.insertCell();
@@ -2885,4 +2885,8 @@ function populateProjectDetails(dataset, tableName) {
     yearColumn.style.textAlign = "right";
   });
 }
-populateProjectDetails(archiveData, "archiveData");
+
+fetch('https://www.dvrpc.org/asp/tcdidirect/ProjectsWithDeliverableList.aspx?year=2002&year2=2015')
+  .then(res => res.json())
+  .then(data => populateProjectDetails([...data.files].reverse(), 'archiveData'))
+
