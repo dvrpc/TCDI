@@ -1,191 +1,5 @@
 const thirdPreviousDataSet = [
   {
-    YR: 2017,
-    MUNICIPALITY: "Bucks County Planning Department",
-    PROJECTNAME: "Bristol Township Economic Development Analysis",
-    ID: 481,
-    AMOUNT: 80000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Chester County Planning Department",
-    PROJECTNAME: "Phoenixville Region Multi Modal Transportation Plan",
-    ID: 482,
-    AMOUNT: 52000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Chester County Planning Department",
-    PROJECTNAME: "Brandywine Valley Wayfinding Signage Plan",
-    ID: 483,
-    AMOUNT: 40000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "East Goshen Township",
-    PROJECTNAME: "Paoli Pike Corridor Master Plan",
-    ID: 484,
-    AMOUNT: 52500,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "East Whiteland Township",
-    PROJECTNAME: "Route 30 Corridor Study",
-    ID: 485,
-    AMOUNT: 75000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Phoenixville",
-    PROJECTNAME: "Downtown Parking Study",
-    ID: 486,
-    AMOUNT: 34000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "West Whiteland Township",
-    PROJECTNAME: "Pottstown Pike Congestion Mitigation Feasibility Study",
-    ID: 487,
-    AMOUNT: 25000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Delaware County Planning Department",
-    PROJECTNAME: "Downtown Awakening",
-    ID: 488,
-    AMOUNT: 80000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Media Borough",
-    PROJECTNAME: "Updated Economic Development Strategy",
-    ID: 489,
-    AMOUNT: 56250,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Morton Borough",
-    PROJECTNAME: "Morton Connect",
-    ID: 490,
-    AMOUNT: 36000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Upper Darby Township",
-    PROJECTNAME: "Mutli-Modal Modernization of the Garrett Road Corridor",
-    ID: 491,
-    AMOUNT: 71250,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Abington Township",
-    PROJECTNAME: "Walk Park Train",
-    ID: 492,
-    AMOUNT: 75000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Lansdale Borough",
-    PROJECTNAME: "Liberty Bell Trail Alignment Study",
-    ID: 493,
-    AMOUNT: 28000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Lower Providence",
-    PROJECTNAME: "Ridge Pike West Corridor Study",
-    ID: 494,
-    AMOUNT: 80000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Montgomery County Planning Commission",
-    PROJECTNAME: "Bike Montco Plan Development",
-    ID: 495,
-    AMOUNT: 30000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Upper Dublin Township",
-    PROJECTNAME: "Transportation Demand Plan for FWOP",
-    ID: 496,
-    AMOUNT: 75000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Philadelphia City Planning Commission",
-    PROJECTNAME: "Wissahickon Gateway",
-    ID: 497,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Office of Transportation & Infrastructure Systems",
-    PROJECTNAME: "Where the Sidewalk Gaps",
-    ID: 498,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Office of Transportation and Infrastructure Systems",
-    PROJECTNAME: "Complete Streets Calculator",
-    ID: 499,
-    AMOUNT: 80000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Department of Streets, City of Philadelphia",
-    PROJECTNAME: "Critical Matchmaking between Vision Zero Research",
-    ID: 500,
-    AMOUNT: 30000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Burlington County Planning",
-    PROJECTNAME: "River Route Circulation",
-    ID: 501,
-    AMOUNT: 175000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Burlington County",
-    PROJECTNAME: "Bridgeboro Redesign (Route 130 Intersecton)",
-    ID: 502,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Cherry Hill",
-    PROJECTNAME: "Woodcrest Station (TOD) Plan",
-    ID: 503,
-    AMOUNT: 60000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Camden County",
-    PROJECTNAME: "Walter Rand Market Feasbility",
-    ID: 504,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Princeton",
-    PROJECTNAME: "Princeton Parking",
-    ID: 505,
-    AMOUNT: 65000,
-  },
-  {
-    YR: 2017,
-    MUNICIPALITY: "Trenton",
-    PROJECTNAME: "Waterfront Reclamation",
-    ID: 506,
-    AMOUNT: 100000,
-  },
-];
-// NOTE: the ID's here aare completely arbitrary. The provided file had every "ID": 0 for every entry so I made up a 600+ range for the hover effect to work This applies for currentDataSet too
-//const previousDataSet =  [{"YR": 2019, "MUNICIPALITY":"Concord Township","PROJECTNAME":"US 1/US 202 Corridor Pedestrian Improvement Plan","ID":600,"AMOUNT":72000,"PROJ_DESC":"Analyze and create conceptual designs  for multi-modal improvements along the corridors."},{"MUNICIPALITY":"Montgomery County","PROJECTNAME":"Creating Equitable Connections to the Montgomery County Trail System","ID":601,"AMOUNT":75000,"PROJ_DESC":"Create a plan that increases the diversity of users to the county trail system, accessibility,  and provides for a modernized design for all users."},{"MUNICIPALITY":"Multi-Municipal - Collingswood Borough & Haddon Township","PROJECTNAME":"Bicycle and Pedestrian Enhancements Master Plan","ID":602,"AMOUNT":72000,"PROJ_DESC":"Develop a bicycle and pedestrian network that seamlessly links the two communities, focusing on travel to, from, and along Haddon Avenue that will encourage greater usage of bicycles and walking."},{"MUNICIPALITY":"Burlington City","PROJECTNAME":"Downtown Circulation Plan","ID":603,"AMOUNT":50000,"PROJ_DESC":"Update the master plan element to increase  economic opportunities and capitalize on the two light rail stations and proposed residential development with in the City."},{"MUNICIPALITY":"Multi-Municipal - Burlington City, Burlington Township, Mount Holly Township & Westampton Township","PROJECTNAME":"County Route 541 Corridor Study","ID":604,"AMOUNT":150000,"PROJ_DESC":"Prepare a coordinated transportation and circulation plan  for the CR 541 corridor that includes Burlington City, Burlington Township, Westampton Township and Mount Holly Township. "},{"MUNICIPALITY":"Chalfont Borough","PROJECTNAME":"Parking Consolidation and Streetscape Plan","ID":605,"AMOUNT":50000,"PROJ_DESC":"Create a schematic layout for consolidated parking and streetscape plan to encourage revitalization in the downtown."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"Central Philadelphia Transportation Analysis Program","ID":606,"AMOUNT":100000,"PROJ_DESC":"Work with key partners to define investment needs for data collection and analysis to inform the City and its partners about steps needed in collecting meaningful data to shape strategic policy and funding decisions that will improve mobility."},{"MUNICIPALITY":"New Garden Township","PROJECTNAME":"Transportation Improvement Plan for the Village of Toughkenamon","ID":607,"AMOUNT":65000,"PROJ_DESC":"Create a transportation plan to reenergize the village with a variety of local commercial establishments,, a diversity of housing options for all ages, with attractive open spaces and streetscapes."},{"MUNICIPALITY":"Camden City","PROJECTNAME":"Connecting Transportation and Land Use Along Haddon Avenue","ID":608,"AMOUNT":100000,"PROJ_DESC":"Improve bike and pedestrian connections with a zoning land use overlay to accommodate freight and home based deliveries to be used to enhance existing and future redevelopment plans along the Medical Mile in Camden City."},{"MUNICIPALITY":"Lawrence Township","PROJECTNAME":"Brunswick Pike Streetscape","ID":609,"AMOUNT":60000,"PROJ_DESC":"Prepare conceptual streetscape plans that enhance pedestrian access and facilitate community meetings to garner support for the revitalization of Brunswick Pike ."},{"MUNICIPALITY":"Chester County","PROJECTNAME":"Active Transportation Municipal Ordinance Inventory and Outreach","ID":610,"AMOUNT":125000,"PROJ_DESC":"Review and identify potential ordinance amendments to increase active transportation throughout the County."},{"MUNICIPALITY":"Merchantville Borough","PROJECTNAME":"Lighting Feasibility Study","ID":611,"AMOUNT":33000,"PROJ_DESC":"Explore the various solar and electric options, types of feasible pedestrian-oriented light fixtures, and design solutions for the various segments of a multi-municipal path."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"Vision Zero Pedestrian Safety Study and Action Plan","ID":612,"AMOUNT":100000,"PROJ_DESC":"Continue efforts to identify causes pedestrian crashes, develop priority pedestrian HIN corridors and “pedestrian focus areas, ” and recommend systemic engineering improvements."},{"MUNICIPALITY":"Middletown Township","PROJECTNAME":"Comprehensive Plan Development","ID":613,"AMOUNT":67000,"PROJ_DESC":"Develop a sustainable comprehensive plan that addresses the changing demographics and development pattern of the Township."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"North Philadelphia Station Area","ID":614,"AMOUNT":100000,"PROJ_DESC":"Develop a transportation plan that improves the safety, usability, and appearance of the station, connects to the street grid, and encourages better stormwater management practices."},{"MUNICIPALITY":"Multi-Municipal - Hatboro Borough & Upper Moreland Township","PROJECTNAME":"Master Trail Feasibility Plan","ID":615,"AMOUNT":72000,"PROJ_DESC":"Develop a Master Trail Plan to close gaps in existing regional trails, provide transportation alternatives to residents, identify trail spurs to local neighborhoods, and contribute to the economic growth of local businesses."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"Complete Streets","ID":616,"AMOUNT":100000,"PROJ_DESC":"Develop conceptual renderings of 3 identified dangerous intersections to enhance the overall communities’ appearance and promote walking and biking."},{"MUNICIPALITY":"Lower Merion Township","PROJECTNAME":"Multi-Modal Strategies and Policies","ID":617,"AMOUNT":52000,"PROJ_DESC":"Review TDM policies as part of ongoing planning efforts to modernize  regulatory and planning documents to address residential transportation impacts."},{"MUNICIPALITY":"Cheltenham Township","PROJECTNAME":"Transportation Impact Study","ID":618,"AMOUNT":100000,"PROJ_DESC":"Develop and adopt a Transportation Impact Fee Ordinance to address impacts from new residential development."},{"MUNICIPALITY":"Gloucester City","PROJECTNAME":"Port Neighborhood Transportation Study","ID":619,"AMOUNT":65000,"PROJ_DESC":"Analyze traffic patterns in the port area and its impact on adjacent residential neighborhoods."},{"MUNICIPALITY":"Pottstown Borough","PROJECTNAME":"Keim Street Gateway Overlay Planning","ID":620,"AMOUNT":32000,"PROJ_DESC":"Create an overlay to increase access to the Schuylkill River Trail, improve the quality of life for the adjacent residential neighborhoods, and enhance the economic performance of the Industrial Center."},{"MUNICIPALITY":"Media Borough","PROJECTNAME":"Traffic Calming Study","ID":621,"AMOUNT":90000,"PROJ_DESC":"Enhance pedestrian and bicycle safety along high speed vehicular routes outside the downtown."},{"MUNICIPALITY":"Multi-Municipal - Mount Laurel Township, Westampton Township & Willingboro Township","PROJECTNAME":"Centerton Road Pedestrian-Bicycle Bridge Feasibility Study","ID":622,"AMOUNT":70000,"PROJ_DESC":"Determine the feasibility of constructing a pedestrian bridge to re-connect the Townships of Willingboro, Westampton, and Mt. Laurel, to provide access to recreational  amenities along the Rancocas Creek."}]
-const secondPreviousDataSet = [
-  {
     YR: "2019",
     ID: "521",
     COUNTY: "Chester County ",
@@ -443,7 +257,9 @@ const secondPreviousDataSet = [
   },
 ];
 
-const previousDataSet = [
+// NOTE: the ID's here aare completely arbitrary. The provided file had every "ID": 0 for every entry so I made up a 600+ range for the hover effect to work This applies for currentDataSet too
+//const previousDataSet =  [{"YR": 2019, "MUNICIPALITY":"Concord Township","PROJECTNAME":"US 1/US 202 Corridor Pedestrian Improvement Plan","ID":600,"AMOUNT":72000,"PROJ_DESC":"Analyze and create conceptual designs  for multi-modal improvements along the corridors."},{"MUNICIPALITY":"Montgomery County","PROJECTNAME":"Creating Equitable Connections to the Montgomery County Trail System","ID":601,"AMOUNT":75000,"PROJ_DESC":"Create a plan that increases the diversity of users to the county trail system, accessibility,  and provides for a modernized design for all users."},{"MUNICIPALITY":"Multi-Municipal - Collingswood Borough & Haddon Township","PROJECTNAME":"Bicycle and Pedestrian Enhancements Master Plan","ID":602,"AMOUNT":72000,"PROJ_DESC":"Develop a bicycle and pedestrian network that seamlessly links the two communities, focusing on travel to, from, and along Haddon Avenue that will encourage greater usage of bicycles and walking."},{"MUNICIPALITY":"Burlington City","PROJECTNAME":"Downtown Circulation Plan","ID":603,"AMOUNT":50000,"PROJ_DESC":"Update the master plan element to increase  economic opportunities and capitalize on the two light rail stations and proposed residential development with in the City."},{"MUNICIPALITY":"Multi-Municipal - Burlington City, Burlington Township, Mount Holly Township & Westampton Township","PROJECTNAME":"County Route 541 Corridor Study","ID":604,"AMOUNT":150000,"PROJ_DESC":"Prepare a coordinated transportation and circulation plan  for the CR 541 corridor that includes Burlington City, Burlington Township, Westampton Township and Mount Holly Township. "},{"MUNICIPALITY":"Chalfont Borough","PROJECTNAME":"Parking Consolidation and Streetscape Plan","ID":605,"AMOUNT":50000,"PROJ_DESC":"Create a schematic layout for consolidated parking and streetscape plan to encourage revitalization in the downtown."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"Central Philadelphia Transportation Analysis Program","ID":606,"AMOUNT":100000,"PROJ_DESC":"Work with key partners to define investment needs for data collection and analysis to inform the City and its partners about steps needed in collecting meaningful data to shape strategic policy and funding decisions that will improve mobility."},{"MUNICIPALITY":"New Garden Township","PROJECTNAME":"Transportation Improvement Plan for the Village of Toughkenamon","ID":607,"AMOUNT":65000,"PROJ_DESC":"Create a transportation plan to reenergize the village with a variety of local commercial establishments,, a diversity of housing options for all ages, with attractive open spaces and streetscapes."},{"MUNICIPALITY":"Camden City","PROJECTNAME":"Connecting Transportation and Land Use Along Haddon Avenue","ID":608,"AMOUNT":100000,"PROJ_DESC":"Improve bike and pedestrian connections with a zoning land use overlay to accommodate freight and home based deliveries to be used to enhance existing and future redevelopment plans along the Medical Mile in Camden City."},{"MUNICIPALITY":"Lawrence Township","PROJECTNAME":"Brunswick Pike Streetscape","ID":609,"AMOUNT":60000,"PROJ_DESC":"Prepare conceptual streetscape plans that enhance pedestrian access and facilitate community meetings to garner support for the revitalization of Brunswick Pike ."},{"MUNICIPALITY":"Chester County","PROJECTNAME":"Active Transportation Municipal Ordinance Inventory and Outreach","ID":610,"AMOUNT":125000,"PROJ_DESC":"Review and identify potential ordinance amendments to increase active transportation throughout the County."},{"MUNICIPALITY":"Merchantville Borough","PROJECTNAME":"Lighting Feasibility Study","ID":611,"AMOUNT":33000,"PROJ_DESC":"Explore the various solar and electric options, types of feasible pedestrian-oriented light fixtures, and design solutions for the various segments of a multi-municipal path."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"Vision Zero Pedestrian Safety Study and Action Plan","ID":612,"AMOUNT":100000,"PROJ_DESC":"Continue efforts to identify causes pedestrian crashes, develop priority pedestrian HIN corridors and “pedestrian focus areas, ” and recommend systemic engineering improvements."},{"MUNICIPALITY":"Middletown Township","PROJECTNAME":"Comprehensive Plan Development","ID":613,"AMOUNT":67000,"PROJ_DESC":"Develop a sustainable comprehensive plan that addresses the changing demographics and development pattern of the Township."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"North Philadelphia Station Area","ID":614,"AMOUNT":100000,"PROJ_DESC":"Develop a transportation plan that improves the safety, usability, and appearance of the station, connects to the street grid, and encourages better stormwater management practices."},{"MUNICIPALITY":"Multi-Municipal - Hatboro Borough & Upper Moreland Township","PROJECTNAME":"Master Trail Feasibility Plan","ID":615,"AMOUNT":72000,"PROJ_DESC":"Develop a Master Trail Plan to close gaps in existing regional trails, provide transportation alternatives to residents, identify trail spurs to local neighborhoods, and contribute to the economic growth of local businesses."},{"MUNICIPALITY":"Philadelphia","PROJECTNAME":"Complete Streets","ID":616,"AMOUNT":100000,"PROJ_DESC":"Develop conceptual renderings of 3 identified dangerous intersections to enhance the overall communities’ appearance and promote walking and biking."},{"MUNICIPALITY":"Lower Merion Township","PROJECTNAME":"Multi-Modal Strategies and Policies","ID":617,"AMOUNT":52000,"PROJ_DESC":"Review TDM policies as part of ongoing planning efforts to modernize  regulatory and planning documents to address residential transportation impacts."},{"MUNICIPALITY":"Cheltenham Township","PROJECTNAME":"Transportation Impact Study","ID":618,"AMOUNT":100000,"PROJ_DESC":"Develop and adopt a Transportation Impact Fee Ordinance to address impacts from new residential development."},{"MUNICIPALITY":"Gloucester City","PROJECTNAME":"Port Neighborhood Transportation Study","ID":619,"AMOUNT":65000,"PROJ_DESC":"Analyze traffic patterns in the port area and its impact on adjacent residential neighborhoods."},{"MUNICIPALITY":"Pottstown Borough","PROJECTNAME":"Keim Street Gateway Overlay Planning","ID":620,"AMOUNT":32000,"PROJ_DESC":"Create an overlay to increase access to the Schuylkill River Trail, improve the quality of life for the adjacent residential neighborhoods, and enhance the economic performance of the Industrial Center."},{"MUNICIPALITY":"Media Borough","PROJECTNAME":"Traffic Calming Study","ID":621,"AMOUNT":90000,"PROJ_DESC":"Enhance pedestrian and bicycle safety along high speed vehicular routes outside the downtown."},{"MUNICIPALITY":"Multi-Municipal - Mount Laurel Township, Westampton Township & Willingboro Township","PROJECTNAME":"Centerton Road Pedestrian-Bicycle Bridge Feasibility Study","ID":622,"AMOUNT":70000,"PROJ_DESC":"Determine the feasibility of constructing a pedestrian bridge to re-connect the Townships of Willingboro, Westampton, and Mt. Laurel, to provide access to recreational  amenities along the Rancocas Creek."}]
+const secondPreviousDataSet = [
   {
     YR: 2021,
     ID: 606,
@@ -606,6 +422,142 @@ const previousDataSet = [
     MUNICIPALITY: "Hightstown Borough",
     AMOUNT: 50000,
     PROJECTNAME: "Redevelopment Area Circulation Concepts",
+  },
+];
+
+const previousDataSet = [
+  {
+    YR: 2023,
+    MUNICIPALITY: "Chester County Planning Commission",
+    PROJECTNAME: "Public Transportation Plan Update: Phase Two",
+    ID: 325,
+    AMOUNT: 60000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "Complete Streets Delivery Program: Phase Two",
+    ID: 324,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "Preliminary Work for the Comprehensive Plan",
+    ID: 340,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "Neighborhood Bikeways",
+    ID: 349,
+    AMOUNT: 70000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "Complete Streets Corridor Study for Aramingo Avenue",
+    ID: 348,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Township of Middletown",
+    PROJECTNAME: "Multimodal Improvement Plan",
+    ID: 323,
+    AMOUNT: 85000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Newtown Borough",
+    PROJECTNAME: "Safety and Walkability Review for Multimodal Improvements",
+    ID: 337,
+    AMOUNT: 65000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Borough of Oxford",
+    PROJECTNAME: "SALDO and Zoning Update",
+    ID: 338,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Delaware County TMA",
+    PROJECTNAME: "Chester Pike Corridor Multi Modal Improvement Study",
+    ID: 329,
+    AMOUNT: 125000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Delaware County Planning Department",
+    PROJECTNAME: "Route 291 Road Diet Study",
+    ID: 331,
+    AMOUNT: 150000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Lower Salford Township",
+    PROJECTNAME: "Feasibility Study for Walkable Lederach",
+    ID: 320,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Municipality of Norristown",
+    PROJECTNAME: "Redevelopment Area Transportation Study",
+    ID: 332,
+    AMOUNT: 80000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Greater Valley Forge TMA",
+    PROJECTNAME: "Community Mobility Hub Feasibility Study",
+    ID: 343,
+    AMOUNT: 65000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Mercer County",
+    PROJECTNAME: "Johnson Trolley Trail Corridor Study",
+    ID: 350,
+    AMOUNT: 175000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Cross County Connection TMA",
+    PROJECTNAME: "BurLink B5 Alternatives Analysis",
+    ID: 351,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Beverly City",
+    PROJECTNAME: "Circulation Plan Element",
+    ID: 352,
+    AMOUNT: 75000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Burlington County",
+    PROJECTNAME: "Southern Regional Trails Feasibility Study",
+    ID: 353,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "NJ Transit",
+    PROJECTNAME: "Pennsauken Transit Center TOD Study",
+    ID: 354,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2023,
+    MUNICIPALITY: "Deptford Township",
+    PROJECTNAME: "Bicycle Facility Plan",
+    ID: 355,
+    AMOUNT: 50000,
   },
 ];
 
@@ -968,7 +920,7 @@ const currentDataSet = {
       properties: {
         PROJECTNAME: "Johnson Trolley Trail Corridor Study",
         AMOUNT: 175000,
-        MUNICIPALITY:"Mercer County",
+        MUNICIPALITY: "Mercer County",
         MCD: "Ewing Township, Lawrence Township, Princeton, Trenton City",
         ID: 350.0,
         PROJ_DESC:
@@ -1063,7 +1015,7 @@ const currentDataSet = {
           "The Plan will provide a strategic approach to develop a network of improvements for bicyclists for commuting and recreational purposes in Deptford Township, where these types of facilities are currently lacking. The Plan will connect the retail nucleus centered on the Deptford Mall to neighborhoods and other trip generators, such as schools, the community college, other institutions and recreational areas.",
         geography: "Municipal",
       },
-    }  
+    },
   ],
 };
 
