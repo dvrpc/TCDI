@@ -5,6 +5,266 @@ const archiveData = {
     {
       type: "Feature",
       properties: {
+        YR: "2017",
+        LEAD_MUN: "Bucks County Planning Department",
+        TITLE: "Bristol Township Economic Development Analysis",
+        ID: "481",
+        AMT_WEB: "$80,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Chester County Planning Department",
+        TITLE: "Phoenixville Region Multi Modal Transportation Plan",
+        ID: "482",
+        AMT_WEB: "$52,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Chester County Planning Department",
+        TITLE: "Brandywine Valley Wayfinding Signage Plan",
+        ID: "483",
+        AMT_WEB: "$40,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "East Goshen Township",
+        TITLE: "Paoli Pike Corridor Master Plan",
+        ID: "484",
+        AMT_WEB: "$52,500",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "East Whiteland Township",
+        TITLE: "Route 30 Corridor Study",
+        ID: "485",
+        AMT_WEB: "$75,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Phoenixville",
+        TITLE: "Downtown Parking Study",
+        ID: "486",
+        AMT_WEB: "$34,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "West Whiteland Township",
+        TITLE: "Pottstown Pike Congestion Mitigation Feasibility Study",
+        ID: "487",
+        AMT_WEB: "$25,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Delaware County Planning Department",
+        TITLE: "Downtown Awakening",
+        ID: "488",
+        AMT_WEB: "$80,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Media Borough",
+        TITLE: "Updated Economic Development Strategy",
+        ID: "489",
+        AMT_WEB: "$56,250",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Morton Borough",
+        TITLE: "Morton Connect",
+        ID: "490",
+        AMT_WEB: "$36,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Upper Darby Township",
+        TITLE: "Mutli-Modal Modernization of the Garrett Road Corridor",
+        ID: "491",
+        AMT_WEB: "$71,250",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Abington Township",
+        TITLE: "Walk Park Train",
+        ID: "492",
+        AMT_WEB: "$75,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Lansdale Borough",
+        TITLE: "Liberty Bell Trail Alignment Study",
+        ID: "493",
+        AMT_WEB: "$28,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Lower Providence",
+        TITLE: "Ridge Pike West Corridor Study",
+        ID: "494",
+        AMT_WEB: "$80,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Montgomery County Planning Commission",
+        TITLE: "Bike Montco Plan Development",
+        ID: "495",
+        AMT_WEB: "$30,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Upper Dublin Township",
+        TITLE: "Transportation Demand Plan for FWOP",
+        ID: "496",
+        AMT_WEB: "$75,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Philadelphia City Planning Commission",
+        TITLE: "Wissahickon Gateway",
+        ID: "497",
+        AMT_WEB: "$100,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Office of Transportation & Infrastructure Systems",
+        TITLE: "Where the Sidewalk Gaps",
+        ID: "498",
+        AMT_WEB: "$100,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Office of Transportation and Infrastructure Systems",
+        TITLE: "Complete Streets Calculator",
+        ID: "499",
+        AMT_WEB: "$80,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Department of Streets, City of Philadelphia",
+        TITLE: "Critical Matchmaking between Vision Zero Research",
+        ID: "500",
+        AMT_WEB: "$30,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Burlington County Planning",
+        TITLE: "River Route Circulation",
+        ID: "501",
+        AMT_WEB: "$175,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Burlington County",
+        TITLE: "Bridgeboro Redesign (Route 130 Intersecton)",
+        ID: "502",
+        AMT_WEB: "$100,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Cherry Hill",
+        TITLE: "Woodcrest Station (TOD) Plan",
+        ID: "503",
+        AMT_WEB: "$60,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Camden County",
+        TITLE: "Walter Rand Market Feasbility",
+        ID: "504",
+        AMT_WEB: "$100,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Princeton",
+        TITLE: "Princeton Parking",
+        ID: "505",
+        AMT_WEB: "$65,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2017",
+        LEAD_MUN: "Trenton",
+        TITLE: "Waterfront Reclamation",
+        ID: "506",
+        AMT_WEB: "$100,000",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
         YR: "2015",
         ID: "383",
         LEAD_MUN: "Abington Township",
@@ -2886,7 +3146,10 @@ function populateProjectDetails(dataset, tableName) {
   });
 }
 
-fetch('https://www.dvrpc.org/asp/tcdidirect/ProjectsWithDeliverableList.aspx?year=2002&year2=2015')
-  .then(res => res.json())
-  .then(data => populateProjectDetails([...data.files].reverse(), 'archiveData'))
-
+fetch(
+  "https://www.dvrpc.org/asp/tcdidirect/ProjectsWithDeliverableList.aspx?year=2002&year2=2017"
+)
+  .then((res) => res.json())
+  .then((data) =>
+    populateProjectDetails([...data.files].reverse(), "archiveData")
+  );
