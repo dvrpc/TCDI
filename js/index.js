@@ -573,6 +573,7 @@ const currentDataSet = {
       type: "Feature",
       id: 10,
       properties: {
+        yr: 2024,
         PROJECTNAME: "Johnson Trolley Trail Corridor Study",
         AMOUNT: 175000,
         MUNICIPALITY: "Mercer County",
@@ -591,6 +592,7 @@ const currentDataSet = {
       type: "Feature",
       id: 10,
       properties: {
+        yr: 2024,
         PROJECTNAME: "BurLink B5 Alternatives Analysis",
         AMOUNT: 100000,
         MUNICIPALITY: "Cross County Connection TMA",
@@ -609,6 +611,7 @@ const currentDataSet = {
       type: "Feature",
       id: 10,
       properties: {
+        yr: 2024,
         PROJECTNAME: "Circulation Plan Element",
         AMOUNT: 75000,
         MUNICIPALITY: "Beverly City",
@@ -626,6 +629,7 @@ const currentDataSet = {
       type: "Feature",
       id: 10,
       properties: {
+        yr: 2024,
         PROJECTNAME: "Southern Regional Trails Feasibility Study",
         AMOUNT: 100000,
         MUNICIPALITY: "Burlington County",
@@ -644,6 +648,7 @@ const currentDataSet = {
       type: "Feature",
       id: 10,
       properties: {
+        yr: 2024,
         PROJECTNAME: "Pennsauken Transit Center TOD Study",
         AMOUNT: 100000,
         MUNICIPALITY: "NJ Transit",
@@ -662,6 +667,7 @@ const currentDataSet = {
       type: "Feature",
       id: 10,
       properties: {
+        yr: 2024,
         PROJECTNAME: "Bicycle Facility Plan",
         AMOUNT: 50000,
         MUNICIPALITY: "Deptford Township",
@@ -671,20 +677,263 @@ const currentDataSet = {
         geography: "Municipal",
       },
     },
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-74.8325937004785,40.16106520070865]},"properties":{"PROJECTNAME":"D&L Trail Crossing Study","MUNICIPALITY":"Multi-municipal (Falls and Bristol Townships)","co_name":"Bucks","AMOUNT":100000,"longitude":-74.8325937005,"id":356,"state":"PA","latitude":40.1610652007,"proj_desc2":"","PROJ_DESC":"TCDI funds will be used to study six specific road crossings along the D&L Trail within Falls and Bristol Townships. Current conditions at these locations create conflict between trail users and motorists. The Study will identify and develop safe crossing alternatives, wayfinding recommendations, and actionable steps for implementation."},"id":0},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.34756004655397,40.4401232638427]},"properties":{"PROJECTNAME":"Quakertown Borough Complete Streets Plan","MUNICIPALITY":"Quakertown","co_name":"Bucks","AMOUNT":100000,"longitude":-75.3475600466,"id":357,"state":"PA","latitude":40.4401232638,"proj_desc2":"access for all users, including pedestrians, bicyclists, and motorists.","PROJ_DESC":"The Plan will identify and recommend elements of Complete Streets that are appropriate for specific corridors within Quakertown Borough that are known to be problematic and unsafe for pedestrians and cyclists. The goal is to improve safe access for all users, including pedestrians, bicyclists, and motorists."},"id":1},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.7987435979579,39.98798155105647]},"properties":{"PROJECTNAME":"Lincoln Highway Active Transportation Improvement Plan","MUNICIPALITY":"Multi-municipal (City of Coatesville and Caln Township)","co_name":"Chester","AMOUNT":85000,"longitude":-75.798743598,"id":358,"state":"PA","latitude":39.9879815511,"proj_desc2":"","PROJ_DESC":"Route 30 (Lincoln Highway) is an important transportation corridor throughout Chester County, but also serves as a primary corridor within many of the County’s western communities. The funds will be used to develop a plan that will make Lincoln Highway a safer and more useable corridor for pedestrians, cyclists, and users of public transportation; and a corridor that better connects the communities that exist along it."},"id":2},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.70730063459794,40.08251246432494]},"properties":{"PROJECTNAME":"Eagle Village Gateways and Mobility Plan","MUNICIPALITY":"Upper Uwchlan Township","co_name":"Chester","AMOUNT":100000,"longitude":-75.7073006346,"id":359,"state":"PA","latitude":40.0825124643,"proj_desc2":"","PROJ_DESC":"Eagle Village is the historic center for Upper Uwchlan Township. The Township will use these TCDI funds to build on prior efforts to improve walkability in the core by closing gaps in the multimodal network. The Plan will also identify appropriate traffic calming measures, and ways in which to enhance the sense of place within Eagle Village."},"id":3},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.26941977468525,39.9195674166227]},"properties":{"PROJECTNAME":"MacDade Boulevard Concept Development Study","MUNICIPALITY":"Multi-municipal (Collingdale and Darby Boroughs)","co_name":"Delaware","AMOUNT":175000,"longitude":-75.2694197747,"id":360,"state":"PA","latitude":39.9195674166,"proj_desc2":"","PROJ_DESC":"Collingdale and Darby Boroughs will use TCDI funds to identify appropriate strategies for improving pedestrian and cyclist safety, and increasing multimodal options along MacDade Boulevard. Strategies may include, but are not limited to, road diets and protected bike lines."},"id":4},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.36814418979104,40.03200051269969]},"properties":{"PROJECTNAME":"Downtown Wayne Master Plan","MUNICIPALITY":"Radnor Township","co_name":"Delaware","AMOUNT":100000,"longitude":-75.3681441898,"id":361,"state":"PA","latitude":40.0320005127,"proj_desc2":"","PROJ_DESC":"The Plan will identify multimodal improvements, economic development strategies, and other infrastructure improvements for the Township’s social and economic center, Wayne. The goal is to coordinate the area’s redevelopment, as well as increease safety for cyclists and pedestrians."},"id":5},
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-74.8325937004785, 40.16106520070865],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "D&L Trail Crossing Study",
+        MUNICIPALITY: "Multi-municipal (Falls and Bristol Townships)",
+        co_name: "Bucks",
+        AMOUNT: 100000,
+        longitude: -74.8325937005,
+        id: 356,
+        state: "PA",
+        latitude: 40.1610652007,
+        proj_desc2: "",
+        PROJ_DESC:
+          "TCDI funds will be used to study six specific road crossings along the D&L Trail within Falls and Bristol Townships. Current conditions at these locations create conflict between trail users and motorists. The Study will identify and develop safe crossing alternatives, wayfinding recommendations, and actionable steps for implementation.",
+      },
+      id: 0,
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.34756004655397, 40.4401232638427],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Quakertown Borough Complete Streets Plan",
+        MUNICIPALITY: "Quakertown",
+        co_name: "Bucks",
+        AMOUNT: 100000,
+        longitude: -75.3475600466,
+        id: 357,
+        state: "PA",
+        latitude: 40.4401232638,
+        proj_desc2:
+          "access for all users, including pedestrians, bicyclists, and motorists.",
+        PROJ_DESC:
+          "The Plan will identify and recommend elements of Complete Streets that are appropriate for specific corridors within Quakertown Borough that are known to be problematic and unsafe for pedestrians and cyclists. The goal is to improve safe access for all users, including pedestrians, bicyclists, and motorists.",
+      },
+      id: 1,
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.7987435979579, 39.98798155105647],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Lincoln Highway Active Transportation Improvement Plan",
+        MUNICIPALITY: "Multi-municipal (City of Coatesville and Caln Township)",
+        co_name: "Chester",
+        AMOUNT: 85000,
+        longitude: -75.798743598,
+        id: 358,
+        state: "PA",
+        latitude: 39.9879815511,
+        proj_desc2: "",
+        PROJ_DESC:
+          "Route 30 (Lincoln Highway) is an important transportation corridor throughout Chester County, but also serves as a primary corridor within many of the County’s western communities. The funds will be used to develop a plan that will make Lincoln Highway a safer and more useable corridor for pedestrians, cyclists, and users of public transportation; and a corridor that better connects the communities that exist along it.",
+      },
+      id: 2,
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.70730063459794, 40.08251246432494],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Eagle Village Gateways and Mobility Plan",
+        MUNICIPALITY: "Upper Uwchlan Township",
+        co_name: "Chester",
+        AMOUNT: 100000,
+        longitude: -75.7073006346,
+        id: 359,
+        state: "PA",
+        latitude: 40.0825124643,
+        proj_desc2: "",
+        PROJ_DESC:
+          "Eagle Village is the historic center for Upper Uwchlan Township. The Township will use these TCDI funds to build on prior efforts to improve walkability in the core by closing gaps in the multimodal network. The Plan will also identify appropriate traffic calming measures, and ways in which to enhance the sense of place within Eagle Village.",
+      },
+      id: 3,
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.26941977468525, 39.9195674166227],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "MacDade Boulevard Concept Development Study",
+        MUNICIPALITY: "Multi-municipal (Collingdale and Darby Boroughs)",
+        co_name: "Delaware",
+        AMOUNT: 175000,
+        longitude: -75.2694197747,
+        id: 360,
+        state: "PA",
+        latitude: 39.9195674166,
+        proj_desc2: "",
+        PROJ_DESC:
+          "Collingdale and Darby Boroughs will use TCDI funds to identify appropriate strategies for improving pedestrian and cyclist safety, and increasing multimodal options along MacDade Boulevard. Strategies may include, but are not limited to, road diets and protected bike lines.",
+      },
+      id: 4,
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.36814418979104, 40.03200051269969],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Downtown Wayne Master Plan",
+        MUNICIPALITY: "Radnor Township",
+        co_name: "Delaware",
+        AMOUNT: 100000,
+        longitude: -75.3681441898,
+        id: 361,
+        state: "PA",
+        latitude: 40.0320005127,
+        proj_desc2: "",
+        PROJ_DESC:
+          "The Plan will identify multimodal improvements, economic development strategies, and other infrastructure improvements for the Township’s social and economic center, Wayne. The goal is to coordinate the area’s redevelopment, as well as increease safety for cyclists and pedestrians.",
+      },
+      id: 5,
+    },
 
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.18019879717662,40.09896040867198]},"properties":{"PROJECTNAME":"Cheltenham Avenue Road Diet Feasibility Study","MUNICIPALITY":"Multi-municipal  (Cheltenham and Springfield Townships)","co_name":"Montgomery","AMOUNT":135000,"longitude":-75.1801987972,"id":362,"state":"PA","latitude":40.0989604087,"proj_desc2":"","PROJ_DESC":"Montgomery County, with direct involvement from Cheltenham and Springfield Townships, will develop a road diet feasibility study aimed at improving accommodations for pedestrians and cyclists, and safety for all roadway users; and reducing vehicle speeds along Cheltenham Avenue."},"id":6},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.11471784013146,40.11384950254374]},"properties":{"PROJECTNAME":"Abington Separated Bike Lanes Action Plan","MUNICIPALITY":"Abington Township","co_name":"Montgomery","AMOUNT":75000,"longitude":-75.1147178401,"id":363,"state":"PA","latitude":40.1138495025,"proj_desc2":"","PROJ_DESC":"The funds will be used to develop an action plan that will identify and prioritize corridors for separated bike lanes throughout the Township. This will build on prior Township efforts that focused primarily on a network of sharrows and unprotected bike lanes, and better connect the existing bicycle network with the Township’s seven SEPTA stations."},"id":7},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.09952698,39.98078434]},"properties":{"PROJECTNAME":"Philadelphia Complete Streets Area Study: Port Richmond Industrial District and Waterfront","MUNICIPALITY":"City of Philadelphia","co_name":"Philadelphia","AMOUNT":60000,"longitude":-75.09952698,"id":364,"state":"PA","latitude":39.98078434,"proj_desc2":"","PROJ_DESC":"TCDI funds will be used to develop a conceptual plan for the Port Richmond neighborhood that will incorporate Complete Streets, address accessibility of the Delaware River Trail, and provide site recommendations and best practices for truck routing and overnight parking to reduce impacts on residents."},"id":8},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.19821305,39.939724]},"properties":{"PROJECTNAME":"34th Street at Grays Ferry Visioning Project","MUNICIPALITY":"City of Philadelphia","co_name":"Philadelphia","AMOUNT":90000,"longitude":-75.19821305,"id":365,"state":"PA","latitude":39.939724,"proj_desc2":"","PROJ_DESC":"The project will focus on the redesign of two intersections in Grays Ferry, and the stretch of 34th Street that connects them. The goal is to improve safety for pedestrians and cyclists, as well as accommodate truck traffic, while balancing the needs of residents and businesses in the surrounding neighborhood."},"id":9},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.18308865,39.95479896]},"properties":{"PROJECTNAME":"Intercity Bus Terminal Site Planning Project","MUNICIPALITY":"City of Philadelphia","co_name":"Philadelphia","AMOUNT":90000,"longitude":-75.18308865,"id":366,"state":"PA","latitude":39.95479896,"proj_desc2":"","PROJ_DESC":"The project will greatly emphasize stakeholder outreach and engagement to evaluate three preidentified potential locations for the intercity bus terminal within the 30th Street Station area. Through a feasibility analysis, a preferred site will be identified, and preliminary designs developed."},"id":10},
-{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.21085197,39.94200379]},"properties":{"PROJECTNAME":"48th & Woodland Playground Area Transportation Safety Study","MUNICIPALITY":"City of Philadelphia","co_name":"Philadelphia","AMOUNT":90000,"longitude":-75.21085197,"id":367,"state":"PA","latitude":39.94200379,"proj_desc2":"","PROJ_DESC":"The confluence of various transit modes and a complicated street network in this area create challenges for multimodal options, concerns regarding pedestrian and cyclist safety, and serve as barriers to access. The effort will provide a plan for short, medium, and long-term implementation of strategies that will improve the quality of life of residents in the surrounding neighborhood, and increase safety among multimodal options."},"id":11},
-     ],
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.18019879717662, 40.09896040867198],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Cheltenham Avenue Road Diet Feasibility Study",
+        MUNICIPALITY: "Multi-municipal  (Cheltenham and Springfield Townships)",
+        co_name: "Montgomery",
+        AMOUNT: 135000,
+        longitude: -75.1801987972,
+        id: 362,
+        state: "PA",
+        latitude: 40.0989604087,
+        proj_desc2: "",
+        PROJ_DESC:
+          "Montgomery County, with direct involvement from Cheltenham and Springfield Townships, will develop a road diet feasibility study aimed at improving accommodations for pedestrians and cyclists, and safety for all roadway users; and reducing vehicle speeds along Cheltenham Avenue.",
+      },
+      id: 6,
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-75.11471784013146, 40.11384950254374],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Abington Separated Bike Lanes Action Plan",
+        MUNICIPALITY: "Abington Township",
+        co_name: "Montgomery",
+        AMOUNT: 75000,
+        longitude: -75.1147178401,
+        id: 363,
+        state: "PA",
+        latitude: 40.1138495025,
+        proj_desc2: "",
+        PROJ_DESC:
+          "The funds will be used to develop an action plan that will identify and prioritize corridors for separated bike lanes throughout the Township. This will build on prior Township efforts that focused primarily on a network of sharrows and unprotected bike lanes, and better connect the existing bicycle network with the Township’s seven SEPTA stations.",
+      },
+      id: 7,
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-75.09952698, 39.98078434] },
+      properties: {
+        yr: 2024,
+        PROJECTNAME:
+          "Philadelphia Complete Streets Area Study: Port Richmond Industrial District and Waterfront",
+        MUNICIPALITY: "City of Philadelphia",
+        co_name: "Philadelphia",
+        AMOUNT: 60000,
+        longitude: -75.09952698,
+        id: 364,
+        state: "PA",
+        latitude: 39.98078434,
+        proj_desc2: "",
+        PROJ_DESC:
+          "TCDI funds will be used to develop a conceptual plan for the Port Richmond neighborhood that will incorporate Complete Streets, address accessibility of the Delaware River Trail, and provide site recommendations and best practices for truck routing and overnight parking to reduce impacts on residents.",
+      },
+      id: 8,
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-75.19821305, 39.939724] },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "34th Street at Grays Ferry Visioning Project",
+        MUNICIPALITY: "City of Philadelphia",
+        co_name: "Philadelphia",
+        AMOUNT: 90000,
+        longitude: -75.19821305,
+        id: 365,
+        state: "PA",
+        latitude: 39.939724,
+        proj_desc2: "",
+        PROJ_DESC:
+          "The project will focus on the redesign of two intersections in Grays Ferry, and the stretch of 34th Street that connects them. The goal is to improve safety for pedestrians and cyclists, as well as accommodate truck traffic, while balancing the needs of residents and businesses in the surrounding neighborhood.",
+      },
+      id: 9,
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-75.18308865, 39.95479896] },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "Intercity Bus Terminal Site Planning Project",
+        MUNICIPALITY: "City of Philadelphia",
+        co_name: "Philadelphia",
+        AMOUNT: 90000,
+        longitude: -75.18308865,
+        id: 366,
+        state: "PA",
+        latitude: 39.95479896,
+        proj_desc2: "",
+        PROJ_DESC:
+          "The project will greatly emphasize stakeholder outreach and engagement to evaluate three preidentified potential locations for the intercity bus terminal within the 30th Street Station area. Through a feasibility analysis, a preferred site will be identified, and preliminary designs developed.",
+      },
+      id: 10,
+    },
+    {
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [-75.21085197, 39.94200379] },
+      properties: {
+        yr: 2024,
+        PROJECTNAME:
+          "48th & Woodland Playground Area Transportation Safety Study",
+        MUNICIPALITY: "City of Philadelphia",
+        co_name: "Philadelphia",
+        AMOUNT: 90000,
+        longitude: -75.21085197,
+        id: 367,
+        state: "PA",
+        latitude: 39.94200379,
+        proj_desc2: "",
+        PROJ_DESC:
+          "The confluence of various transit modes and a complicated street network in this area create challenges for multimodal options, concerns regarding pedestrian and cyclist safety, and serve as barriers to access. The effort will provide a plan for short, medium, and long-term implementation of strategies that will improve the quality of life of residents in the surrounding neighborhood, and increase safety among multimodal options.",
+      },
+      id: 11,
+    },
+  ],
 };
 
 // Accordion functionality
@@ -718,18 +967,9 @@ for (var i = 0; i < accordion.length; i++) {
   };
 }
 
-const options = {
-  method: "GET",
-  mode: "cors",
-  headers: {
-    "Content-Type": "application/json; charset=utf-8",
-  },
-};
-
 const getWebLinks = async (year) => {
   const stream = await fetch(
-    `https://www.dvrpc.org/ASP/TCDIdirect/deliverableFileList_new.aspx?year=${year}`,
-    options
+    `https://www.dvrpc.org/ASP/TCDIdirect/deliverableFileList_new.aspx?year=${year}`
   );
 
   let output = {};
@@ -784,9 +1024,9 @@ const populateProjectDetails = function (dataset, tableName) {
 
   // fill out the awards header
   const awardsHeader = document.querySelector("h2." + tableName);
-  awardsHeader.textContent = !isCurrent
+  awardsHeader.textContent = isCurrent
     ? "FY24 NJ & FY25 PA TCDI Awards"
-    : "FY" + yearShort + " PA & FY" + (yearShort + 1) + " NJ TCDI Awards";
+    : "FY" + year + " TCDI Awards";
 
   // fill out the accordion header & get links where applicable
   let response;
