@@ -517,48 +517,6 @@ const previousDataSet = [
     ID: 343,
     AMOUNT: 65000,
   },
-  {
-    YR: 2023,
-    MUNICIPALITY: "Mercer County",
-    PROJECTNAME: "Johnson Trolley Trail Corridor Study",
-    ID: 350,
-    AMOUNT: 175000,
-  },
-  {
-    YR: 2023,
-    MUNICIPALITY: "Cross County Connection TMA",
-    PROJECTNAME: "BurLink B5 Alternatives Analysis",
-    ID: 351,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2023,
-    MUNICIPALITY: "Beverly City",
-    PROJECTNAME: "Circulation Plan Element",
-    ID: 352,
-    AMOUNT: 75000,
-  },
-  {
-    YR: 2023,
-    MUNICIPALITY: "Burlington County",
-    PROJECTNAME: "Southern Regional Trails Feasibility Study",
-    ID: 353,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2023,
-    MUNICIPALITY: "NJ Transit",
-    PROJECTNAME: "Pennsauken Transit Center TOD Study",
-    ID: 354,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2023,
-    MUNICIPALITY: "Deptford Township",
-    PROJECTNAME: "Bicycle Facility Plan",
-    ID: 355,
-    AMOUNT: 50000,
-  },
 ];
 
 // mapped dataset has a much different shape from data displayed in accordions updating/archiving becomes a pain
@@ -967,9 +925,10 @@ for (var i = 0; i < accordion.length; i++) {
   };
 }
 
+
 const getWebLinks = async (year) => {
   const stream = await fetch(
-    `https://www.dvrpc.org/ASP/TCDIdirect/deliverableFileList_new.aspx?year=${year}`
+    `https://www.dvrpc.org/asp/tcdidirect/deliverableFileList_new.aspx?year=${year}`
   );
 
   let output = {};
