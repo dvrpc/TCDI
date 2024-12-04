@@ -428,7 +428,7 @@ const previousDataSet = [
     YR: 2023,
     MUNICIPALITY: "Chester County Planning Commission",
     PROJECTNAME: "Public Transportation Plan Update: Phase Two",
-    ID: 325,
+    ID: 683,
     AMOUNT: 60000,
   },
   {
@@ -442,7 +442,7 @@ const previousDataSet = [
     YR: 2023,
     MUNICIPALITY: "City of Philadelphia",
     PROJECTNAME: "Preliminary Work for the Comprehensive Plan",
-    ID: 340,
+    ID: 690,
     AMOUNT: 100000,
   },
   {
@@ -456,21 +456,21 @@ const previousDataSet = [
     YR: 2023,
     MUNICIPALITY: "City of Philadelphia",
     PROJECTNAME: "Complete Streets Corridor Study for Aramingo Avenue",
-    ID: 348,
+    ID: 691,
     AMOUNT: 100000,
   },
   {
     YR: 2023,
     MUNICIPALITY: "Township of Middletown",
     PROJECTNAME: "Multimodal Improvement Plan",
-    ID: 323,
+    ID: 681,
     AMOUNT: 85000,
   },
   {
     YR: 2023,
     MUNICIPALITY: "Newtown Borough",
     PROJECTNAME: "Safety and Walkability Review for Multimodal Improvements",
-    ID: 337,
+    ID: 682,
     AMOUNT: 65000,
   },
   {
@@ -484,7 +484,7 @@ const previousDataSet = [
     YR: 2023,
     MUNICIPALITY: "Delaware County TMA",
     PROJECTNAME: "Chester Pike Corridor Multi Modal Improvement Study",
-    ID: 329,
+    ID: 686,
     AMOUNT: 125000,
   },
   {
@@ -498,7 +498,7 @@ const previousDataSet = [
     YR: 2023,
     MUNICIPALITY: "Lower Salford Township",
     PROJECTNAME: "Feasibility Study for Walkable Lederach",
-    ID: 320,
+    ID: 689,
     AMOUNT: 100000,
   },
   {
@@ -512,7 +512,7 @@ const previousDataSet = [
     YR: 2023,
     MUNICIPALITY: "Greater Valley Forge TMA",
     PROJECTNAME: "Community Mobility Hub Feasibility Study",
-    ID: 343,
+    ID: 687,
     AMOUNT: 65000,
   },
 ];
@@ -925,7 +925,7 @@ for (var i = 0; i < accordion.length; i++) {
 
 const getWebLinks = async (year) => {
   const stream = await fetch(
-    `https://www.dvrpc.org/asp/tcdidirect/deliverableFileList_new.aspx?year=${year}`
+    `https://www.dvrpc.org/asp/tcdidirect/deliverableFileList_new.aspx?year=${year}`,
   );
 
   let output = {};
@@ -1166,7 +1166,7 @@ const popupDetails = function (e) {
         "<br /><em>Award Amount: </em>$" +
         e.features[0].properties.AMOUNT.toLocaleString() +
         "<hr class='popup-hr' />" +
-        e.features[0].properties.PROJ_DESC
+        e.features[0].properties.PROJ_DESC,
     )
     .addTo(map);
 };
@@ -1195,7 +1195,7 @@ legendSizes.forEach(function (circle) {
   let labelText = awardSize(circle.size);
   legend.insertAdjacentHTML(
     "beforeend",
-    "<p class='leg-label'" + circle.class + ">" + labelText + "</p>"
+    "<p class='leg-label'" + circle.class + ">" + labelText + "</p>",
   );
 });
 
