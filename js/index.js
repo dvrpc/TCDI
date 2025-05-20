@@ -554,19 +554,34 @@ const FY24 = [
     PROJECTNAME: "Bicycle Facility Plan",
     AMOUNT: 50000,
   },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Multi-municipal (Falls and Bristol Townships)",
-    PROJECTNAME: "D&L Trail Crossing Study",
-    ID: 356,
-    AMOUNT: 100000,
-  },
 ];
 
 // mapped dataset has a much different shape from data displayed in accordions updating/archiving becomes a pain
 const currentDataSet = {
   type: "FeatureCollection",
   features: [
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-74.8325937004785, 40.16106520070865],
+      },
+      properties: {
+        yr: 2024,
+        PROJECTNAME: "D&L Trail Crossing Study",
+        MUNICIPALITY: "Multi-municipal (Falls and Bristol Townships)",
+        co_name: "Bucks",
+        AMOUNT: 100000,
+        longitude: -74.8325937005,
+        id: 356,
+        state: "PA",
+        latitude: 40.1610652007,
+        proj_desc2: "",
+        PROJ_DESC:
+          "TCDI funds will be used to study six specific road crossings along the D&L Trail within Falls and Bristol Townships. Current conditions at these locations create conflict between trail users and motorists. The Study will identify and develop safe crossing alternatives, wayfinding recommendations, and actionable steps for implementation.",
+      },
+      id: 0,
+    },
     {
       type: "Feature",
       geometry: {
