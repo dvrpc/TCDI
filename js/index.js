@@ -614,7 +614,7 @@ const currentDataSet = {
       properties: {
         yr: 2024,
         PROJECTNAME: "Lincoln Highway Active Transportation Improvement Plan",
-        MUNICIPALITY: "Multi-municipal (City of Coatesville and Caln Township)",
+        MUNICIPALITY: "Transportation Management Association of Chester County",
         co_name: "Chester",
         AMOUNT: 85000,
         longitude: -75.798743598,
@@ -703,7 +703,7 @@ const currentDataSet = {
       properties: {
         yr: 2024,
         PROJECTNAME: "Cheltenham Avenue Road Diet Feasibility Study",
-        MUNICIPALITY: "Multi-municipal  (Cheltenham and Springfield Townships)",
+        MUNICIPALITY: "Montgomery County",
         co_name: "Montgomery",
         AMOUNT: 135000,
         longitude: -75.1801987972,

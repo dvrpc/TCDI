@@ -5,6 +5,273 @@ const archiveData = {
     {
       type: "Feature",
       properties: {
+        YR: "2019",
+        ID: "545",
+        LEAD_MUN: "Upper Moreland Township",
+        AMT_WEB: "$72,000.00",
+        TITLE: "Master Trail Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1vgdo2YnkPz-E2uHiJCqF1csnSCfj92lg&filename=TCDI_545deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "530",
+        LEAD_MUN: "Gloucester City",
+        AMT_WEB: "$65,000.00",
+        TITLE: "Port Neighborhood Transportation Study",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1uPa9bMfAjct-8xwxf8p5jBE-gBSQUavp&filename=TCDI_530deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "537",
+        LEAD_MUN: "Lawrence Township",
+        AMT_WEB: "$60,000.00",
+        TITLE: "Brunswick Pike Streetscape",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=19snZTSIAPHeZMEnMU3oXjUCl8MrtboJF&filename=TCDI_537deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "544",
+        LEAD_MUN: "Chalfont Borough",
+        AMT_WEB: "$50,000.00",
+        TITLE: "Parking Consolidation & Streetscape Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1U1TQYZ_cvmjHRCATj-A_sZbjpoDkid8W&filename=TCDI_544deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "549",
+        LEAD_MUN: "Burlington County",
+        AMT_WEB: "$70,000.00",
+        TITLE: "Centerton Road Pedestrian-Bicycle Bridge Feasibility Study",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1ahEeXkQ_mh2r2XQIONIhxgCFQmgDx0Ix&filename=TCDI_549deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "532",
+        LEAD_MUN: "Montgomery County",
+        AMT_WEB: "$75,000.00",
+        TITLE:
+          "Creating Equitable Connections to the Montgomery County Trail System",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1ZaUUbnWFtfY3DYGis3evVh4IS7570p51&filename=TCDI_532deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "547",
+        LEAD_MUN: "City of Philadelphia (oTis)",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Vision Zero Pedestrian Safety Study & Action Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1EsVD-i6fIzvoCoTng5uZvUC7JPKb8Yj3&filename=TCDI_547deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "528",
+        LEAD_MUN: "City of Philadelphia (oTis)",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Central Philadelphia Transportation Analysis Program",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1EsNtmxZmDwSIogz11aWqnJs4it7WJghD&filename=TCDI_528deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "529",
+        LEAD_MUN: "Burlington County Bridge Commission",
+        AMT_WEB: "$150,000.00",
+        TITLE: "County Route 541 Corridor Study",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1MpxIlTdK1pQ6Iu46GAFJyZc3lMT3puEK&filename=TCDI_529deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "553",
+        LEAD_MUN: "Camden County",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Connecting Transportation and Land Use Along Haddon Avenue",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1iXodA3EIaz4o5JLiRpdIFAlLnPp9VQm-&filename=TCDI_553deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "540",
+        LEAD_MUN: "Pottstown Borough",
+        AMT_WEB: "$32,000.00",
+        TITLE: "Keim Street Gateway Overlay Planning",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1NkZYtZTDYRA-_qvcFwkM4gBCBFhZZ10A&filename=TCDI_540deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "538",
+        LEAD_MUN: "City of Philadelphia (PCPC)",
+        AMT_WEB: "$100,000.00",
+        TITLE: "North Philadelphia Station Area",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1xMc5f5knjaBRbdBlLopYLKuoFAXGivUo&filename=TCDI_538deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "524",
+        LEAD_MUN: "Burlington City",
+        AMT_WEB: "$50,000.00",
+        TITLE: "Downtown Circulation Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1njNRXaZEPvRlv6j1oSybZZaZoS3Bf8xC&filename=TCDI_524deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "541",
+        LEAD_MUN: "Middletown Township",
+        AMT_WEB: "$67,000.00",
+        TITLE: "Comprehensive Plan Update",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1Nbd46yQQRxCkBmWTaGrEGSQXuxO0peox&filename=TCDI_541deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "527",
+        LEAD_MUN: "City of Philadelphia (PCPC)",
+        AMT_WEB: "$100,000.00",
+        TITLE: "Complete Streets",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1f8c-Lky6ES0x5sPn1DkXwVD81nCq9Ti0&filename=TCDI_527deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "552",
+        LEAD_MUN: "Media Borough",
+        AMT_WEB: "$90,000.00",
+        TITLE: "Traffic Calming Study",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1sFeNu6PcYF4hxDzdmrBtxry2M7DlVRiM&filename=TCDI_552deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "559",
+        LEAD_MUN: "Concord Township",
+        AMT_WEB: "$72,000.00",
+        TITLE: "1/202 Corridor Pedestrian Improvement Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1lMKoIUkvBk3Cx1tuw-kTo-ciO7VRUoVb&filename=TCDI_559deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "531",
+        LEAD_MUN: "Collingswood Borough",
+        AMT_WEB: "$72,000.00",
+        TITLE: "Bicycle and Pedestrian Enhancements Master Plan",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1o90ikn0nFs_SHMCCcxJp_8hMiN6tQBp8&filename=TCDI_531deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "551",
+        LEAD_MUN: "Merchantville Borough",
+        AMT_WEB: "$33,000.00",
+        TITLE: "Lighting Feasibility Study",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1v-rg8zxXLokxHN7mdUWP2ZdRz60S0UdH&filename=TCDI_551deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "542",
+        LEAD_MUN: "New Garden Township",
+        AMT_WEB: "$65,000.00",
+        TITLE:
+          "Transportation Improvement Plan for the Village of Toughkenamon",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1NzbGFmp9uVyBzDWhbpsL2sYweiU59ofv&filename=TCDI_542deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "521",
+        LEAD_MUN: "Chester County",
+        AMT_WEB: "$125,000.00",
+        TITLE:
+          "Active Transportation Municipal Ordinance Inventory and Outreach",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=17AMovfPainCb9Uusqe5gkuV3b9HVu9pD&filename=TCDI_521deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: "2019",
+        ID: "556",
+        LEAD_MUN: "Lower Merion Township",
+        AMT_WEB: "$52,000.00",
+        TITLE: "Multi-Modal Strategies and Policies",
+        WEBLINK:
+          "https://www.dvrpc.org/asp/TCDIdirect/filedownload.aspx?fileid=1hgp1i1Fg-eR8nsoLVPDZWzn-Ho_N9J4A&filename=TCDI_556deliverable.pdf",
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
         YR: "2017",
         LEAD_MUN: "Bucks County Planning Department",
         TITLE: "Bristol Township Economic Development Analysis",
@@ -3147,9 +3414,9 @@ function populateProjectDetails(dataset, tableName) {
 }
 
 fetch(
-  "https://www.dvrpc.org/asp/tcdidirect/ProjectsWithDeliverableList.aspx?year=2002&year2=2017"
+  "https://www.dvrpc.org/asp/tcdidirect/ProjectsWithDeliverableList.aspx?year=2002&year2=2019",
 )
   .then((res) => res.json())
   .then((data) =>
-    populateProjectDetails([...data.files].reverse(), "archiveData")
+    populateProjectDetails([...data.files].reverse(), "archiveData"),
   );
