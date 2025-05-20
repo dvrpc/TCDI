@@ -561,224 +561,12 @@ const FY24 = [
     ID: 356,
     AMOUNT: 100000,
   },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Quakertown",
-    PROJECTNAME: "Quakertown Borough Complete Streets Plan",
-    ID: 357,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Multi-municipal (City of Coatesville and Caln Township)",
-    PROJECTNAME: "Lincoln Highway Active Transportation Improvement Plan",
-    ID: 358,
-    AMOUNT: 85000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Upper Uwchlan Township",
-    PROJECTNAME: "Eagle Village Gateways and Mobility Plan",
-    ID: 359,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Multi-municipal (Collingdale and Darby Boroughs)",
-    PROJECTNAME: "MacDade Boulevard Concept Development Study",
-    ID: 360,
-    AMOUNT: 175000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Radnor Township",
-    PROJECTNAME: "Downtown Wayne Master Plan",
-    ID: 361,
-    AMOUNT: 100000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Multi-municipal  (Cheltenham and Springfield Townships)",
-    PROJECTNAME: "Cheltenham Avenue Road Diet Feasibility Study",
-    ID: 362,
-    AMOUNT: 135000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "Abington Township",
-    PROJECTNAME: "Abington Separated Bike Lanes Action Plan",
-    ID: 363,
-    AMOUNT: 75000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "City of Philadelphia",
-    PROJECTNAME:
-      "Philadelphia Complete Streets Area Study: Port Richmond Industrial District and Waterfront",
-    ID: 364,
-    AMOUNT: 60000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "City of Philadelphia",
-    PROJECTNAME: "34th Street at Grays Ferry Visioning Project",
-    ID: 365,
-    AMOUNT: 90000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "City of Philadelphia",
-    PROJECTNAME: "Intercity Bus Terminal Site Planning Project",
-    ID: 366,
-    AMOUNT: 90000,
-  },
-  {
-    YR: 2024,
-    MUNICIPALITY: "City of Philadelphia",
-    PROJECTNAME: "48th & Woodland Playground Area Transportation Safety Study",
-    ID: 367,
-    AMOUNT: 90000,
-  },
 ];
 
 // mapped dataset has a much different shape from data displayed in accordions updating/archiving becomes a pain
 const currentDataSet = {
   type: "FeatureCollection",
   features: [
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-74.73086389612111, 40.29627907352508],
-      },
-      type: "Feature",
-      id: 10,
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "Johnson Trolley Trail Corridor Study",
-        AMOUNT: 175000,
-        MUNICIPALITY: "Mercer County",
-        MCD: "Ewing Township, Lawrence Township, Princeton, Trenton City",
-        ID: 350.0,
-        PROJ_DESC:
-          "The Johnson Trolley Trail is part of the Circuit Trails network, and this feasibility assessment will identify an alignment that connects, and extends, both existing and proposed segments. The outcome would be a bicycle and pedestrian corridor originating in the City of Trenton, passing through Ewing and Lawrence Townships, and terminating in the Municipality of Princeton.",
-        geography: "Municipal",
-      },
-    },
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-74.79047417315965, 40.09393153142108],
-      },
-      type: "Feature",
-      id: 10,
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "BurLink B5 Alternatives Analysis",
-        AMOUNT: 100000,
-        MUNICIPALITY: "Cross County Connection TMA",
-        MCD: "Burlington Township & Florence Township",
-        ID: 351.0,
-        PROJ_DESC:
-          "The BurLINK B5 shuttle operates in Florence and Burlington Townships, and serves as a first-mile/last-mile loop for commuters between NJ Transit\u2019s Florence River LINE Station and the Haines Industrial Park. Cross County Connection Transportation Management Association will conduct an analysis to identify limitations, inefficiencies, and quality of service issues; include a review of workforce automation trends in the sectors served by the shuttle to better understand how those trends may impact future ridership; and identify short-, medium-, and long-term improvement and funding options.",
-        geography: "Municipal",
-      },
-    },
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-74.92232840965741, 40.065207435503304],
-      },
-      type: "Feature",
-      id: 10,
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "Circulation Plan Element",
-        AMOUNT: 75000,
-        MUNICIPALITY: "Beverly City",
-        ID: 352.0,
-        PROJ_DESC:
-          "TCDI funds will be used to develop a circulation plan element for the City\u2019s masterplan. The plan will be comprehensive, and provide recommendations for improving circulation of pedestrians, bicycles, and vehicles while addressing connections to public transit (e.g. NJ Transit\u2019s River LINE). Complete Streets and Green Streets principles will also be included.",
-        geography: "Municipal",
-      },
-    },
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-74.87974188635692, 39.89800062914225],
-      },
-      type: "Feature",
-      id: 10,
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "Southern Regional Trails Feasibility Study",
-        AMOUNT: 100000,
-        MUNICIPALITY: "Burlington County",
-        MCD: "Evesham Township, Maple Shade Township, Medford Township, Moorestown Township, Mount Laurel Township",
-        ID: 353.0,
-        PROJ_DESC:
-          "Burlington County will conduct a feasibility study to expand the Circuit Trail network from the Rancocas Creek Greenway Trail through multiple municipalities in Burlington County, including Maple Shade Township, Moorestown Township,Mount Laurel Township, Evesham Township, Medford Township, Shamong Township, and Tabernacle Township; as well as potential links to Camden County\u2019s regional trails.",
-        geography: "Municipal",
-      },
-    },
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-75.05639683290443, 39.9649959907333],
-      },
-      type: "Feature",
-      id: 10,
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "Pennsauken Transit Center TOD Study",
-        AMOUNT: 100000,
-        MUNICIPALITY: "NJ Transit",
-        MCD: "Pennsauken Township",
-        ID: 354.0,
-        PROJ_DESC:
-          "New Jersey Transit will use the TCDI funds to study the need for TOD at the Pennsauken Transit Center, which is an ADA-accessible intermodal transit facility with NJ Transit Atlantic City Rail, River LINE, and bus service, as well as identify transit-friendly improvements within the half-mile station area.",
-        geography: "Municipal",
-      },
-    },
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-75.11815629485359, 39.8157059701066],
-      },
-      type: "Feature",
-      id: 10,
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "Bicycle Facility Plan",
-        AMOUNT: 50000,
-        MUNICIPALITY: "Deptford Township",
-        ID: 355.0,
-        PROJ_DESC:
-          "The Plan will provide a strategic approach to develop a network of improvements for bicyclists for commuting and recreational purposes in Deptford Township, where these types of facilities are currently lacking. The Plan will connect the retail nucleus centered on the Deptford Mall to neighborhoods and other trip generators, such as schools, the community college, other institutions and recreational areas.",
-        geography: "Municipal",
-      },
-    },
-    {
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [-74.8325937004785, 40.16106520070865],
-      },
-      properties: {
-        yr: 2024,
-        PROJECTNAME: "D&L Trail Crossing Study",
-        MUNICIPALITY: "Multi-municipal (Falls and Bristol Townships)",
-        co_name: "Bucks",
-        AMOUNT: 100000,
-        longitude: -74.8325937005,
-        id: 356,
-        state: "PA",
-        latitude: 40.1610652007,
-        proj_desc2: "",
-        PROJ_DESC:
-          "TCDI funds will be used to study six specific road crossings along the D&L Trail within Falls and Bristol Townships. Current conditions at these locations create conflict between trail users and motorists. The Study will identify and develop safe crossing alternatives, wayfinding recommendations, and actionable steps for implementation.",
-      },
-      id: 0,
-    },
     {
       type: "Feature",
       geometry: {
@@ -1012,6 +800,114 @@ const currentDataSet = {
           "The confluence of various transit modes and a complicated street network in this area create challenges for multimodal options, concerns regarding pedestrian and cyclist safety, and serve as barriers to access. The effort will provide a plan for short, medium, and long-term implementation of strategies that will improve the quality of life of residents in the surrounding neighborhood, and increase safety among multimodal options.",
       },
       id: 11,
+    },
+    // start unmapped
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME: "Transit Village and Land Use Plan",
+        MUNICIPALITY: "Beverly City",
+        co_name: "Burlington",
+        AMOUNT: 90000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "TCDI funds will be used to advance Beverly City’s efforts of becoming a transit village and increase access to housing and jobs by enabling mixed-used commercial and residential development. The scope will include developing a land use plan that will foster transit-oriented development, while leveraging the city’s location along NJ Transit’s River Line.",
+      },
+      id: 12,
+    },
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME:
+          "Delaware River Heritage Trail (DRHT) Feasibility and Route Alignment Study",
+        MUNICIPALITY:
+          "Burlington County Project (Beverly City, Burlington City, Burlington Township, Delanco Township, Edgewater Park Township, and Florence Township)",
+        co_name: "Burlington",
+        AMOUNT: 75000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "The goal for this project is to identify feasible alignments of the Delaware River Heritage Trail (DRHT) that will link separated communities from Florence to Delanco Townships along a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
+      },
+      id: 13,
+    },
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME: "Circulation Plan Improvements",
+        MUNICIPALITY: "Evesham Township",
+        co_name: "Burlington",
+        AMOUNT: 75000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "Funding will be used to develop a circulation plan to advance township-wide mobility improvements aimed at enhancing connectivity and improving wayfinding and access to transit.",
+      },
+      id: 14,
+    },
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME: "Zoning & Land Development Ordinance Update",
+        MUNICIPALITY: "Haddon Township",
+        co_name: "Camden",
+        AMOUNT: 60000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "In order to advance Township efforts to meet affordable housing applications, TCDI funds will be use to update the Township’s land development and zoning ordinance to foster transit-oriented development (TOD) and enable mixed-use redevelopment of the area surrounding the PATCO High Speed Line station.",
+      },
+      id: 15,
+    },
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME: "Pennsauken-Palmyra Trail Expansion Feasibility Study",
+        MUNICIPALITY: "Pennsauken Township and Palmyra Borough",
+        co_name: "Camden",
+        AMOUNT: 125000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "This multimunicipal effort will identify alignments through Pennsauken Township, in Camden County, and Palmyra Borough, in Burlington County, for a stretch of the Delaware River Heritage Trail. The goal being to aAdvance efforts to complete the region’s Circuit Trails network and the East Coast Greenway.",
+      },
+      id: 16,
+    },
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME: "Downtown Parking and Economic Development Plan",
+        MUNICIPALITY: "Hightstown Borough",
+        co_name: "Mercer",
+        AMOUNT: 75000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "With the goal of creating a more vibrant downtown that better serves the changing population and addresses access issues, the Borough will use TCDI funds to develop strategies to increase economic activity in downtown, while also understanding parking availability versus demand.",
+      },
+      id: 17,
+    },
+    {
+      type: "Feature",
+      properties: {
+        yr: 2026,
+        PROJECTNAME: "Trenton Transit Center TOD Study",
+        MUNICIPALITY: "NJ Transit (Trenton)",
+        co_name: "Mercer",
+        AMOUNT: 75000,
+        state: "NJ",
+        proj_desc2: "",
+        PROJ_DESC:
+          "TCDI funds will be used to study the feasibility transit-oriented development within a half-mile radius of the Trenton Transit Center and identify appropriate transit-friendly improvements. The goal is to advance state-level economic and environmental goals and increase City of Trenton’s tax-base by increasing multimodal access to housing and jobs.",
+      },
+      id: 18,
     },
   ],
 };
