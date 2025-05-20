@@ -517,6 +517,130 @@ const previousDataSet = [
   },
 ];
 
+const FY24 = [
+  {
+    YR: 2024,
+    MUNICIPALITY: "Mercer County",
+    PROJECTNAME: "Johnson Trolley Trail Corridor Study",
+    AMOUNT: 175000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Cross County Connection TMA",
+    PROJECTNAME: "BurLink B5 Alternatives Analysis",
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Beverly City",
+    PROJECTNAME: "Circulation Plan Element",
+    AMOUNT: 75000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Burlington County",
+    PROJECTNAME: "Southern Regional Trails Feasibility Study",
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "NJ Transit",
+    PROJECTNAME: "Pennsauken Transit Center TOD Study",
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Deptford Township",
+    PROJECTNAME: "Bicycle Facility Plan",
+    AMOUNT: 50000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Multi-municipal (Falls and Bristol Townships)",
+    PROJECTNAME: "D&L Trail Crossing Study",
+    ID: 356,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Quakertown",
+    PROJECTNAME: "Quakertown Borough Complete Streets Plan",
+    ID: 357,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Multi-municipal (City of Coatesville and Caln Township)",
+    PROJECTNAME: "Lincoln Highway Active Transportation Improvement Plan",
+    ID: 358,
+    AMOUNT: 85000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Upper Uwchlan Township",
+    PROJECTNAME: "Eagle Village Gateways and Mobility Plan",
+    ID: 359,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Multi-municipal (Collingdale and Darby Boroughs)",
+    PROJECTNAME: "MacDade Boulevard Concept Development Study",
+    ID: 360,
+    AMOUNT: 175000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Radnor Township",
+    PROJECTNAME: "Downtown Wayne Master Plan",
+    ID: 361,
+    AMOUNT: 100000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Multi-municipal  (Cheltenham and Springfield Townships)",
+    PROJECTNAME: "Cheltenham Avenue Road Diet Feasibility Study",
+    ID: 362,
+    AMOUNT: 135000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "Abington Township",
+    PROJECTNAME: "Abington Separated Bike Lanes Action Plan",
+    ID: 363,
+    AMOUNT: 75000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME:
+      "Philadelphia Complete Streets Area Study: Port Richmond Industrial District and Waterfront",
+    ID: 364,
+    AMOUNT: 60000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "34th Street at Grays Ferry Visioning Project",
+    ID: 365,
+    AMOUNT: 90000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "Intercity Bus Terminal Site Planning Project",
+    ID: 366,
+    AMOUNT: 90000,
+  },
+  {
+    YR: 2024,
+    MUNICIPALITY: "City of Philadelphia",
+    PROJECTNAME: "48th & Woodland Playground Area Transportation Safety Study",
+    ID: 367,
+    AMOUNT: 90000,
+  },
+];
+
 // mapped dataset has a much different shape from data displayed in accordions updating/archiving becomes a pain
 const currentDataSet = {
   type: "FeatureCollection",
@@ -1027,6 +1151,7 @@ const populateProjectDetails = function (dataset, tableName) {
 };
 
 populateProjectDetails(currentDataSet, "currentDataSet");
+populateProjectDetails(FY24, "FY24");
 populateProjectDetails(previousDataSet, "previousDataSet");
 populateProjectDetails(secondPreviousDataSet, "secondPreviousDataSet");
 // moved to archived projects 5/12/2022
