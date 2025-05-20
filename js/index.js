@@ -843,6 +843,31 @@ const currentDataSet = {
     {
       geometry: {
         type: "Point",
+        coordinates: [-74.8631747717932, 40.06708614858715],
+      },
+      type: "Feature",
+      id: 6,
+      properties: {
+        PROJECTNAME:
+          "Delaware River Heritage Trail (DRHT) Feasibility and Route Alignment Study",
+        MUNICIPALITY:
+          "Burlington County Project (Beverly City, Burlington City, Burlington Township, Delanco Township, Edgewater Park Township, and Florence Township)",
+        co_name: "Burlington",
+        AMOUNT: 75000,
+        longitude: -74.8631747718,
+        id: 369,
+        state: "NJ",
+        latitude: 40.0670861486,
+        yr: 2026,
+        PROJ_DESC2:
+          "a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
+        PROJ_DESC:
+          "The goal for this project is to identify feasible alignments of the Delaware River Heritage Trail (DRHT) that will link separated communities from Florence to Delanco Townships along a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
+      },
+    },
+    {
+      geometry: {
+        type: "Point",
         coordinates: [-74.89465327460098, 39.86681993773317],
       },
       type: "Feature",
@@ -953,31 +978,6 @@ const currentDataSet = {
           "TCDI funds will be used to study the feasibility transit-oriented development within a half-mile radius of the Trenton Transit Center and identify appropriate transit-friendly improvements.The goal is to advance state-level economic and environmental goals and increase City of Trenton’s tax-base by increasing multimodal access to housing and jobs.",
       },
     },
-    {
-      geometry: {
-        type: "Point",
-        coordinates: [-74.8631747717932, 40.06708614858715],
-      },
-      type: "Feature",
-      id: 6,
-      properties: {
-        PROJECTNAME:
-          "Delaware River Heritage Trail (DRHT) Feasibility and Route Alignment Study",
-        MUNICIPALITY:
-          "Burlington County Project (Beverly City, Burlington City, Burlington Township, Delanco Township, Edgewater Park Township, and Florence Township)",
-        co_name: "Burlington",
-        AMOUNT: 75000,
-        longitude: -74.8631747718,
-        id: 369,
-        state: "NJ",
-        latitude: 40.0670861486,
-        yr: 2026,
-        PROJ_DESC2:
-          "a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
-        PROJ_DESC:
-          "The goal for this project is to identify feasible alignments of the Delaware River Heritage Trail (DRHT) that will link separated communities from Florence to Delanco Townships along a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
-      },
-    },
   ],
 };
 
@@ -1070,7 +1070,7 @@ const populateProjectDetails = function (dataset, tableName) {
   // fill out the awards header
   const awardsHeader = document.querySelector("h2." + tableName);
   awardsHeader.textContent = isCurrent
-    ? "FY24 NJ & FY25 PA TCDI Awards"
+    ? "FY25 PA & FY26 NJ TCDI Awards"
     : "FY" + year + " TCDI Awards";
 
   // fill out the accordion header & get links where applicable
