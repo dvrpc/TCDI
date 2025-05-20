@@ -816,113 +816,167 @@ const currentDataSet = {
       },
       id: 11,
     },
-    // start unmapped
+    // Add NJ here
     {
+      geometry: {
+        type: "Point",
+        coordinates: [-74.92232840965741, 40.065207435503304],
+      },
       type: "Feature",
+      id: 0,
       properties: {
-        yr: 2026,
         PROJECTNAME: "Transit Village and Land Use Plan",
         MUNICIPALITY: "Beverly City",
         co_name: "Burlington",
         AMOUNT: 90000,
+        longitude: -74.9223284097,
+        id: 368,
         state: "NJ",
-        proj_desc2: "",
+        latitude: 40.0652074355,
+        yr: 2026,
+        PROJ_DESC2:
+          "The scope will include developing a land use plan that will foster transit-oriented development, while leveraging the city’s location along NJ Transit’s River Line.",
         PROJ_DESC:
-          "TCDI funds will be used to advance Beverly City’s efforts of becoming a transit village and increase access to housing and jobs by enabling mixed-used commercial and residential development. The scope will include developing a land use plan that will foster transit-oriented development, while leveraging the city’s location along NJ Transit’s River Line.",
+          "TCDI funds will be used to advance Beverly City’s efforts of becoming a transit village and increase access to housing and jobs by enabling mixed-used commercial and residential development.The scope will include developing a land use plan that will foster transit-oriented development, while leveraging the city’s location along NJ Transit’s River Line.",
       },
-      id: 12,
     },
     {
+      geometry: {
+        type: "Point",
+        coordinates: [-74.89465327460098, 39.86681993773317],
+      },
       type: "Feature",
+      id: 1,
       properties: {
+        PROJECTNAME: "Circulation Plan Improvements",
+        MUNICIPALITY: "Evesham Township",
+        co_name: "Burlington",
+        AMOUNT: 75000,
+        longitude: -74.8946532746,
+        state: "NJ",
+        latitude: 39.8668199377,
         yr: 2026,
+        id: 370,
+        PROJ_DESC:
+          "Funding will be used to develop a circulation plan to advance township-wide mobility improvements aimed at enhancing connectivity and improving wayfinding and access to transit.",
+      },
+    },
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [-75.05369705936836, 39.906666392891516],
+      },
+      type: "Feature",
+      id: 2,
+      properties: {
+        PROJECTNAME: "Zoning & Land Development Ordinance Update",
+        MUNICIPALITY: "Haddon Township",
+        co_name: "Camden",
+        AMOUNT: 60000,
+        longitude: -75.0536970594,
+        id: 371,
+        state: "NJ",
+        latitude: 39.9066663929,
+        yr: 2026,
+        PROJ_DESC2:
+          "and enable mixed-use redevelopment of the area surrounding the PATCO High Speed Line station.",
+        PROJ_DESC:
+          "In order to advance Township efforts to meet affordable housing applications, TCDI funds will be use to update the Township’s land development and zoning ordinance to foster transit-oriented development (TOD) and enable mixed-use redevelopment of the area surrounding the PATCO High Speed Line station.",
+      },
+    },
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [-75.04384006267034, 39.98247764242342],
+      },
+      type: "Feature",
+      id: 3,
+      properties: {
+        PROJECTNAME: "Pennsauken-Palmyra Trail Expansion Feasibility Study",
+        MUNICIPALITY: "Pennsauken Township and Palmyra Borough",
+        co_name: "Camden",
+        AMOUNT: 125000,
+        longitude: -75.0438400627,
+        id: 374,
+        state: "NJ",
+        latitude: 39.9824776424,
+        yr: 2026,
+        PROJ_DESC2:
+          "The goal being to advance efforts to complete the region’s Circuit Trails network and the East Coast Greenway.",
+        PROJ_DESC:
+          "This multimunicipal effort will identify alignments through Pennsauken Township, in Camden County, and Palmyra Borough, in Burlington County, for a stretch of the Delaware River Heritage Trail.The goal being to advance efforts to complete the region’s Circuit Trails network and the East Coast Greenway.",
+      },
+    },
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [-74.5259309716541, 40.26872772772394],
+      },
+      type: "Feature",
+      id: 4,
+      properties: {
+        PROJECTNAME: "Downtown Parking and Economic Development Plan",
+        MUNICIPALITY: "Hightstown Borough",
+        co_name: "Mercer",
+        AMOUNT: 75000,
+        longitude: -74.5259309717,
+        id: 372,
+        state: "NJ",
+        latitude: 40.2687277277,
+        yr: 2026,
+        PROJ_DESC2:
+          ", while also understanding parking availability versus demand.",
+        PROJ_DESC:
+          "With the goal of creating a more vibrant downtown that better serves the changing population and addresses access issues, the Borough will use TCDI funds to develop strategies to increase economic activity in downtown, while also understanding parking availability versus demand.",
+      },
+    },
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [-74.76265131226208, 40.21981818620881],
+      },
+      type: "Feature",
+      id: 5,
+      properties: {
+        PROJECTNAME: "Trenton Transit Center TOD Study",
+        MUNICIPALITY: "NJ Transit (Trenton)",
+        co_name: "Mercer",
+        AMOUNT: 100000,
+        longitude: -74.7626513123,
+        id: 373,
+        state: "NJ",
+        latitude: 40.2198181862,
+        yr: 2026,
+        PROJ_DESC2:
+          "The goal is to advance state-level economic and environmental goals and increase City of Trenton’s tax-base by increasing multimodal access to housing and jobs.",
+        PROJ_DESC:
+          "TCDI funds will be used to study the feasibility transit-oriented development within a half-mile radius of the Trenton Transit Center and identify appropriate transit-friendly improvements.The goal is to advance state-level economic and environmental goals and increase City of Trenton’s tax-base by increasing multimodal access to housing and jobs.",
+      },
+    },
+    {
+      geometry: {
+        type: "Point",
+        coordinates: [-74.8631747717932, 40.06708614858715],
+      },
+      type: "Feature",
+      id: 6,
+      properties: {
         PROJECTNAME:
           "Delaware River Heritage Trail (DRHT) Feasibility and Route Alignment Study",
         MUNICIPALITY:
           "Burlington County Project (Beverly City, Burlington City, Burlington Township, Delanco Township, Edgewater Park Township, and Florence Township)",
         co_name: "Burlington",
         AMOUNT: 75000,
+        longitude: -74.8631747718,
+        id: 369,
         state: "NJ",
-        proj_desc2: "",
+        latitude: 40.0670861486,
+        yr: 2026,
+        PROJ_DESC2:
+          "a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
         PROJ_DESC:
           "The goal for this project is to identify feasible alignments of the Delaware River Heritage Trail (DRHT) that will link separated communities from Florence to Delanco Townships along a 13-mile-long segment of the DRHT and explore ways to eliminate physical barriers.",
       },
-      id: 13,
-    },
-    {
-      type: "Feature",
-      properties: {
-        yr: 2026,
-        PROJECTNAME: "Circulation Plan Improvements",
-        MUNICIPALITY: "Evesham Township",
-        co_name: "Burlington",
-        AMOUNT: 75000,
-        state: "NJ",
-        proj_desc2: "",
-        PROJ_DESC:
-          "Funding will be used to develop a circulation plan to advance township-wide mobility improvements aimed at enhancing connectivity and improving wayfinding and access to transit.",
-      },
-      id: 14,
-    },
-    {
-      type: "Feature",
-      properties: {
-        yr: 2026,
-        PROJECTNAME: "Zoning & Land Development Ordinance Update",
-        MUNICIPALITY: "Haddon Township",
-        co_name: "Camden",
-        AMOUNT: 60000,
-        state: "NJ",
-        proj_desc2: "",
-        PROJ_DESC:
-          "In order to advance Township efforts to meet affordable housing applications, TCDI funds will be use to update the Township’s land development and zoning ordinance to foster transit-oriented development (TOD) and enable mixed-use redevelopment of the area surrounding the PATCO High Speed Line station.",
-      },
-      id: 15,
-    },
-    {
-      type: "Feature",
-      properties: {
-        yr: 2026,
-        PROJECTNAME: "Pennsauken-Palmyra Trail Expansion Feasibility Study",
-        MUNICIPALITY: "Pennsauken Township and Palmyra Borough",
-        co_name: "Camden",
-        AMOUNT: 125000,
-        state: "NJ",
-        proj_desc2: "",
-        PROJ_DESC:
-          "This multimunicipal effort will identify alignments through Pennsauken Township, in Camden County, and Palmyra Borough, in Burlington County, for a stretch of the Delaware River Heritage Trail. The goal being to aAdvance efforts to complete the region’s Circuit Trails network and the East Coast Greenway.",
-      },
-      id: 16,
-    },
-    {
-      type: "Feature",
-      properties: {
-        yr: 2026,
-        PROJECTNAME: "Downtown Parking and Economic Development Plan",
-        MUNICIPALITY: "Hightstown Borough",
-        co_name: "Mercer",
-        AMOUNT: 75000,
-        state: "NJ",
-        proj_desc2: "",
-        PROJ_DESC:
-          "With the goal of creating a more vibrant downtown that better serves the changing population and addresses access issues, the Borough will use TCDI funds to develop strategies to increase economic activity in downtown, while also understanding parking availability versus demand.",
-      },
-      id: 17,
-    },
-    {
-      type: "Feature",
-      properties: {
-        yr: 2026,
-        PROJECTNAME: "Trenton Transit Center TOD Study",
-        MUNICIPALITY: "NJ Transit (Trenton)",
-        co_name: "Mercer",
-        AMOUNT: 75000,
-        state: "NJ",
-        proj_desc2: "",
-        PROJ_DESC:
-          "TCDI funds will be used to study the feasibility transit-oriented development within a half-mile radius of the Trenton Transit Center and identify appropriate transit-friendly improvements. The goal is to advance state-level economic and environmental goals and increase City of Trenton’s tax-base by increasing multimodal access to housing and jobs.",
-      },
-      id: 18,
     },
   ],
 };
