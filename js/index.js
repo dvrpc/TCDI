@@ -764,8 +764,9 @@ const getWebLinks = async (year) => {
   if (stream.ok) {
     const response = await stream.json();
     response.items.forEach((file) => {
+      file = {...file, properties: JSON.parse(file.properties)}
       const id = file.properties.project;
-      const link = file.webViewLink;
+      const link = file.webviewlink;
 
       // format response so that lookup time for the datasets loop is faster (only looping thru response once here, rather than for every dataset obj)
       output[id] = link;
