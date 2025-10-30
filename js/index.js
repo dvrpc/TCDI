@@ -755,7 +755,7 @@ for (var i = 0; i < accordion.length; i++) {
 
 const getWebLinks = async (year) => {
   const stream = await fetch(
-    `https://www.dvrpc.org/asp/tcdidirect/deliverableFileList_new.aspx?year=${year}`,
+    `https://apps.dvrpc.org/ords/tcdi_db/deliverablefiles?year=${year}`,
   );
 
   let output = {};
@@ -763,7 +763,7 @@ const getWebLinks = async (year) => {
   // check if the ID yields a response
   if (stream.ok) {
     const response = await stream.json();
-    response.files.forEach((file) => {
+    response.items.forEach((file) => {
       const id = file.properties.project;
       const link = file.webViewLink;
 

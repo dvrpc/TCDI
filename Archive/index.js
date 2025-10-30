@@ -3395,11 +3395,11 @@ function populateProjectDetails(dataset, tableName) {
     const AMT_WEBColumn = newRow.insertCell();
     const yearColumn = newRow.insertCell();
 
-    const D = project.properties.LEAD_MUN;
-    const title = project.properties.TITLE;
-    const link = project.properties.WEBLINK;
-    const AMT_WEB = project.properties.AMT_WEB;
-    const year = project.properties.YR;
+    const D = project.lead_mun;
+    const title = project.title;
+    const link = project.properties.webviewlink;
+    const AMT_WEB = project.amt_web;
+    const year = project.properties.year;
 
     DColumn.textContent = D;
     titleColumn.innerHTML =
@@ -3414,9 +3414,9 @@ function populateProjectDetails(dataset, tableName) {
 }
 
 fetch(
-  "https://www.dvrpc.org/asp/tcdidirect/ProjectsWithDeliverableList.aspx?year=2002&year2=2019",
+  "https://apps.dvrpc.org/ords/tcdi_db/deliverablefiles?year=2002&year2=2019",
 )
   .then((res) => res.json())
   .then((data) =>
-    populateProjectDetails([...data.files].reverse(), "archiveData"),
+    populateProjectDetails([...data.items].reverse(), "archiveData"),
   );
