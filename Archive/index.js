@@ -3397,7 +3397,7 @@ function populateProjectDetails(dataset, tableName) {
 
     const D = project.lead_mun;
     const title = project.title;
-    const link = project.properties.webviewlink;
+    const link = project.webviewlink;
     const AMT_WEB = project.amt_web;
     const year = project.properties.year;
 
