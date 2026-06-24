@@ -844,8 +844,6 @@ const populateProjectDetails = function (dataset, tableName) {
     isCurrent = dataset[0].properties.yr;
   }
 
-  console.log("dataset", dataset, tableName, isCurrent);
-
   const table = document.querySelector("#" + tableName);
   const year = isCurrent || dataset[0]["YR"];
   const yearShort = year - 2000;
@@ -1037,7 +1035,8 @@ const popupDetails = function (e) {
         "<br /><em>Award Amount: </em>$" +
         e.features[0].properties.AMOUNT.toLocaleString() +
         "<hr class='popup-hr' />" +
-        e.features[0].properties.PROJ_DESC,
+        e.features[0].properties.PROJ_DESC +
+        e.features[0].properties.PROJ_DESC2,
     )
     .addTo(map);
 };
