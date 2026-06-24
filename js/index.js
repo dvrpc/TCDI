@@ -597,7 +597,7 @@ const currentDataSet = {
         PROJ_DESC2: " ",
       },
     },
-        {
+    {
       geometry: {
         type: "Point",
         coordinates: [-74.92232840965741, 40.065207435503304],
@@ -853,7 +853,7 @@ const populateProjectDetails = function (dataset, tableName) {
   // fill out the awards header
   const awardsHeader = document.querySelector("h2." + tableName);
   awardsHeader.textContent = isCurrent
-    ? "FY26 PA & FY27 NJ TCDI Awards"
+    ? "FY26 NJ & FY27 PA TCDI Awards"
     : "FY" + year + " TCDI Awards";
 
   // fill out the accordion header & get links where applicable
