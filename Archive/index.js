@@ -5,6 +5,237 @@ const archiveData = {
     {
       type: "Feature",
       properties: {
+        YR: 2021,
+        LEAD_MUN: "Bucks County",
+        TITLE: "Bucks County Pedestrian Safety Enhancements",
+        ID: 606,
+        AMT_WEB: 80000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Bucks County Planning Commission",
+        TITLE: "Upper Bucks County Area Public Transportation Analysis",
+        ID: 661,
+        AMT_WEB: 60000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Kennett Square Borough",
+        TITLE: "Kennett Region Micro-Transit Feasibility",
+        ID: 610,
+        AMT_WEB: 80000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Charlestown Township",
+        TITLE: "Devault Trail Activation Feasibility",
+        ID: 601,
+        AMT_WEB: 64000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Eddystone Borough",
+        TITLE: "Route 291 Corridor Improvements",
+        ID: 603,
+        AMT_WEB: 48000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Media Borough",
+        TITLE: "Hybrid Form-Based Code",
+        ID: 623,
+        AMT_WEB: 64000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Lansdowne Borough",
+        TITLE: "Eastern Delco Bikeway Prioritization",
+        ID: 602,
+        AMT_WEB: 85000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Upper Gwynedd Township",
+        TITLE: "Advancing the Liberty Bell Trail",
+        ID: 605,
+        AMT_WEB: 113000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Montgomery County",
+        TITLE: "Cross County Trail Feasibility",
+        ID: 618,
+        AMT_WEB: 90000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Green Lane Borough",
+        TITLE: "Addressing Active Transportation and Trail-End Revitalization",
+        ID: 608,
+        AMT_WEB: 36000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Whitemarsh Township",
+        TITLE:
+          "Multi-Modal Connections between Washington Street and Spring Mill Station",
+        ID: 616,
+        AMT_WEB: 80000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Philadelphia",
+        TITLE: "North Philadelphia Transit First Corridor",
+        ID: 605,
+        AMT_WEB: 90000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Philadelphia",
+        TITLE: "Philadelphia Complete Streets Delivery Program",
+        ID: 614,
+        AMT_WEB: 85000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Philadelphia",
+        TITLE: "Philadelphia Trail and Sidepath Maintenance",
+        ID: 617,
+        AMT_WEB: 60000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Philadelphia",
+        TITLE: "25th Street Corridor Concepts",
+        ID: 613,
+        AMT_WEB: 65000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Philadelphia",
+        TITLE: "Imagine Philadelphia Part 2",
+        ID: 607,
+        AMT_WEB: 100000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Bordentown City",
+        TITLE: "Developing Streetscape and Parking Enhancements",
+        ID: 619,
+        AMT_WEB: 60000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Pemberton Township",
+        TITLE: "CR 530-CR 687 Corridor Development",
+        ID: 622,
+        AMT_WEB: 85000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Haddonfield Borough",
+        TITLE: "Mitigating Stormwater Impacts on the Transportation System",
+        ID: 609,
+        AMT_WEB: 164000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Woodbury City",
+        TITLE: "Redbank Station Bike/Ped Shed Improvements",
+        ID: 612,
+        AMT_WEB: 74000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Elk Township",
+        TITLE: "Assessing Alternative Transportation",
+        ID: 611,
+        AMT_WEB: 77000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Trenton City",
+        TITLE: "TOD Strategic Plan",
+        ID: 621,
+        AMT_WEB: 90000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        YR: 2021,
+        LEAD_MUN: "Hightstown Borough",
+        TITLE: "Redevelopment Area Circulation Concepts",
+        ID: 615,
+        AMT_WEB: 50000,
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
         YR: "2019",
         ID: "545",
         LEAD_MUN: "Upper Moreland Township",
@@ -3399,7 +3630,9 @@ function populateProjectDetails(dataset, tableName) {
     const title = project.title;
     const link = project.webviewlink;
     const AMT_WEB = project.amt_web;
-    const year = project.properties.year;
+    const year = JSON.parse(project.properties).year;
+
+    console.log(year, title)
 
     DColumn.textContent = D;
     titleColumn.innerHTML =
@@ -3414,7 +3647,7 @@ function populateProjectDetails(dataset, tableName) {
 }
 
 fetch(
-  "https://apps.dvrpc.org/ords/tcdi_db/deliverablefiles?year=2002&year2=2019",
+  "https://apps.dvrpc.org/ords/tcdi_db/deliverablefiles?year=2002&year2=2021&limit=999",
 )
   .then((res) => res.json())
   .then((data) =>
